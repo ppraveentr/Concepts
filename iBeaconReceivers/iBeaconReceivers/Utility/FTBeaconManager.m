@@ -127,7 +127,55 @@ static NSString * const kLocationAccessRequied_Always = @"Required Location Acce
     return NO;
 }
 
-#pragma mark - Beacon ranging
+#pragma mark - Location Manager
+
+- (void)createLocationManager {
+    
+    if (!self.locationManager) {
+        self.locationManager = [[CLLocationManager alloc] init];
+        self.locationManager.delegate = (id<CLLocationManagerDelegate>)[[UIApplication sharedApplication] delegate];
+    }
+}
+
+#pragma mark - Beacon monitoring
+
+- (void)startMonitoringForBeacons {
+    
+    self.operationContext = kMonitoringOperationContext;
+    
+    [self createLocationManager];
+    
+    [self checkLocationAccessForMonitoring];
+    
+    [self turnOnMonitoring];
+}
+
+- (void)turnOnMonitoring {
+    
+    NSLog(@"Turning on monitoring...");
+    
+    if (![CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
+        NSLog(kBeaconRegionMonitoringNotAvaialbe);
+        self.monitoringSwitch = NO;
+        [[NSNotificationCenter defaultCenter] postNotificationName:BeaconMonitoringNotification object:kBeaconRegionMonitoringNotAvaialbe];
+        return;
+    }
+    
+    [self createBeaconRegion];
+    [self.locationManager startMonitoringForRegion:self.beaconRegion];
+    
+    NSLog(@"Monitoring turned on for region: %@.", self.beaconRegion);
+}
+
+- (void)stopMonitoringForBeacons {
+    
+    [self.locationManager stopMonitoringForRegion:self.beaconRegion];
+    self.locationManager = nil;
+    
+    NSLog(@"Turned off monitoring");
+}
+
+#pragma mark - Beacon Region ranging
 
 - (void)createBeaconRegion {
     
@@ -189,50 +237,30 @@ static NSString * const kLocationAccessRequied_Always = @"Required Location Acce
     NSLog(@"Turned off ranging.");
 }
 
-#pragma mark - Beacon region monitoring
-
-- (void)createLocationManager {
-    
-    if (!self.locationManager) {
-        self.locationManager = [[CLLocationManager alloc] init];
-        self.locationManager.delegate = (id<CLLocationManagerDelegate>)[[UIApplication sharedApplication] delegate];
+#pragma mark - Location access methods
+- (void)checkLocationAccessForRanging {
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
     }
 }
 
-- (void)startMonitoringForBeacons {
-    
-    self.operationContext = kMonitoringOperationContext;
-
-    [self createLocationManager];
-    
-    [self checkLocationAccessForMonitoring];
-    
-    [self turnOnMonitoring];
-}
-
-- (void)turnOnMonitoring {
-    
-    NSLog(@"Turning on monitoring...");
-    
-    if (![CLLocationManager isMonitoringAvailableForClass:[CLBeaconRegion class]]) {
-        NSLog(kBeaconRegionMonitoringNotAvaialbe);
-        self.monitoringSwitch = NO;
-        [[NSNotificationCenter defaultCenter] postNotificationName:BeaconMonitoringNotification object:kBeaconRegionMonitoringNotAvaialbe];
-        return;
+- (void)checkLocationAccessForMonitoring {
+    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+        CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
+        if (authorizationStatus != kCLAuthorizationStatusAuthorizedAlways) {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Access Missing"
+                                                            message:@"Required Location Access(Always) missing. Click Settings to update Location Access."
+                                                           delegate:self
+                                                  cancelButtonTitle:@"Settings"
+                                                  otherButtonTitles:@"Cancel", nil];
+            [alert show];
+            self.monitoringSwitch = NO;
+            NSLog(kLocationAccessRequied_Always);
+            [[NSNotificationCenter defaultCenter] postNotificationName:BeaconMonitoringNotification object:kLocationAccessRequied_Always];
+            return;
+        }
+        [self.locationManager requestAlwaysAuthorization];
     }
-    
-    [self createBeaconRegion];
-    [self.locationManager startMonitoringForRegion:self.beaconRegion];
-    
-    NSLog(@"Monitoring turned on for region: %@.", self.beaconRegion);
-}
-
-- (void)stopMonitoringForBeacons {
-    
-    [self.locationManager stopMonitoringForRegion:self.beaconRegion];
-    self.locationManager = nil;
-    
-    NSLog(@"Turned off monitoring");
 }
 
 #pragma mark - Index path management
@@ -388,32 +416,6 @@ static NSString * const kLocationAccessRequied_Always = @"Required Location Acce
     [notification setUserInfo:userInfo];
     
     [[UIApplication sharedApplication] presentLocalNotificationNow:notification];
-}
-
-#pragma mark - Location access methods
-- (void)checkLocationAccessForRanging {
-    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        [self.locationManager requestWhenInUseAuthorization];
-    }
-}
-
-- (void)checkLocationAccessForMonitoring {
-    if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
-        CLAuthorizationStatus authorizationStatus = [CLLocationManager authorizationStatus];
-        if (authorizationStatus != kCLAuthorizationStatusAuthorizedAlways) {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Access Missing"
-                                                            message:@"Required Location Access(Always) missing. Click Settings to update Location Access."
-                                                           delegate:self
-                                                  cancelButtonTitle:@"Settings"
-                                                  otherButtonTitles:@"Cancel", nil];
-            [alert show];
-            self.monitoringSwitch = NO;
-            NSLog(kLocationAccessRequied_Always);
-            [[NSNotificationCenter defaultCenter] postNotificationName:BeaconMonitoringNotification object:kLocationAccessRequied_Always];
-            return;
-        }
-        [self.locationManager requestAlwaysAuthorization];
-    }
 }
 
 #pragma mark - Alert view delegate methods

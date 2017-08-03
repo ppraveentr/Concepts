@@ -1,0 +1,630 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DE680C001F338A5B00A9F68C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE680BFF1F338A5B00A9F68C /* AppDelegate.swift */; };
+		DE680C021F338A5B00A9F68C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE680C011F338A5B00A9F68C /* ViewController.swift */; };
+		DE680C051F338A5B00A9F68C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE680C031F338A5B00A9F68C /* Main.storyboard */; };
+		DE680C071F338A5B00A9F68C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE680C061F338A5B00A9F68C /* Assets.xcassets */; };
+		DE680C0A1F338A5B00A9F68C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE680C081F338A5B00A9F68C /* LaunchScreen.storyboard */; };
+		DE680C151F338A5B00A9F68C /* FTAutenticationDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE680C141F338A5B00A9F68C /* FTAutenticationDemoTests.swift */; };
+		DE680C201F338A5B00A9F68C /* FTAutenticationDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE680C1F1F338A5B00A9F68C /* FTAutenticationDemoUITests.swift */; };
+		DE680C441F338AD700A9F68C /* FTAuthentication.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = DE680C401F338AA600A9F68C /* FTAuthentication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE680C471F338AE400A9F68C /* FTAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE680C401F338AA600A9F68C /* FTAuthentication.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DE680C111F338A5B00A9F68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE680BF41F338A5B00A9F68C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE680BFB1F338A5B00A9F68C;
+			remoteInfo = FTAutenticationDemo;
+		};
+		DE680C1C1F338A5B00A9F68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE680BF41F338A5B00A9F68C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE680BFB1F338A5B00A9F68C;
+			remoteInfo = FTAutenticationDemo;
+		};
+		DE680C3F1F338AA600A9F68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE680BD61F33858300A9F68C;
+			remoteInfo = FTAuthentication;
+		};
+		DE680C411F338AA600A9F68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE680BDF1F33858400A9F68C;
+			remoteInfo = FTAuthenticationTests;
+		};
+		DE680C451F338ADC00A9F68C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE680BD51F33858300A9F68C;
+			remoteInfo = FTAuthentication;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DE680C431F338ACD00A9F68C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 11;
+			files = (
+				DE680C441F338AD700A9F68C /* FTAuthentication.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		DE680BFC1F338A5B00A9F68C /* FTAutenticationDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FTAutenticationDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE680BFF1F338A5B00A9F68C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DE680C011F338A5B00A9F68C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DE680C041F338A5B00A9F68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DE680C061F338A5B00A9F68C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DE680C091F338A5B00A9F68C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DE680C0B1F338A5B00A9F68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE680C101F338A5B00A9F68C /* FTAutenticationDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAutenticationDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE680C141F338A5B00A9F68C /* FTAutenticationDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAutenticationDemoTests.swift; sourceTree = "<group>"; };
+		DE680C161F338A5B00A9F68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE680C1B1F338A5B00A9F68C /* FTAutenticationDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FTAutenticationDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE680C1F1F338A5B00A9F68C /* FTAutenticationDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FTAutenticationDemoUITests.swift; sourceTree = "<group>"; };
+		DE680C211F338A5B00A9F68C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTAuthentication.xcodeproj; path = ../../FTAuthentication/FTAuthentication.xcodeproj; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DE680BF91F338A5B00A9F68C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE680C471F338AE400A9F68C /* FTAuthentication.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C0D1F338A5B00A9F68C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C181F338A5B00A9F68C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DE680BF31F338A5B00A9F68C = {
+			isa = PBXGroup;
+			children = (
+				DE680BFE1F338A5B00A9F68C /* FTAutenticationDemo */,
+				DE680C131F338A5B00A9F68C /* FTAutenticationDemoTests */,
+				DE680C1E1F338A5B00A9F68C /* FTAutenticationDemoUITests */,
+				DE680BFD1F338A5B00A9F68C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DE680BFD1F338A5B00A9F68C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE680BFC1F338A5B00A9F68C /* FTAutenticationDemo.app */,
+				DE680C101F338A5B00A9F68C /* FTAutenticationDemoTests.xctest */,
+				DE680C1B1F338A5B00A9F68C /* FTAutenticationDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DE680BFE1F338A5B00A9F68C /* FTAutenticationDemo */ = {
+			isa = PBXGroup;
+			children = (
+				DE680C391F338A9700A9F68C /* Framework */,
+				DE680BFF1F338A5B00A9F68C /* AppDelegate.swift */,
+				DE680C011F338A5B00A9F68C /* ViewController.swift */,
+				DE680C031F338A5B00A9F68C /* Main.storyboard */,
+				DE680C061F338A5B00A9F68C /* Assets.xcassets */,
+				DE680C081F338A5B00A9F68C /* LaunchScreen.storyboard */,
+				DE680C0B1F338A5B00A9F68C /* Info.plist */,
+			);
+			path = FTAutenticationDemo;
+			sourceTree = "<group>";
+		};
+		DE680C131F338A5B00A9F68C /* FTAutenticationDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				DE680C141F338A5B00A9F68C /* FTAutenticationDemoTests.swift */,
+				DE680C161F338A5B00A9F68C /* Info.plist */,
+			);
+			path = FTAutenticationDemoTests;
+			sourceTree = "<group>";
+		};
+		DE680C1E1F338A5B00A9F68C /* FTAutenticationDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DE680C1F1F338A5B00A9F68C /* FTAutenticationDemoUITests.swift */,
+				DE680C211F338A5B00A9F68C /* Info.plist */,
+			);
+			path = FTAutenticationDemoUITests;
+			sourceTree = "<group>";
+		};
+		DE680C391F338A9700A9F68C /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		DE680C3B1F338AA600A9F68C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DE680C401F338AA600A9F68C /* FTAuthentication.framework */,
+				DE680C421F338AA600A9F68C /* FTAuthenticationTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DE680BFB1F338A5B00A9F68C /* FTAutenticationDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE680C241F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemo" */;
+			buildPhases = (
+				DE680BF81F338A5B00A9F68C /* Sources */,
+				DE680BF91F338A5B00A9F68C /* Frameworks */,
+				DE680BFA1F338A5B00A9F68C /* Resources */,
+				DE680C431F338ACD00A9F68C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE680C461F338ADC00A9F68C /* PBXTargetDependency */,
+			);
+			name = FTAutenticationDemo;
+			productName = FTAutenticationDemo;
+			productReference = DE680BFC1F338A5B00A9F68C /* FTAutenticationDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DE680C0F1F338A5B00A9F68C /* FTAutenticationDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE680C271F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemoTests" */;
+			buildPhases = (
+				DE680C0C1F338A5B00A9F68C /* Sources */,
+				DE680C0D1F338A5B00A9F68C /* Frameworks */,
+				DE680C0E1F338A5B00A9F68C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE680C121F338A5B00A9F68C /* PBXTargetDependency */,
+			);
+			name = FTAutenticationDemoTests;
+			productName = FTAutenticationDemoTests;
+			productReference = DE680C101F338A5B00A9F68C /* FTAutenticationDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		DE680C1A1F338A5B00A9F68C /* FTAutenticationDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE680C2A1F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemoUITests" */;
+			buildPhases = (
+				DE680C171F338A5B00A9F68C /* Sources */,
+				DE680C181F338A5B00A9F68C /* Frameworks */,
+				DE680C191F338A5B00A9F68C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DE680C1D1F338A5B00A9F68C /* PBXTargetDependency */,
+			);
+			name = FTAutenticationDemoUITests;
+			productName = FTAutenticationDemoUITests;
+			productReference = DE680C1B1F338A5B00A9F68C /* FTAutenticationDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE680BF41F338A5B00A9F68C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Praveen Prabhakar";
+				TargetAttributes = {
+					DE680BFB1F338A5B00A9F68C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = W6W48SVQX7;
+						ProvisioningStyle = Automatic;
+					};
+					DE680C0F1F338A5B00A9F68C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = W6W48SVQX7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE680BFB1F338A5B00A9F68C;
+					};
+					DE680C1A1F338A5B00A9F68C = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = W6W48SVQX7;
+						ProvisioningStyle = Automatic;
+						TestTargetID = DE680BFB1F338A5B00A9F68C;
+					};
+				};
+			};
+			buildConfigurationList = DE680BF71F338A5B00A9F68C /* Build configuration list for PBXProject "FTAutenticationDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DE680BF31F338A5B00A9F68C;
+			productRefGroup = DE680BFD1F338A5B00A9F68C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DE680C3B1F338AA600A9F68C /* Products */;
+					ProjectRef = DE680C3A1F338AA600A9F68C /* FTAuthentication.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				DE680BFB1F338A5B00A9F68C /* FTAutenticationDemo */,
+				DE680C0F1F338A5B00A9F68C /* FTAutenticationDemoTests */,
+				DE680C1A1F338A5B00A9F68C /* FTAutenticationDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		DE680C401F338AA600A9F68C /* FTAuthentication.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FTAuthentication.framework;
+			remoteRef = DE680C3F1F338AA600A9F68C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DE680C421F338AA600A9F68C /* FTAuthenticationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FTAuthenticationTests.xctest;
+			remoteRef = DE680C411F338AA600A9F68C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DE680BFA1F338A5B00A9F68C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE680C0A1F338A5B00A9F68C /* LaunchScreen.storyboard in Resources */,
+				DE680C071F338A5B00A9F68C /* Assets.xcassets in Resources */,
+				DE680C051F338A5B00A9F68C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C0E1F338A5B00A9F68C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C191F338A5B00A9F68C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DE680BF81F338A5B00A9F68C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE680C021F338A5B00A9F68C /* ViewController.swift in Sources */,
+				DE680C001F338A5B00A9F68C /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C0C1F338A5B00A9F68C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE680C151F338A5B00A9F68C /* FTAutenticationDemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DE680C171F338A5B00A9F68C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE680C201F338A5B00A9F68C /* FTAutenticationDemoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DE680C121F338A5B00A9F68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE680BFB1F338A5B00A9F68C /* FTAutenticationDemo */;
+			targetProxy = DE680C111F338A5B00A9F68C /* PBXContainerItemProxy */;
+		};
+		DE680C1D1F338A5B00A9F68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DE680BFB1F338A5B00A9F68C /* FTAutenticationDemo */;
+			targetProxy = DE680C1C1F338A5B00A9F68C /* PBXContainerItemProxy */;
+		};
+		DE680C461F338ADC00A9F68C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTAuthentication;
+			targetProxy = DE680C451F338ADC00A9F68C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DE680C031F338A5B00A9F68C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE680C041F338A5B00A9F68C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DE680C081F338A5B00A9F68C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DE680C091F338A5B00A9F68C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DE680C221F338A5B00A9F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DE680C231F338A5B00A9F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DE680C251F338A5B00A9F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		DE680C261F338A5B00A9F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		DE680C281F338A5B00A9F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTAutenticationDemo.app/FTAutenticationDemo";
+			};
+			name = Debug;
+		};
+		DE680C291F338A5B00A9F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FTAutenticationDemo.app/FTAutenticationDemo";
+			};
+			name = Release;
+		};
+		DE680C2B1F338A5B00A9F68C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FTAutenticationDemo;
+			};
+			name = Debug;
+		};
+		DE680C2C1F338A5B00A9F68C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				INFOPLIST_FILE = FTAutenticationDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.FTAutenticationDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = FTAutenticationDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DE680BF71F338A5B00A9F68C /* Build configuration list for PBXProject "FTAutenticationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE680C221F338A5B00A9F68C /* Debug */,
+				DE680C231F338A5B00A9F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE680C241F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE680C251F338A5B00A9F68C /* Debug */,
+				DE680C261F338A5B00A9F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE680C271F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE680C281F338A5B00A9F68C /* Debug */,
+				DE680C291F338A5B00A9F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DE680C2A1F338A5B00A9F68C /* Build configuration list for PBXNativeTarget "FTAutenticationDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE680C2B1F338A5B00A9F68C /* Debug */,
+				DE680C2C1F338A5B00A9F68C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE680BF41F338A5B00A9F68C /* Project object */;
+}
