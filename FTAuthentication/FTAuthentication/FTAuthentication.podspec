@@ -1,15 +1,16 @@
 Pod::Spec.new do |s|  
-    s.name              = 'FTAuthentication'
-    s.version           = '1.0.0'
-    s.summary           = 'A SDK for Authentication.'
-    s.homepage          = 'https://github.com/ppraveentr/Concepts/tree/master/FTAuthentication'
+    s.name              = "FTAuthentication"
+    s.version           = "1.0"
+    s.summary           = "A SDK for Authentication."
+    s.homepage          = "https://github.com/ppraveentr/Concepts/tree/master/FTAuthentication"
 
-    s.author            = { 'Name' => ‘ppraveentr@gmail.com’ }
-    s.license           = { :type => 'Apache-2.0', :file => 'LICENSE' }
+    s.author            = { "PraveenP" => "ppraveentr@gmail.com" }
+    s.license           = "MIT"
 
-    s.platform          = :ios
-    s.source            = { :http => 'https://github.com/ppraveentr/CocoaPods/blob/master/FTAuthentication.zip' }
+    s.source            = { :git => "https://github.com/ppraveentr/CocoaPods.git", :tag => "1.0" }
 
-    s.ios.deployment_target = ‘9.0’
-    s.ios.vendored_frameworks = 'FTAuthentication.framework'
+    s.platform		= :ios, "9.0"
+    s.ios.deployment_target = '9.0'
+    s.source_files = "*.{swift}"
+    s.resources = "*.{png,jpeg,jpg,storyboard,xib}"
 end 
