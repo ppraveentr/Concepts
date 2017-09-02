@@ -13,23 +13,28 @@ class NRAppDelegate: FTAppDelegate {
 
     open override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
-        FTReflection.registerBundleIdentifier([application.self])
-        
         setAppTheme()
-        
-//        setUpFloatingView()
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
     }
     
     func setAppTheme() {
         
+        FTReflection.registerBundleIdentifier([NRAppDelegate.self,FTBaseView.self])
+
+        if
+            let theme = Bundle.main.path(forResource: "Themes", ofType: "json"),
+            let themeContent = try? theme.JSONContentAtPath() as! FTThemeDic {
+            
+            FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: NRAppDelegate.self)
+        }
+        
         let navigationBarAppearance = UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
         navigationBarAppearance.barTintColor = .white
         navigationBarAppearance.tintColor = .white
 //        navigationBarAppearance.isTranslucent = false
         
-        UINavigationBar.applyBackgroundImage(navigationBar: navigationBarAppearance, defaultImage: #imageLiteral(resourceName: "Pixel"), landScapeImage: #imageLiteral(resourceName: "Pixel"))
+        UINavigationBar.applyBackgroundImage(navigationBar: navigationBarAppearance, defaultImage: #imageLiteral(resourceName: "Pixel"))
         //Remove Bottom 1px image
         navigationBarAppearance.shadowImage = UIImage()
         

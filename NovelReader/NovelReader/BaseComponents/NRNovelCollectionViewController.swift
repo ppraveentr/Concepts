@@ -33,6 +33,7 @@ class NRNovelCollectionViewController: NRBaseViewController, UICollectionViewDat
 
     lazy var collectionView: UICollectionView = self.getCollectionView()
     
+//    lazy var novel: Novels = Novels(urlString: Bundle.main.path(forResource: "Novellist", ofType: "html")!)
     lazy var novel: Novels = Novels(urlString: "https://novelonlinefree.info/novel_list")
 
     lazy var sampleCell: NRNovelCollectionViewCell = self.getSampleCell()
@@ -88,8 +89,6 @@ extension NRNovelCollectionViewController {
     }
     
     func parseNovel() {
-        //(Bundle.main.path(forResource: "Novellist", ofType: "html")!)
-        
         NovelOnlineParser.parseNovelList(novel.baseUrlString, completionHandler: { (novelList) in
             self.novel.novelList.append(contentsOf: novelList)
             self.collectionView.reloadData()

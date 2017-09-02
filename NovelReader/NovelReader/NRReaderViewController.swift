@@ -82,16 +82,16 @@ extension NRReaderViewController: FTFontPickerViewProtocal {
     
     func pickerColor(textColor: UIColor, backgroundColor: UIColor) {
         
-        let bgJS = self.getBodyText() + ".style.backgroundColor= \"" + backgroundColor.hexColor() + "\";"
+        let bgJS = self.getBodyText() + ".style.backgroundColor= \"" + backgroundColor.hexString() + "\";"
         self.insertCSSString(jsString: bgJS)
         
-        let fontJS = self.getBodyText() + ".style.color= \"" + textColor.hexColor() + "\";"
+        let fontJS = self.getBodyText() + ".style.color= \"" + textColor.hexString() + "\";"
         self.insertCSSString(jsString: fontJS)
     }
     
     func fontColorSelected(_ fontColor: UIColor) {
         
-        let js = self.getBodyText() + ".style.backgroundColor= \"" + fontColor.hexColor() + "\";"
+        let js = self.getBodyText() + ".style.backgroundColor= \"" + fontColor.hexString() + "\";"
 
         self.insertCSSString(jsString: js)
     }
