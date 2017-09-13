@@ -14,17 +14,15 @@ class NRReaderViewController: FTBaseViewController {
     
     @IBOutlet var fontPickerBarItem: UIBarButtonItem?
     @IBOutlet var chapterToolBarItem: UIToolbar?
-    var aray: [UIBarButtonItem]?
+    var sortedToolBarItems: [UIBarButtonItem]? {
+        get{
+            return self.chapterToolBarItem?.items?.sorted(by: { $0.tag > $1.tag })
+        }
+    }
 
     var textSize: Int = 140
     
     let contentView = FTContentView()
-
-    override func loadView() {
-        super.loadView()
-        
-        aray = self.chapterToolBarItem?.items?.sorted(by: { $0.tag > $1.tag })
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,15 +54,11 @@ class NRReaderViewController: FTBaseViewController {
     }
     
     func loadWebContent(contnet: String) {
-        contentView.webView.loadHTMLString("<html><meta name=\"viewport\" content=\"initial-scale=1.0\" /><body>\(contnet)</body></html>", baseURL: nil)
+        contentView.webView.loadHTMLBody(contnet)
     }
 }
 
 extension NRReaderViewController: FTFontPickerViewProtocal {
-
-    func getBodyText() -> String {
-        return "document.getElementsByTagName('body')[0]"
-    }
 
     func fontSize(_ size: FontSizePicker) {
         
@@ -74,44 +68,15 @@ extension NRReaderViewController: FTFontPickerViewProtocal {
             textSize -= 10
         }
     
-        if textSize >= 10 {
-            let js = self.getBodyText() + ".style.webkitTextSizeAdjust= '\(textSize)%'"
-            self.insertCSSString(jsString: js)
-        }
+        contentView.webView.setContentFontSize(textSize)
     }
     
     func pickerColor(textColor: UIColor, backgroundColor: UIColor) {
-        
-        let bgJS = self.getBodyText() + ".style.backgroundColor= \"" + backgroundColor.hexString() + "\";"
-        self.insertCSSString(jsString: bgJS)
-        
-        let fontJS = self.getBodyText() + ".style.color= \"" + textColor.hexString() + "\";"
-        self.insertCSSString(jsString: fontJS)
-    }
-    
-    func fontColorSelected(_ fontColor: UIColor) {
-        
-        let js = self.getBodyText() + ".style.backgroundColor= \"" + fontColor.hexString() + "\";"
-
-        self.insertCSSString(jsString: js)
+        contentView.webView.setContentColor(textColor: textColor, backgroundColor: backgroundColor)
     }
     
     func fontFamily(_ fontName: String?) {
-        
-        //base document style
-        var css = self.getBodyText() + ".style.fontFamily= \""
-        
-        //user selected font
-        css += ( (fontName != nil && fontName != "") ? "\(fontName!)," : "")
-        
-        //Default font
-        css += "-apple-system\";"
-        
-        self.insertCSSString(jsString: css)
-    }
-    
-    func insertCSSString(jsString: String) {
-        contentView.webView.evaluateJavaScript(jsString, completionHandler: nil)
+        contentView.webView.setContentFontFamily(fontName)
     }
 }
 

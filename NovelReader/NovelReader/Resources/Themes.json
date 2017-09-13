@@ -27,7 +27,7 @@
             "tintColor": "white",
             "isTranslucent": false,
             "backgroundImage": {
-                "default": "#image.Pixel"
+                "default": "@Pixel"
             },
             "shadowImage": "@empty"
         },

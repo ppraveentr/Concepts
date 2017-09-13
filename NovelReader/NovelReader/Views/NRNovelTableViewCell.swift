@@ -48,10 +48,10 @@ class NRNovelTableViewCell: UITableViewCell {
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
     }
     
-    override var intrinsicContentSize: CGSize {
-        get{
-            return (self.titleLabel?.intrinsicContentSize)!
-        }
-    }
+//    override var intrinsicContentSize: CGSize {
+//        get{
+//            return (self.titleLabel?.intrinsicContentSize)!
+//        }
+//    }
     
 }

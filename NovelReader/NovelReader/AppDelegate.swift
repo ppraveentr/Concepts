@@ -26,7 +26,7 @@ class NRAppDelegate: FTAppDelegate {
             let theme = Bundle.main.path(forResource: "Themes", ofType: "json"),
             let themeContent = try? theme.JSONContentAtPath() as! FTThemeDic {
             
-            FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: NRAppDelegate.self)
+            FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: [NRAppDelegate.self])
         }
         
         let navigationBarAppearance = UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
@@ -51,6 +51,11 @@ class NRAppDelegate: FTAppDelegate {
 //        let textBarAppearance = UILabel.appearance(whenContainedInInstancesOf: [FTSearchBar.self])
 //        textBarAppearance.tintColor = .blue
         
+        if let color = "#DF6E6E".hexColor() {
+            FTThemesManager.setStatusBarBackgroundColor(color)
+        }
+        
+        UIApplication.shared.statusBarStyle = .lightContent
     }
     
 //    lazy public var floatingButton : FTFloatingView = {

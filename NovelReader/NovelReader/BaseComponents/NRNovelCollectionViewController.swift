@@ -48,7 +48,9 @@ class NRNovelCollectionViewController: NRBaseViewController, UICollectionViewDat
         collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
                                 forCellWithReuseIdentifier: "kNovelCellIdentifer")
         
-        collectionView.register(NRNovelCollectionHeaderView.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerCell")  // UICollectionReusableView
+        collectionView.register(NRNovelCollectionHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
+                                withReuseIdentifier: "headerCell")
 
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -56,14 +58,6 @@ class NRNovelCollectionViewController: NRBaseViewController, UICollectionViewDat
 
         self.mainView?.pin(view: collectionView)
     }
-    
-//    override func viewWillAppear(animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-////        if let navigationController = self.navigationController as? ScrollingNavigationController {
-////            navigationController.followScrollView(tableView, delay: 50.0)
-////        }
-//    }
     
     func getflowLayout() -> UICollectionViewFlowLayout {
         
