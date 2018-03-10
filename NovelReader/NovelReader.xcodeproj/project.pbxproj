@@ -10,6 +10,9 @@
 		DE04001A2054608700A8B57A /* FTMobileCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400172054608600A8B57A /* FTMobileCoreUI.framework */; };
 		DE04001B2054608700A8B57A /* FTCoreUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400182054608700A8B57A /* FTCoreUtility.framework */; };
 		DE04001C2054608700A8B57A /* FTMobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400192054608700A8B57A /* FTMobileCore.framework */; };
+		DE04001D2054610B00A8B57A /* FTCoreUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400182054608700A8B57A /* FTCoreUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE04001E2054610B00A8B57A /* FTMobileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400192054608700A8B57A /* FTMobileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE04001F2054610B00A8B57A /* FTMobileCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400172054608600A8B57A /* FTMobileCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE4383A11F4AEADC003DF8A7 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
 		DE4383A21F4AEADC003DF8A7 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
 		DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
@@ -67,6 +70,9 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				DE04001D2054610B00A8B57A /* FTCoreUtility.framework in Embed Frameworks */,
+				DE04001E2054610B00A8B57A /* FTMobileCore.framework in Embed Frameworks */,
+				DE04001F2054610B00A8B57A /* FTMobileCoreUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
