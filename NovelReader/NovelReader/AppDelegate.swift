@@ -13,8 +13,8 @@ class NRAppDelegate: FTAppDelegate {
 
     open override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
-        FTDataModelCreator.configureSourcePath(path: Bundle.main.path(forResource: "NRDataModel", ofType: "json")!);
-        FTDataModelCreator.generateOutput()
+//        FTDataModelCreator.configureSourcePath(path: Bundle.main.path(forResource: "NRDataModel", ofType: "json")!);
+//        FTDataModelCreator.generateOutput()
         
         setAppTheme()
         

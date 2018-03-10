@@ -14,9 +14,6 @@
 		DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
 		DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */; };
 		DE8D302B1F5704A20075FDE3 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8D302A1F5704A20075FDE3 /* Themes.json */; };
-		DE9411AA1F55BA2A00938DA6 /* FTMobileCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297CF1F55B9D90088B77A /* FTMobileCoreUI.framework */; };
-		DE9411AD1F55BA2F00938DA6 /* FTMobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297C51F55B9D00088B77A /* FTMobileCore.framework */; };
-		DE9411AE1F55BA3600938DA6 /* FTCoreUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297BB1F55B9CC0088B77A /* FTCoreUtility.framework */; };
 		DEA76531205140F20009F7F7 /* NRDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA76530205140F20009F7F7 /* NRDataModel.json */; };
 		DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1431F496BAB0002C148 /* AppDelegate.swift */; };
 		DEA7E1461F496BAB0002C148 /* NRNovelChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */; };
@@ -30,7 +27,6 @@
 		DEA7E1A61F497B6C0002C148 /* NRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */; };
 		DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */; };
 		DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */; };
-		DEA7E1B31F49975D0002C148 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = DEA7E1B21F49975D0002C148 /* libxml2.tbd */; };
 		DEA7E1B51F49A5F80002C148 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B41F49A5F80002C148 /* NRNovel.swift */; };
 		DEA7E1B71F49A67F0002C148 /* NRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B61F49A67F0002C148 /* NRUtility.swift */; };
 		DEA7E1BA1F49E06A0002C148 /* NRNovelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B91F49E06A0002C148 /* NRNovelTableViewCell.swift */; };
@@ -42,9 +38,6 @@
 		DEC297A11F51E44B0088B77A /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
 		DEC297A31F51E9160088B77A /* FTFontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A21F51E9160088B77A /* FTFontPickerView.swift */; };
 		DEC297A51F51EFDC0088B77A /* FTFontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */; };
-		DEC297D81F55B9FD0088B77A /* FTMobileCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297CF1F55B9D90088B77A /* FTMobileCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DEC297D91F55B9FD0088B77A /* FTMobileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297C51F55B9D00088B77A /* FTMobileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		DEC297DA1F55B9FD0088B77A /* FTCoreUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DEC297BB1F55B9CC0088B77A /* FTCoreUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,69 +55,6 @@
 			remoteGlobalIDString = DEA7E13F1F496BAB0002C148;
 			remoteInfo = NovelReader;
 		};
-		DEC297BA1F55B9CC0088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE680B131F2BBD9500A9F68C;
-			remoteInfo = FTCoreUtility;
-		};
-		DEC297BC1F55B9CC0088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE680B1C1F2BBD9500A9F68C;
-			remoteInfo = FTCoreUtilityTests;
-		};
-		DEC297C41F55B9D00088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE9221A61EF28C9B000C8FC7;
-			remoteInfo = FTMobileCore;
-		};
-		DEC297C61F55B9D00088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE9221AF1EF28C9C000C8FC7;
-			remoteInfo = FTMobileCoreTests;
-		};
-		DEC297CE1F55B9D90088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DE1485161F10B13600A250A6;
-			remoteInfo = FTMobileCoreUI;
-		};
-		DEC297D01F55B9D90088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = DEB569771F17DC2600B5F187;
-			remoteInfo = FTMobileCoreUITests;
-		};
-		DEC297D21F55B9ED0088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DE1485151F10B13600A250A6;
-			remoteInfo = FTMobileCoreUI;
-		};
-		DEC297D41F55B9ED0088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DE9221A51EF28C9B000C8FC7;
-			remoteInfo = FTMobileCore;
-		};
-		DEC297D61F55B9ED0088B77A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = DE680B121F2BBD9500A9F68C;
-			remoteInfo = FTCoreUtility;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -134,9 +64,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				DEC297D81F55B9FD0088B77A /* FTMobileCoreUI.framework in Embed Frameworks */,
-				DEC297D91F55B9FD0088B77A /* FTMobileCore.framework in Embed Frameworks */,
-				DEC297DA1F55B9FD0088B77A /* FTCoreUtility.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -171,7 +98,6 @@
 		DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRBaseView.swift; sourceTree = "<group>"; };
 		DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRBaseTableViewController.swift; sourceTree = "<group>"; };
 		DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRServiceProvider.swift; sourceTree = "<group>"; };
-		DEA7E1B21F49975D0002C148 /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = usr/lib/libxml2.tbd; sourceTree = SDKROOT; };
 		DEA7E1B41F49A5F80002C148 /* NRNovel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovel.swift; sourceTree = "<group>"; };
 		DEA7E1B61F49A67F0002C148 /* NRUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRUtility.swift; sourceTree = "<group>"; };
 		DEA7E1B91F49E06A0002C148 /* NRNovelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelTableViewCell.swift; sourceTree = "<group>"; };
@@ -183,9 +109,6 @@
 		DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTFontPickerView.xib; sourceTree = "<group>"; };
 		DEC297A21F51E9160088B77A /* FTFontPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerView.swift; sourceTree = "<group>"; };
 		DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerViewController.swift; sourceTree = "<group>"; };
-		DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTCoreUtility.xcodeproj; path = ../../../MobileCore/FTCoreUtility/FTCoreUtility.xcodeproj; sourceTree = "<group>"; };
-		DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCore.xcodeproj; path = ../../../MobileCore/FTMobileCore/FTMobileCore.xcodeproj; sourceTree = "<group>"; };
-		DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCoreUI.xcodeproj; path = ../../../MobileCore/FTMobileCoreUI/FTMobileCoreUI.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,10 +116,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE9411AE1F55BA3600938DA6 /* FTCoreUtility.framework in Frameworks */,
-				DE9411AD1F55BA2F00938DA6 /* FTMobileCore.framework in Frameworks */,
-				DE9411AA1F55BA2A00938DA6 /* FTMobileCoreUI.framework in Frameworks */,
-				DEA7E1B31F49975D0002C148 /* libxml2.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,10 +210,6 @@
 		DEA7E1831F496D950002C148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */,
-				DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */,
-				DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */,
-				DEA7E1B21F49975D0002C148 /* libxml2.tbd */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -345,33 +260,6 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		DEC297B61F55B9CC0088B77A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEC297BB1F55B9CC0088B77A /* FTCoreUtility.framework */,
-				DEC297BD1F55B9CC0088B77A /* FTCoreUtilityTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DEC297BF1F55B9D00088B77A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEC297C51F55B9D00088B77A /* FTMobileCore.framework */,
-				DEC297C71F55B9D00088B77A /* FTMobileCoreTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		DEC297C91F55B9D90088B77A /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				DEC297CF1F55B9D90088B77A /* FTMobileCoreUI.framework */,
-				DEC297D11F55B9D90088B77A /* FTMobileCoreUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -387,9 +275,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				DEC297D31F55B9ED0088B77A /* PBXTargetDependency */,
-				DEC297D51F55B9ED0088B77A /* PBXTargetDependency */,
-				DEC297D71F55B9ED0088B77A /* PBXTargetDependency */,
 			);
 			name = NovelReader;
 			productName = NovelReader;
@@ -475,20 +360,6 @@
 			mainGroup = DEA7E1371F496BAB0002C148;
 			productRefGroup = DEA7E1411F496BAB0002C148 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = DEC297B61F55B9CC0088B77A /* Products */;
-					ProjectRef = DEC297B51F55B9CC0088B77A /* FTCoreUtility.xcodeproj */;
-				},
-				{
-					ProductGroup = DEC297BF1F55B9D00088B77A /* Products */;
-					ProjectRef = DEC297BE1F55B9D00088B77A /* FTMobileCore.xcodeproj */;
-				},
-				{
-					ProductGroup = DEC297C91F55B9D90088B77A /* Products */;
-					ProjectRef = DEC297C81F55B9D90088B77A /* FTMobileCoreUI.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				DEA7E13F1F496BAB0002C148 /* NovelReader */,
@@ -497,51 +368,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		DEC297BB1F55B9CC0088B77A /* FTCoreUtility.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FTCoreUtility.framework;
-			remoteRef = DEC297BA1F55B9CC0088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEC297BD1F55B9CC0088B77A /* FTCoreUtilityTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FTCoreUtilityTests.xctest;
-			remoteRef = DEC297BC1F55B9CC0088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEC297C51F55B9D00088B77A /* FTMobileCore.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FTMobileCore.framework;
-			remoteRef = DEC297C41F55B9D00088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEC297C71F55B9D00088B77A /* FTMobileCoreTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FTMobileCoreTests.xctest;
-			remoteRef = DEC297C61F55B9D00088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEC297CF1F55B9D90088B77A /* FTMobileCoreUI.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = FTMobileCoreUI.framework;
-			remoteRef = DEC297CE1F55B9D90088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		DEC297D11F55B9D90088B77A /* FTMobileCoreUITests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = FTMobileCoreUITests.xctest;
-			remoteRef = DEC297D01F55B9D90088B77A /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		DEA7E13E1F496BAB0002C148 /* Resources */ = {
@@ -632,21 +458,6 @@
 			isa = PBXTargetDependency;
 			target = DEA7E13F1F496BAB0002C148 /* NovelReader */;
 			targetProxy = DEA7E1621F496BAB0002C148 /* PBXContainerItemProxy */;
-		};
-		DEC297D31F55B9ED0088B77A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FTMobileCoreUI;
-			targetProxy = DEC297D21F55B9ED0088B77A /* PBXContainerItemProxy */;
-		};
-		DEC297D51F55B9ED0088B77A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FTMobileCore;
-			targetProxy = DEC297D41F55B9ED0088B77A /* PBXContainerItemProxy */;
-		};
-		DEC297D71F55B9ED0088B77A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FTCoreUtility;
-			targetProxy = DEC297D61F55B9ED0088B77A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
