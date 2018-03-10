@@ -1,8 +1,8 @@
 language: objective-c
-xcode_workspace: Concepts/NovelReader/NovelReader.xcodeproj # path to your xcodeproj folder
+xcode_workspace: NovelReader/NovelReader.xcodeproj # path to your xcodeproj folder
 osx_image: xcode9.2
 xcode_scheme: NovelReader
 script:
  #- xcodebuild -scheme NovelReader  -sdk "iphonesimulator" -configuration Release -arch x86_64 -arch i386 only_active_arch=no defines_module=yes
  #- xcodebuild -workspace "FTMobileCoreSampleWorkspace.xcworkspace" -scheme FTMobileCoreSample -sdk "iphoneos" -configuration Release -arch arm64 -arch armv7 -arch armv7s only_active_arch=no defines_module=yes
-- xcodebuild -project Concepts/NovelReader/NovelReader.xcodeproj -scheme NovelReader -arch x86_64 -arch i386 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
+- xcodebuild -project NovelReader/NovelReader.xcodeproj -scheme NovelReader -arch x86_64 -arch i386 -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO build | xcpretty -c
