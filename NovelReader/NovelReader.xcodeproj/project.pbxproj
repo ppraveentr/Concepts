@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DE04001A2054608700A8B57A /* FTMobileCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400172054608600A8B57A /* FTMobileCoreUI.framework */; };
+		DE04001B2054608700A8B57A /* FTCoreUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400182054608700A8B57A /* FTCoreUtility.framework */; };
+		DE04001C2054608700A8B57A /* FTMobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400192054608700A8B57A /* FTMobileCore.framework */; };
 		DE4383A11F4AEADC003DF8A7 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
 		DE4383A21F4AEADC003DF8A7 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
 		DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
@@ -71,6 +74,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		DE0400172054608600A8B57A /* FTMobileCoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCoreUI.framework; sourceTree = "<group>"; };
+		DE0400182054608700A8B57A /* FTCoreUtility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTCoreUtility.framework; sourceTree = "<group>"; };
+		DE0400192054608700A8B57A /* FTMobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCore.framework; sourceTree = "<group>"; };
 		DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorsDomination.html; sourceTree = "<group>"; };
 		DE4383A01F4AEADC003DF8A7 /* Novellist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novellist.json; sourceTree = "<group>"; };
 		DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRNovelCollectionViewController.swift; path = BaseComponents/NRNovelCollectionViewController.swift; sourceTree = "<group>"; };
@@ -116,6 +122,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE04001C2054608700A8B57A /* FTMobileCore.framework in Frameworks */,
+				DE04001B2054608700A8B57A /* FTCoreUtility.framework in Frameworks */,
+				DE04001A2054608700A8B57A /* FTMobileCoreUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,6 +219,9 @@
 		DEA7E1831F496D950002C148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DE0400182054608700A8B57A /* FTCoreUtility.framework */,
+				DE0400192054608700A8B57A /* FTMobileCore.framework */,
+				DE0400172054608600A8B57A /* FTMobileCoreUI.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
