@@ -27,12 +27,10 @@ class NRReaderViewController: FTBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.baseView?.backgroundColor = "#f7f3f0".hexColor()
-        
         self.setupViewContent()
     }
     
-    func back() {
+    @objc func back() {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -47,7 +45,7 @@ class NRReaderViewController: FTBaseViewController {
         self.mainView?.pin(view: contentView)
 
         if let url = novel?.url {
-            NovelOnlineParser.parseNovelReader(url, completionHandler: { (html) in
+            NRServiceProvider.parseNovelReader(url, completionHandler: { (html) in
                 self.loadWebContent(contnet: html)
             })
         }
@@ -62,11 +60,12 @@ extension NRReaderViewController: FTFontPickerViewProtocal {
 
     func fontSize(_ size: FontSizePicker) {
         
-        if size == .increment {
-            textSize += 10
-        }else {
-            textSize -= 10
-        }
+        textSize += (size == .increment) ? 10 : -10;
+//        if size == .increment {
+//            textSize += 10
+//        }else {
+//            textSize -= 10
+//        }
     
         contentView.webView.setContentFontSize(textSize)
     }

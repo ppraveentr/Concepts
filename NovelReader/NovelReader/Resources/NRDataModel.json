@@ -1,0 +1,27 @@
+{
+    "NRNovel": {
+        "identifer": "id",
+        "title": "name",
+        "searchString": "nameunsigned",
+        "author": "author",
+        "imageURL": "image",
+        "lastUpdated": "updatetime",
+        "views": "view",
+        "contentDescription": "description",
+        "lastChapter": "lastchapter",
+        "keyworkds": {
+            "bindKey": "keyworkds",
+            "bindAs": "NovelChapter"
+        },
+        "chapterList": {
+            "bindKey": "chapterList",
+            "arrayOf": "NovelChapter"
+        }
+    },
+    "NovelChapter": {
+        "url": "url",
+        "title": "title",
+        "shortTitle": "shortTitle",
+        "releaseDate": "releaseDate"
+    }
+}

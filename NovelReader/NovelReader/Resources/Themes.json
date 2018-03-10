@@ -6,6 +6,7 @@
         "clear": "clear",
         "black": "#000000",
         "appRed": "#DD6060",
+        "appWhite": "#F7F3F0",
         "blue": "#1059ce",
         "green": "#10ce1a",
         "yellow": "#cecb10",
@@ -27,7 +28,8 @@
             "tintColor": "white",
             "isTranslucent": false,
             "backgroundImage": {
-                "default": "@Pixel"
+                "default": "@Pixel",
+                "landScape": "@Pixel"
             },
             "shadowImage": "@empty"
         },
@@ -45,7 +47,7 @@
     "components": {
         "FTView": {
             "default": {
-                "backgroundColor": "clear"
+                "backgroundColor": "appWhite"
             }
         },
         "FTButton": {

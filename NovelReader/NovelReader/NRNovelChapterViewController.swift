@@ -10,7 +10,7 @@ import UIKit
 
 class NRNovelChapterViewController: NRBaseTableViewController {
     
-    var novel: NovelObject?
+    var novel: NRNovel?
     
     var novelDescView: NRNovelDescriptionView? = NRNovelDescriptionView.fromNib() as? NRNovelDescriptionView
     
@@ -23,26 +23,19 @@ class NRNovelChapterViewController: NRBaseTableViewController {
         
         self.automaticallyAdjustsScrollViewInsets = true
         
-        self.baseView?.backgroundColor = "#f7f3f0".hexColor()
-
         setupToolBar()
 
         tableView.backgroundColor = .clear
         tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifer")
         
-//        novel = NovelObject(urlString: (Bundle.main.path(forResource: "EmperorsDomination", ofType: "html")!))
-        
-        if let url = novel?.urlString {
-            
-            NovelOnlineParser.getNovelChapters(url, completionHandler: { (value: [String : Any]) in
-                self.configureContent(value: value)
-            })
-        }
+        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (value: [String : Any]) in
+            self.configureContent(value: value)
+        })
     }
     
     func configureContent(value: [String : Any]) {
         
-        NovelOnlineParser.getNovelChapters(&self.novel!, details: value)
+        NRServiceProvider.getNovelChapters(&self.novel!, details: value)
         
         self.novelDescView?.configureContent(novel: self.novel!)
         self.tableView.setTableHeaderView(view: self.novelDescView)
@@ -65,7 +58,7 @@ extension NRNovelChapterViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return novel?.chapterList?.count ?? 0
+        return novel?.chapterList.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -78,7 +71,7 @@ extension NRNovelChapterViewController {
         
         if
             let cell = cell as? NRNovelTableViewCell,
-            let cur = novel?.chapterList?[indexPath.section] {
+            let cur = novel?.chapterList[indexPath.section] {
             cell.configureContent(novel: cur)
         }
         
@@ -90,7 +83,7 @@ extension NRNovelChapterViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let cur = novel?.chapterList?[indexPath.section] {
+        if let cur = novel?.chapterList[indexPath.section] {
             self.performSegue(withIdentifier: "kShowNovelReaderView", sender: cur)
         }
     }
@@ -107,7 +100,7 @@ extension NRNovelChapterViewController {
 
 extension NRNovelChapterViewController {
     
-    func back() {
+    @objc func back() {
         self.navigationController?.popViewController(animated: true)
     }
     
@@ -115,11 +108,12 @@ extension NRNovelChapterViewController {
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(back))
         
-        let searchBar = FTSearchBar(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 44)), textColor: .white)
-        searchBar.configure(barTintColor: "#de6161".hexColor()!, tintColor: .white)
-        searchBar.placeholder = "Search"
-        
-        self.navigationItem.titleView = searchBar
+//        let searchBar = FTSearchBar(frame: CGRect(origin: .zero, size: CGSize(width: 300, height: 44)), textColor: .white)
+//        searchBar.configure(barTintColor: "#de6161".hexColor()!, tintColor: .white)
+//        searchBar.placeholder = "Search"
+//        searchBar.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+//        
+//        self.navigationItem.titleView = searchBar
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .bookmarks, target: nil, action: nil)
     }

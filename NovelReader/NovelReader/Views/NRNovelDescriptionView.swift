@@ -18,10 +18,10 @@ class NRNovelDescriptionView: FTView {
     @IBOutlet var lastUpdateLabel: FTLabel?
     @IBOutlet var viewsButton: FTButton?
     
-    func configureContent(novel: NovelObject) {
-        self.contentImageView?.downloadedFrom(link: novel.imageURL ?? "")
-        self.titleLabel?.text = novel.title ?? ""
-        self.descriptionLabel?.text = novel.contentDesc ?? ""
+    func configureContent(novel: NRNovel) {
+        self.contentImageView?.downloadedFrom(link: novel.imageURL )
+        self.titleLabel?.text = novel.title
+        self.descriptionLabel?.text = novel.contentDescription
 
         self.chapterLabel?.text = novel.lastChapter
         self.lastUpdateLabel?.text = novel.lastUpdated

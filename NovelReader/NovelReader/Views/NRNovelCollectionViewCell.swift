@@ -69,8 +69,8 @@ class NRNovelCollectionViewCell: UICollectionViewCell {
         self.addBorder()
     }
     
-    func configureContent(novel: NovelObject) {
-        self.contentImageView?.downloadedFrom(link: novel.imageURL ?? "")
+    func configureContent(novel: NRNovel) {
+        self.contentImageView?.downloadedFrom(link: novel.imageURL )
         self.titleLabel?.text = novel.title
         self.chapterLabel?.text = novel.lastChapter
         self.lastUpdateLabel?.text = novel.lastUpdated
@@ -100,8 +100,8 @@ class NRNovelCollectionViewCell: UICollectionViewCell {
         }
         
         let size = self.systemLayoutSizeFitting( CGSize(width: baseView.frame.width - 30, height: CGFloat.greatestFiniteMagnitude),
-                                                 withHorizontalFittingPriority: UILayoutPriorityFittingSizeLevel,
-                                                 verticalFittingPriority: UILayoutPriorityFittingSizeLevel)
+                                                 withHorizontalFittingPriority: UILayoutPriority.fittingSizeLevel,
+                                                 verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
         
         return CGSize(width: baseView.frame.width - 30, height: size.height)
         

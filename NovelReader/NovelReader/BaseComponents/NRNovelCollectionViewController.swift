@@ -22,29 +22,33 @@ class NRNovelCollectionHeaderView: UICollectionReusableView {
     
     func setupSegmentView() {
         
-        let segmentedControl = UISegmentedControl(items: [ "Hi", "wel" ])
-        
+        let segmentedControl = FTSegmentedControl(items: [ "Recent Update", "Top Views" ],
+                                                  completionHandler: { (segment) in
+                print(segment)
+        });
+
         self.backgroundColor = "#df6e6e".hexColor()
         self.pin(view: segmentedControl, withEdgeOffsets: FTEdgeOffsets(10))
     }
 }
 
-class NRNovelCollectionViewController: NRBaseViewController, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
+class NRNovelCollectionViewController: NRBaseViewController {
 
     lazy var collectionView: UICollectionView = self.getCollectionView()
     
-//    lazy var novel: Novels = Novels(urlString: Bundle.main.path(forResource: "Novellist", ofType: "html")!)
-    lazy var novel: Novels = Novels(urlString: "https://novelonlinefree.info/novel_list")
-
+//    lazy var novel: NRNovels = NRNovels(urlString: Bundle.main.path(forResource: "Novellist", ofType: "html")!)
+//    lazy var novel: NRNovels = NRNovels(urlString: "https://novelonlinefree.info/novel_list")
+    lazy var novel: NRNovels = NRNovels(urlString: "http://127.0.0.1:3000/users?jhj")
+    
     lazy var sampleCell: NRNovelCollectionViewCell = self.getSampleCell()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+  
         self.parseNovel()
         
-        self.view.backgroundColor = "#f7f3f0".hexColor()
-        
+
+//        self.view.theme = "default"
         collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
                                 forCellWithReuseIdentifier: "kNovelCellIdentifer")
         
@@ -54,7 +58,7 @@ class NRNovelCollectionViewController: NRBaseViewController, UICollectionViewDat
 
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.backgroundColor = .clear
 
         self.mainView?.pin(view: collectionView)
     }
@@ -79,18 +83,21 @@ extension NRNovelCollectionViewController {
     func getCollectionView() -> UICollectionView {
         let flow = self.getflowLayout()
         
-        return UICollectionView(frame: .zero, collectionViewLayout: flow)
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flow)
+        collectionView.backgroundView?.backgroundColor = .clear
+        
+        return collectionView
     }
     
     func parseNovel() {
-        NovelOnlineParser.parseNovelList(novel.baseUrlString, completionHandler: { (novelList) in
+        NRServiceProvider.fetchRecentUpdateList({ (novelList) in
             self.novel.novelList.append(contentsOf: novelList)
             self.collectionView.reloadData()
         })
     }
 }
 
-extension NRNovelCollectionViewController {
+extension NRNovelCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -105,13 +112,11 @@ extension NRNovelCollectionViewController {
         return reusableView!
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-    {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return novel.novelList.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
-    {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kNovelCellIdentifer", for: indexPath)
         
         let cur = novel.novelList[indexPath.row]
@@ -130,14 +135,9 @@ extension NRNovelCollectionViewController {
         
         return sampleCell.getSize(baseView: collectionView)
     }
-}
-
-extension NRNovelCollectionViewController {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
         let cur = novel.novelList[indexPath.row]
-
         self.performSegue(withIdentifier: "kShowNovelChapterList", sender: cur)
     }
 }
@@ -152,7 +152,7 @@ extension NRNovelCollectionViewController {
        
         if segue.identifier == "kShowNovelChapterList" {
             if let nextViewController = segue.destination as? NRNovelChapterViewController {
-                nextViewController.novel = sender as? NovelObject
+                nextViewController.novel = sender as? NRNovel
             }
         }
         else if segue.identifier == "kShowNovelReaderView" {
@@ -169,7 +169,7 @@ extension NRNovelCollectionViewController {
 //        floatingView?.show()
         
 //        var novels = NovelChapter(title: "title", url: (Bundle.main.path(forResource: "EmperorDominationChapter", ofType: "html")!))
-//        NovelOnlineParser.parseNovelReader(&novels)
+//        NRServiceProvider.parseNovelReader(&novels)
 //
 //        self.performSegue(withIdentifier: "kShowNovelReaderView", sender: novels)
 
