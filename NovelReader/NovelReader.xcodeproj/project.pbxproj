@@ -13,12 +13,45 @@
 		DE04001D2054610B00A8B57A /* FTCoreUtility.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400182054608700A8B57A /* FTCoreUtility.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE04001E2054610B00A8B57A /* FTMobileCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400192054608700A8B57A /* FTMobileCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE04001F2054610B00A8B57A /* FTMobileCoreUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400172054608600A8B57A /* FTMobileCoreUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		DE23237920551287004F1480 /* NRServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */; };
+		DE23237A20551287004F1480 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B41F49A5F80002C148 /* NRNovels.swift */; };
+		DE23237B20551287004F1480 /* NRBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */; };
+		DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */; };
+		DE23237D20551287004F1480 /* NRTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A11F497B5D0002C148 /* NRTabBarController.swift */; };
+		DE23237E20551287004F1480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1431F496BAB0002C148 /* AppDelegate.swift */; };
+		DE23237F20551287004F1480 /* NRNovelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B91F49E06A0002C148 /* NRNovelTableViewCell.swift */; };
+		DE23238020551287004F1480 /* NRNovelChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */; };
+		DE23238120551287004F1480 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
+		DE23238220551287004F1480 /* NRBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A01F497B5D0002C148 /* NRBaseViewController.swift */; };
+		DE23238320551287004F1480 /* FTFontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A21F51E9160088B77A /* FTFontPickerView.swift */; };
+		DE23238420551287004F1480 /* NRNovelDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9EDBB1F4FED4E00D54171 /* NRNovelDescriptionView.swift */; };
+		DE23238520551287004F1480 /* NRNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */; };
+		DE23238620551287004F1480 /* NRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B61F49A67F0002C148 /* NRUtility.swift */; };
+		DE23238720551287004F1480 /* FTFontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */; };
+		DE23238820551287004F1480 /* NRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */; };
+		DE23238920551287004F1480 /* NRServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */; };
+		DE23238F20551287004F1480 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
+		DE23239020551287004F1480 /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
+		DE23239120551287004F1480 /* NRDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA76530205140F20009F7F7 /* NRDataModel.json */; };
+		DE23239220551287004F1480 /* EmperorDominationChapter.html in Resources */ = {isa = PBXBuildFile; fileRef = DEC2979E1F51D02E0088B77A /* EmperorDominationChapter.html */; };
+		DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */; };
+		DE23239420551287004F1480 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
+		DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */; };
+		DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
+		DE23239720551287004F1480 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8D302A1F5704A20075FDE3 /* Themes.json */; };
+		DE23239820551287004F1480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14C1F496BAB0002C148 /* Assets.xcassets */; };
+		DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */; };
+		DE23239A20551287004F1480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
 		DE4383A11F4AEADC003DF8A7 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
 		DE4383A21F4AEADC003DF8A7 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
 		DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
 		DE4383B21F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */; };
 		DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
 		DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */; };
+		DE84280A20558FE8006605C0 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280520558FE7006605C0 /* NRNovel.swift */; };
+		DE84280B20558FE8006605C0 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280520558FE7006605C0 /* NRNovel.swift */; };
+		DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280620558FE7006605C0 /* NovelChapter.swift */; };
+		DE84280D20558FE8006605C0 /* NovelChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280620558FE7006605C0 /* NovelChapter.swift */; };
 		DE8D302B1F5704A20075FDE3 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8D302A1F5704A20075FDE3 /* Themes.json */; };
 		DEA76531205140F20009F7F7 /* NRDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA76530205140F20009F7F7 /* NRDataModel.json */; };
 		DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1431F496BAB0002C148 /* AppDelegate.swift */; };
@@ -33,7 +66,7 @@
 		DEA7E1A61F497B6C0002C148 /* NRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */; };
 		DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */; };
 		DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */; };
-		DEA7E1B51F49A5F80002C148 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B41F49A5F80002C148 /* NRNovel.swift */; };
+		DEA7E1B51F49A5F80002C148 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B41F49A5F80002C148 /* NRNovels.swift */; };
 		DEA7E1B71F49A67F0002C148 /* NRUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B61F49A67F0002C148 /* NRUtility.swift */; };
 		DEA7E1BA1F49E06A0002C148 /* NRNovelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1B91F49E06A0002C148 /* NRNovelTableViewCell.swift */; };
 		DEA9EDBA1F4FEA7D00D54171 /* NRNovelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */; };
@@ -47,6 +80,69 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DEA45C99205513CF008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE680B131F2BBD9500A9F68C;
+			remoteInfo = FTCoreUtility;
+		};
+		DEA45C9B205513CF008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE680B1C1F2BBD9500A9F68C;
+			remoteInfo = FTCoreUtilityTests;
+		};
+		DEA45C9D205513DE008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE680B121F2BBD9500A9F68C;
+			remoteInfo = FTCoreUtility;
+		};
+		DEA45CA5205513E3008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE9221A61EF28C9B000C8FC7;
+			remoteInfo = FTMobileCore;
+		};
+		DEA45CA7205513E3008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE9221AF1EF28C9C000C8FC7;
+			remoteInfo = FTMobileCoreTests;
+		};
+		DEA45CAF205513E7008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DE1485161F10B13600A250A6;
+			remoteInfo = FTMobileCoreUI;
+		};
+		DEA45CB1205513E7008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DEB569771F17DC2600B5F187;
+			remoteInfo = FTMobileCoreUITests;
+		};
+		DEA45CB3205513ED008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9221A51EF28C9B000C8FC7;
+			remoteInfo = FTMobileCore;
+		};
+		DEA45CB5205513F0008FA401 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DE1485151F10B13600A250A6;
+			remoteInfo = FTMobileCoreUI;
+		};
 		DEA7E1571F496BAB0002C148 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DEA7E1381F496BAB0002C148 /* Project object */;
@@ -64,6 +160,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		DE23239B20551287004F1480 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA7E19B1F4970400002C148 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -83,13 +189,20 @@
 		DE0400172054608600A8B57A /* FTMobileCoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCoreUI.framework; sourceTree = "<group>"; };
 		DE0400182054608700A8B57A /* FTCoreUtility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTCoreUtility.framework; sourceTree = "<group>"; };
 		DE0400192054608700A8B57A /* FTMobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCore.framework; sourceTree = "<group>"; };
+		DE2323A220551287004F1480 /* NovelReaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NovelReaderDemo-Info.plist"; path = "/Users/praveenprabhakar/Frameworks/xCodeProject/Concepts/NovelReader/NovelReader/NovelReaderDemo-Info.plist"; sourceTree = "<absolute>"; };
 		DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorsDomination.html; sourceTree = "<group>"; };
 		DE4383A01F4AEADC003DF8A7 /* Novellist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novellist.json; sourceTree = "<group>"; };
 		DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRNovelCollectionViewController.swift; path = BaseComponents/NRNovelCollectionViewController.swift; sourceTree = "<group>"; };
 		DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelCollectionViewCell.xib; sourceTree = "<group>"; };
 		DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRServiceConstants.swift; sourceTree = "<group>"; };
+		DE84280520558FE7006605C0 /* NRNovel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovel.swift; sourceTree = "<group>"; };
+		DE84280620558FE7006605C0 /* NovelChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelChapter.swift; sourceTree = "<group>"; };
 		DE8D302A1F5704A20075FDE3 /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
+		DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTCoreUtility.xcodeproj; path = ../../../MobileCore/FTCoreUtility/FTCoreUtility.xcodeproj; sourceTree = "<group>"; };
+		DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCore.xcodeproj; path = ../../../MobileCore/FTMobileCore/FTMobileCore.xcodeproj; sourceTree = "<group>"; };
+		DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCoreUI.xcodeproj; path = ../../../MobileCore/FTMobileCoreUI/FTMobileCoreUI.xcodeproj; sourceTree = "<group>"; };
 		DEA76530205140F20009F7F7 /* NRDataModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NRDataModel.json; sourceTree = "<group>"; };
 		DEA7E1401F496BAB0002C148 /* NovelReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA7E1431F496BAB0002C148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,7 +223,7 @@
 		DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRBaseView.swift; sourceTree = "<group>"; };
 		DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRBaseTableViewController.swift; sourceTree = "<group>"; };
 		DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRServiceProvider.swift; sourceTree = "<group>"; };
-		DEA7E1B41F49A5F80002C148 /* NRNovel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovel.swift; sourceTree = "<group>"; };
+		DEA7E1B41F49A5F80002C148 /* NRNovels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovels.swift; sourceTree = "<group>"; };
 		DEA7E1B61F49A67F0002C148 /* NRUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRUtility.swift; sourceTree = "<group>"; };
 		DEA7E1B91F49E06A0002C148 /* NRNovelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelTableViewCell.swift; sourceTree = "<group>"; };
 		DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelTableViewCell.xib; sourceTree = "<group>"; };
@@ -124,6 +237,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DE23238A20551287004F1480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA7E13D1F496BAB0002C148 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +283,42 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		DE84280420558FE7006605C0 /* ModelObjects */ = {
+			isa = PBXGroup;
+			children = (
+				DE84280520558FE7006605C0 /* NRNovel.swift */,
+				DE84280620558FE7006605C0 /* NovelChapter.swift */,
+			);
+			path = ModelObjects;
+			sourceTree = "<group>";
+		};
+		DEA45C95205513CF008FA401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEA45C9A205513CF008FA401 /* FTCoreUtility.framework */,
+				DEA45C9C205513CF008FA401 /* FTCoreUtilityTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEA45CA0205513E3008FA401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEA45CA6205513E3008FA401 /* FTMobileCore.framework */,
+				DEA45CA8205513E3008FA401 /* FTMobileCoreTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DEA45CAA205513E7008FA401 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DEA45CB0205513E7008FA401 /* FTMobileCoreUI.framework */,
+				DEA45CB2205513E7008FA401 /* FTMobileCoreUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		DEA7E1371F496BAB0002C148 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +336,7 @@
 				DEA7E1401F496BAB0002C148 /* NovelReader.app */,
 				DEA7E1561F496BAB0002C148 /* NovelReaderTests.xctest */,
 				DEA7E1611F496BAB0002C148 /* NovelReaderUITests.xctest */,
+				DE2323A220551287004F1480 /* NovelReaderDemo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -199,6 +356,7 @@
 				DEA7E14C1F496BAB0002C148 /* Assets.xcassets */,
 				DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */,
 				DEA7E1511F496BAB0002C148 /* Info.plist */,
+				DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */,
 				DEA7E1801F496C1C0002C148 /* NovelReader-Bridging-Header.h */,
 			);
 			path = NovelReader;
@@ -225,6 +383,9 @@
 		DEA7E1831F496D950002C148 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */,
+				DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */,
+				DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */,
 				DE0400182054608700A8B57A /* FTCoreUtility.framework */,
 				DE0400192054608700A8B57A /* FTMobileCore.framework */,
 				DE0400172054608600A8B57A /* FTMobileCoreUI.framework */,
@@ -254,8 +415,9 @@
 		DEA7E1AF1F4996910002C148 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				DE84280420558FE7006605C0 /* ModelObjects */,
 				DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */,
-				DEA7E1B41F49A5F80002C148 /* NRNovel.swift */,
+				DEA7E1B41F49A5F80002C148 /* NRNovels.swift */,
 				DEA7E1B61F49A67F0002C148 /* NRUtility.swift */,
 				DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */,
 			);
@@ -281,6 +443,27 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DE23237720551287004F1480 /* NovelReaderDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DE23239F20551287004F1480 /* Build configuration list for PBXNativeTarget "NovelReaderDemo" */;
+			buildPhases = (
+				DE23237820551287004F1480 /* Sources */,
+				DE23238A20551287004F1480 /* Frameworks */,
+				DE23238E20551287004F1480 /* Resources */,
+				DE23239B20551287004F1480 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DEA45CB6205513F0008FA401 /* PBXTargetDependency */,
+				DEA45CB4205513ED008FA401 /* PBXTargetDependency */,
+				DEA45C9E205513DE008FA401 /* PBXTargetDependency */,
+			);
+			name = NovelReaderDemo;
+			productName = NovelReader;
+			productReference = DE2323A220551287004F1480 /* NovelReaderDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		DEA7E13F1F496BAB0002C148 /* NovelReader */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA7E16A1F496BAB0002C148 /* Build configuration list for PBXNativeTarget "NovelReader" */;
@@ -345,6 +528,9 @@
 				LastUpgradeCheck = 0900;
 				ORGANIZATIONNAME = "Praveen Prabhakar";
 				TargetAttributes = {
+					DE23237720551287004F1480 = {
+						DevelopmentTeam = W6W48SVQX7;
+					};
 					DEA7E13F1F496BAB0002C148 = {
 						CreatedOnToolsVersion = 8.3.2;
 						DevelopmentTeam = W6W48SVQX7;
@@ -378,16 +564,95 @@
 			mainGroup = DEA7E1371F496BAB0002C148;
 			productRefGroup = DEA7E1411F496BAB0002C148 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = DEA45C95205513CF008FA401 /* Products */;
+					ProjectRef = DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */;
+				},
+				{
+					ProductGroup = DEA45CA0205513E3008FA401 /* Products */;
+					ProjectRef = DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */;
+				},
+				{
+					ProductGroup = DEA45CAA205513E7008FA401 /* Products */;
+					ProjectRef = DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				DEA7E13F1F496BAB0002C148 /* NovelReader */,
+				DE23237720551287004F1480 /* NovelReaderDemo */,
 				DEA7E1551F496BAB0002C148 /* NovelReaderTests */,
 				DEA7E1601F496BAB0002C148 /* NovelReaderUITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		DEA45C9A205513CF008FA401 /* FTCoreUtility.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FTCoreUtility.framework;
+			remoteRef = DEA45C99205513CF008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEA45C9C205513CF008FA401 /* FTCoreUtilityTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FTCoreUtilityTests.xctest;
+			remoteRef = DEA45C9B205513CF008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEA45CA6205513E3008FA401 /* FTMobileCore.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FTMobileCore.framework;
+			remoteRef = DEA45CA5205513E3008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEA45CA8205513E3008FA401 /* FTMobileCoreTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FTMobileCoreTests.xctest;
+			remoteRef = DEA45CA7205513E3008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEA45CB0205513E7008FA401 /* FTMobileCoreUI.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = FTMobileCoreUI.framework;
+			remoteRef = DEA45CAF205513E7008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		DEA45CB2205513E7008FA401 /* FTMobileCoreUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = FTMobileCoreUITests.xctest;
+			remoteRef = DEA45CB1205513E7008FA401 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
+		DE23238E20551287004F1480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE23238F20551287004F1480 /* EmperorsDomination.html in Resources */,
+				DE23239020551287004F1480 /* FTFontPickerView.xib in Resources */,
+				DE23239120551287004F1480 /* NRDataModel.json in Resources */,
+				DE23239220551287004F1480 /* EmperorDominationChapter.html in Resources */,
+				DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */,
+				DE23239420551287004F1480 /* Novellist.json in Resources */,
+				DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */,
+				DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */,
+				DE23239720551287004F1480 /* Themes.json in Resources */,
+				DE23239820551287004F1480 /* Assets.xcassets in Resources */,
+				DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */,
+				DE23239A20551287004F1480 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA7E13E1F496BAB0002C148 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -424,12 +689,38 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DE23237820551287004F1480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE23237920551287004F1480 /* NRServiceProvider.swift in Sources */,
+				DE23237A20551287004F1480 /* NRNovels.swift in Sources */,
+				DE23237B20551287004F1480 /* NRBaseTableViewController.swift in Sources */,
+				DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */,
+				DE23237D20551287004F1480 /* NRTabBarController.swift in Sources */,
+				DE23237E20551287004F1480 /* AppDelegate.swift in Sources */,
+				DE23237F20551287004F1480 /* NRNovelTableViewCell.swift in Sources */,
+				DE23238020551287004F1480 /* NRNovelChapterViewController.swift in Sources */,
+				DE23238120551287004F1480 /* NRNovelCollectionViewController.swift in Sources */,
+				DE23238220551287004F1480 /* NRBaseViewController.swift in Sources */,
+				DE23238320551287004F1480 /* FTFontPickerView.swift in Sources */,
+				DE23238420551287004F1480 /* NRNovelDescriptionView.swift in Sources */,
+				DE23238520551287004F1480 /* NRNovelCollectionViewCell.swift in Sources */,
+				DE23238620551287004F1480 /* NRUtility.swift in Sources */,
+				DE84280B20558FE8006605C0 /* NRNovel.swift in Sources */,
+				DE23238720551287004F1480 /* FTFontPickerViewController.swift in Sources */,
+				DE84280D20558FE8006605C0 /* NovelChapter.swift in Sources */,
+				DE23238820551287004F1480 /* NRBaseView.swift in Sources */,
+				DE23238920551287004F1480 /* NRServiceConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DEA7E13C1F496BAB0002C148 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */,
-				DEA7E1B51F49A5F80002C148 /* NRNovel.swift in Sources */,
+				DEA7E1B51F49A5F80002C148 /* NRNovels.swift in Sources */,
 				DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */,
 				DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */,
 				DEA7E1A41F497B5D0002C148 /* NRTabBarController.swift in Sources */,
@@ -442,7 +733,9 @@
 				DEA9EDBC1F4FED4E00D54171 /* NRNovelDescriptionView.swift in Sources */,
 				DE4383B21F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift in Sources */,
 				DEA7E1B71F49A67F0002C148 /* NRUtility.swift in Sources */,
+				DE84280A20558FE8006605C0 /* NRNovel.swift in Sources */,
 				DEC297A51F51EFDC0088B77A /* FTFontPickerViewController.swift in Sources */,
+				DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */,
 				DEA7E1A61F497B6C0002C148 /* NRBaseView.swift in Sources */,
 				DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */,
 			);
@@ -467,6 +760,21 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DEA45C9E205513DE008FA401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTCoreUtility;
+			targetProxy = DEA45C9D205513DE008FA401 /* PBXContainerItemProxy */;
+		};
+		DEA45CB4205513ED008FA401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTMobileCore;
+			targetProxy = DEA45CB3205513ED008FA401 /* PBXContainerItemProxy */;
+		};
+		DEA45CB6205513F0008FA401 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FTMobileCoreUI;
+			targetProxy = DEA45CB5205513F0008FA401 /* PBXContainerItemProxy */;
+		};
 		DEA7E1581F496BAB0002C148 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DEA7E13F1F496BAB0002C148 /* NovelReader */;
@@ -499,6 +807,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DE2323A020551287004F1480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NovelReader/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "NovelReader/NovelReaderDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		DE2323A120551287004F1480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEVELOPMENT_TEAM = W6W48SVQX7;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/NovelReader/Frameworks",
+					"$(PROJECT_DIR)/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = "NovelReader/NovelReaderDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
 		DEA7E1681F496BAB0002C148 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -720,6 +1073,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DE23239F20551287004F1480 /* Build configuration list for PBXNativeTarget "NovelReaderDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DE2323A020551287004F1480 /* Debug */,
+				DE2323A120551287004F1480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		DEA7E13B1F496BAB0002C148 /* Build configuration list for PBXProject "NovelReader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

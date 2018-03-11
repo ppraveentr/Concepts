@@ -28,12 +28,12 @@ class NRNovelChapterViewController: NRBaseTableViewController {
         tableView.backgroundColor = .clear
         tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifer")
         
-        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (value: [String : Any]) in
+        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (value: JSON) in
             self.configureContent(value: value)
         })
     }
     
-    func configureContent(value: [String : Any]) {
+    func configureContent(value: JSON) {
         
         NRServiceProvider.getNovelChapters(&self.novel!, details: value)
         

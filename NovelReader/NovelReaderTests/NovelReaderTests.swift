@@ -22,7 +22,6 @@ class NovelReaderTests: XCTestCase {
     }
     
     func testExample() {
-        
        
     }
     

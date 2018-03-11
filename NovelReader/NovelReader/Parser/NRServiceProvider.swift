@@ -23,17 +23,8 @@ class NRServiceProvider {
     class func fetchRecentUpdateList(_ completionHandler: @escaping (_ novelsList: [NRNovel]) -> Swift.Void) {
         
         let parse = { (html: Data) in
-            
-//            do {
-                let novelList: [NRNovel] = try! JSONDecoder().decode([NRNovel].self, from:html)
-                
-                //Send it main object
-                DispatchQueue.main.async() { () -> Void in
-                    completionHandler(novelList)
-                }
-//            } catch {
-//
-//            }
+            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
+            completionHandler(novelList)
         }
         
         FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
@@ -43,16 +34,11 @@ class NRServiceProvider {
     
     //Get list of all chapters from a single NRNovelObject
     class func getNovelChapters(_ novel: NRNovel, getChapters: Bool = true,
-                                completionHandler: @escaping (_ novelsList: [String:Any]) -> Swift.Void) {
+                                completionHandler: @escaping (_ novelsList: JSON) -> Swift.Void) {
 
         let parse = { (html: String) in
-            
-            let valye: [String:Any] = [:]
-            
-            //Send it main object
-            DispatchQueue.main.async() { () -> Void in
-                completionHandler(valye)
-            }
+            let valye: JSON = [:]
+            completionHandler(valye)
         }
         
         FTServiceClient.getContentFromURL(self.nonvelChaptersList(novel: novel), completionHandler: { (htmlString, data, httpURLResponse) in
@@ -61,7 +47,7 @@ class NRServiceProvider {
     }
     
     //Get list of all chapters from a single NRNovelObject
-    class func getNovelChapters(_ novel: inout NRNovel, details: [String: Any]) {
+    class func getNovelChapters(_ novel: inout NRNovel, details: JSON) {
         
         if let value = details["title"] as? String {
             novel.title = value
@@ -85,11 +71,7 @@ class NRServiceProvider {
                                 completionHandler: @escaping (_ chapterContent: String) -> Swift.Void) {
         
         let parse = { (html: String) in
-
-            //Send it main object
-            DispatchQueue.main.async() { () -> Void in
-                completionHandler("")
-            }
+            completionHandler("")
         }
         
         FTServiceClient.getContentFromURL(url) { (htmlString, data, httpURLResponse) in
