@@ -12,7 +12,7 @@ class FTFontPickerViewController: FTBaseViewController {
     
     var pickerView = FTFontPickerView.fromNib() as? FTFontPickerView
     
-    var fontPickerViewDelegate: FTFontPickerViewProtocal? = nil {
+    var fontPickerViewDelegate: FTFontPickerViewprotocol? = nil {
         didSet{
             pickerView?.pickerDelegate = fontPickerViewDelegate
         }

@@ -13,7 +13,7 @@ public enum FontSizePicker {
     case decrement
 }
 
-public protocol FTFontPickerViewProtocal {
+public protocol FTFontPickerViewprotocol {
     
     func pickerColor(textColor: UIColor, backgroundColor: UIColor)
     func fontSize(_ size: FontSizePicker)
@@ -22,7 +22,7 @@ public protocol FTFontPickerViewProtocal {
 
 open class FTFontPickerView: FTView {
     
-    var pickerDelegate: FTFontPickerViewProtocal?
+    var pickerDelegate: FTFontPickerViewprotocol?
     
     @IBOutlet weak var decrementFontButton: FTButton!
     @IBOutlet weak var incrementFontButton: FTButton!

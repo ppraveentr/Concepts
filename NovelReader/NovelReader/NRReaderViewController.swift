@@ -56,7 +56,7 @@ class NRReaderViewController: FTBaseViewController {
     }
 }
 
-extension NRReaderViewController: FTFontPickerViewProtocal {
+extension NRReaderViewController: FTFontPickerViewprotocol {
 
     func fontSize(_ size: FontSizePicker) {
         
