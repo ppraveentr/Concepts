@@ -1,4 +1,4 @@
-struct NRNovel: FTModelData {
+final class NRNovel: FTModelData {
     var identifer: String = ""
     var lastChapter: String = ""
     var imageURL: String = ""
@@ -110,4 +110,3 @@ struct NRNovel: FTModelData {
     }
     
 }
-

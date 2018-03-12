@@ -1,4 +1,4 @@
-struct NovelChapter: FTModelData {
+final class NovelChapter: FTModelData {
     var shortTitle: String = ""
     var title: String = ""
     var url: String = ""
@@ -54,4 +54,3 @@ struct NovelChapter: FTModelData {
     }
     
 }
-
