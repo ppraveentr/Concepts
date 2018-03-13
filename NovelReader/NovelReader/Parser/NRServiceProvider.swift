@@ -22,14 +22,16 @@ class NRServiceProvider {
     //Get list of all Novels
     class func fetchRecentUpdateList(_ completionHandler: @escaping (_ novelsList: [NRNovel]) -> Swift.Void) {
         
-        let parse = { (html: Data) in
-            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
-            completionHandler(novelList)
-        }
+        FTServiceClient.make("FetchList") 
         
-        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
-            parse(data)
-        })
+//        let parse = { (html: Data) in
+//            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
+//            completionHandler(novelList)
+//        }
+//
+//        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
+//            parse(data)
+//        })
     }
     
     //Get list of all chapters from a single NRNovelObject

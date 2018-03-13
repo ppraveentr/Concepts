@@ -13,19 +13,32 @@ class NRAppDelegate: FTAppDelegate {
 
     open override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
-//        FTDataModelCreator.configureSourcePath(path: Bundle.main.path(forResource: "NRDataModel", ofType: "json")!);
-//        FTDataModelCreator.generateOutput()
-        
+        configBindings()
         setAppTheme()
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+    
+    func configBindings() {
+        //App Config
+        FTMobileConfig.appBaseURL = "https://novelreader-online.herokuapp.com"
+        
+        //Model Binding Generator
+        if let resourcePath = Bundle.main.resourceURL {
+            FTModelCreator.configureSourcePath(path: resourcePath.appendingPathComponent("Bindings/ModelBindings").path);
+            FTModelCreator.generateOutput()
+        }
+        
+        //Service Binding
+        FTMobileConfig.serviceBindingPath = "Bindings/ServiceBindings"
+        print("Service Binding Path: ",FTMobileConfig.serviceBindingDirectory() )
     }
     
     func setAppTheme() {
 
         if
             let theme = Bundle.main.path(forResource: "Themes", ofType: "json"),
-            let themeContent = try? theme.JSONContentAtPath() as! FTThemeDic {
+            let themeContent: FTThemeDic = try! theme.jsonContentAtPath() {
             
             FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: [NRAppDelegate.self])
         }

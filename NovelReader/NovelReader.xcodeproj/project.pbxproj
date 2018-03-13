@@ -30,20 +30,13 @@
 		DE23238720551287004F1480 /* FTFontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */; };
 		DE23238820551287004F1480 /* NRBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1A51F497B6C0002C148 /* NRBaseView.swift */; };
 		DE23238920551287004F1480 /* NRServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */; };
-		DE23238F20551287004F1480 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
 		DE23239020551287004F1480 /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
-		DE23239120551287004F1480 /* NRDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA76530205140F20009F7F7 /* NRDataModel.json */; };
-		DE23239220551287004F1480 /* EmperorDominationChapter.html in Resources */ = {isa = PBXBuildFile; fileRef = DEC2979E1F51D02E0088B77A /* EmperorDominationChapter.html */; };
 		DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */; };
-		DE23239420551287004F1480 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
 		DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */; };
 		DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
-		DE23239720551287004F1480 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8D302A1F5704A20075FDE3 /* Themes.json */; };
 		DE23239820551287004F1480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14C1F496BAB0002C148 /* Assets.xcassets */; };
 		DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */; };
 		DE23239A20551287004F1480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
-		DE4383A11F4AEADC003DF8A7 /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */; };
-		DE4383A21F4AEADC003DF8A7 /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DE4383A01F4AEADC003DF8A7 /* Novellist.json */; };
 		DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
 		DE4383B21F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */; };
 		DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
@@ -52,8 +45,6 @@
 		DE84280B20558FE8006605C0 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280520558FE7006605C0 /* NRNovel.swift */; };
 		DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280620558FE7006605C0 /* NovelChapter.swift */; };
 		DE84280D20558FE8006605C0 /* NovelChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280620558FE7006605C0 /* NovelChapter.swift */; };
-		DE8D302B1F5704A20075FDE3 /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DE8D302A1F5704A20075FDE3 /* Themes.json */; };
-		DEA76531205140F20009F7F7 /* NRDataModel.json in Resources */ = {isa = PBXBuildFile; fileRef = DEA76530205140F20009F7F7 /* NRDataModel.json */; };
 		DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1431F496BAB0002C148 /* AppDelegate.swift */; };
 		DEA7E1461F496BAB0002C148 /* NRNovelChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */; };
 		DEA7E14B1F496BAB0002C148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
@@ -72,8 +63,17 @@
 		DEA9EDBA1F4FEA7D00D54171 /* NRNovelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */; };
 		DEA9EDBC1F4FED4E00D54171 /* NRNovelDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA9EDBB1F4FED4E00D54171 /* NRNovelDescriptionView.swift */; };
 		DEA9EDBE1F4FED5500D54171 /* NRNovelDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */; };
+		DEAD34172058263C0064C46A /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DEAD340E2058263C0064C46A /* Novellist.json */; };
+		DEAD34182058263C0064C46A /* Novellist.json in Resources */ = {isa = PBXBuildFile; fileRef = DEAD340E2058263C0064C46A /* Novellist.json */; };
+		DEAD34192058263C0064C46A /* EmperorDominationChapter.html in Resources */ = {isa = PBXBuildFile; fileRef = DEAD340F2058263C0064C46A /* EmperorDominationChapter.html */; };
+		DEAD341A2058263C0064C46A /* EmperorDominationChapter.html in Resources */ = {isa = PBXBuildFile; fileRef = DEAD340F2058263C0064C46A /* EmperorDominationChapter.html */; };
+		DEAD341B2058263C0064C46A /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DEAD34102058263C0064C46A /* EmperorsDomination.html */; };
+		DEAD341C2058263C0064C46A /* EmperorsDomination.html in Resources */ = {isa = PBXBuildFile; fileRef = DEAD34102058263C0064C46A /* EmperorsDomination.html */; };
+		DEAD341F2058263C0064C46A /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DEAD34162058263C0064C46A /* Themes.json */; };
+		DEAD34202058263C0064C46A /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DEAD34162058263C0064C46A /* Themes.json */; };
+		DEAD3422205826660064C46A /* Bindings in Resources */ = {isa = PBXBuildFile; fileRef = DEAD3421205826660064C46A /* Bindings */; };
+		DEAD3423205826660064C46A /* Bindings in Resources */ = {isa = PBXBuildFile; fileRef = DEAD3421205826660064C46A /* Bindings */; };
 		DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */; };
-		DEC2979F1F51D02E0088B77A /* EmperorDominationChapter.html in Resources */ = {isa = PBXBuildFile; fileRef = DEC2979E1F51D02E0088B77A /* EmperorDominationChapter.html */; };
 		DEC297A11F51E44B0088B77A /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
 		DEC297A31F51E9160088B77A /* FTFontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A21F51E9160088B77A /* FTFontPickerView.swift */; };
 		DEC297A51F51EFDC0088B77A /* FTFontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */; };
@@ -191,19 +191,15 @@
 		DE0400192054608700A8B57A /* FTMobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCore.framework; sourceTree = "<group>"; };
 		DE2323A220551287004F1480 /* NovelReaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NovelReaderDemo-Info.plist"; path = "/Users/praveenprabhakar/Frameworks/xCodeProject/Concepts/NovelReader/NovelReader/NovelReaderDemo-Info.plist"; sourceTree = "<absolute>"; };
-		DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorsDomination.html; sourceTree = "<group>"; };
-		DE4383A01F4AEADC003DF8A7 /* Novellist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novellist.json; sourceTree = "<group>"; };
 		DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRNovelCollectionViewController.swift; path = BaseComponents/NRNovelCollectionViewController.swift; sourceTree = "<group>"; };
 		DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelCollectionViewCell.xib; sourceTree = "<group>"; };
 		DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRServiceConstants.swift; sourceTree = "<group>"; };
 		DE84280520558FE7006605C0 /* NRNovel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovel.swift; sourceTree = "<group>"; };
 		DE84280620558FE7006605C0 /* NovelChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelChapter.swift; sourceTree = "<group>"; };
-		DE8D302A1F5704A20075FDE3 /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
 		DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTCoreUtility.xcodeproj; path = ../../../MobileCore/FTCoreUtility/FTCoreUtility.xcodeproj; sourceTree = "<group>"; };
 		DEA45C9F205513E3008FA401 /* FTMobileCore.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCore.xcodeproj; path = ../../../MobileCore/FTMobileCore/FTMobileCore.xcodeproj; sourceTree = "<group>"; };
 		DEA45CA9205513E7008FA401 /* FTMobileCoreUI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTMobileCoreUI.xcodeproj; path = ../../../MobileCore/FTMobileCoreUI/FTMobileCoreUI.xcodeproj; sourceTree = "<group>"; };
-		DEA76530205140F20009F7F7 /* NRDataModel.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = NRDataModel.json; sourceTree = "<group>"; };
 		DEA7E1401F496BAB0002C148 /* NovelReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DEA7E1431F496BAB0002C148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRNovelChapterViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +225,12 @@
 		DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelTableViewCell.xib; sourceTree = "<group>"; };
 		DEA9EDBB1F4FED4E00D54171 /* NRNovelDescriptionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelDescriptionView.swift; sourceTree = "<group>"; };
 		DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelDescriptionView.xib; sourceTree = "<group>"; };
+		DEAD340E2058263C0064C46A /* Novellist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Novellist.json; sourceTree = "<group>"; };
+		DEAD340F2058263C0064C46A /* EmperorDominationChapter.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorDominationChapter.html; sourceTree = "<group>"; };
+		DEAD34102058263C0064C46A /* EmperorsDomination.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorsDomination.html; sourceTree = "<group>"; };
+		DEAD34162058263C0064C46A /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
+		DEAD3421205826660064C46A /* Bindings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bindings; sourceTree = "<group>"; };
 		DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRReaderViewController.swift; sourceTree = "<group>"; };
-		DEC2979E1F51D02E0088B77A /* EmperorDominationChapter.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = EmperorDominationChapter.html; sourceTree = "<group>"; };
 		DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTFontPickerView.xib; sourceTree = "<group>"; };
 		DEC297A21F51E9160088B77A /* FTFontPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerView.swift; sourceTree = "<group>"; };
 		DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerViewController.swift; sourceTree = "<group>"; };
@@ -271,18 +271,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DE43839E1F4AEADC003DF8A7 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				DE8D302A1F5704A20075FDE3 /* Themes.json */,
-				DE43839F1F4AEADC003DF8A7 /* EmperorsDomination.html */,
-				DE4383A01F4AEADC003DF8A7 /* Novellist.json */,
-				DEC2979E1F51D02E0088B77A /* EmperorDominationChapter.html */,
-				DEA76530205140F20009F7F7 /* NRDataModel.json */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		DE84280420558FE7006605C0 /* ModelObjects */ = {
 			isa = PBXGroup;
 			children = (
@@ -344,7 +332,7 @@
 		DEA7E1421F496BAB0002C148 /* NovelReader */ = {
 			isa = PBXGroup;
 			children = (
-				DE43839E1F4AEADC003DF8A7 /* Resources */,
+				DEAD340C2058263C0064C46A /* Resources */,
 				DEA7E1B81F49E04B0002C148 /* Views */,
 				DEA7E1AF1F4996910002C148 /* Parser */,
 				DEA7E19F1F497B5D0002C148 /* BaseComponents */,
@@ -438,6 +426,34 @@
 				DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DEAD340C2058263C0064C46A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD3421205826660064C46A /* Bindings */,
+				DEAD340D2058263C0064C46A /* MockData */,
+				DEAD34152058263C0064C46A /* Themes */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		DEAD340D2058263C0064C46A /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD340E2058263C0064C46A /* Novellist.json */,
+				DEAD340F2058263C0064C46A /* EmperorDominationChapter.html */,
+				DEAD34102058263C0064C46A /* EmperorsDomination.html */,
+			);
+			path = MockData;
+			sourceTree = "<group>";
+		};
+		DEAD34152058263C0064C46A /* Themes */ = {
+			isa = PBXGroup;
+			children = (
+				DEAD34162058263C0064C46A /* Themes.json */,
+			);
+			path = Themes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,17 +654,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE23238F20551287004F1480 /* EmperorsDomination.html in Resources */,
 				DE23239020551287004F1480 /* FTFontPickerView.xib in Resources */,
-				DE23239120551287004F1480 /* NRDataModel.json in Resources */,
-				DE23239220551287004F1480 /* EmperorDominationChapter.html in Resources */,
+				DEAD341C2058263C0064C46A /* EmperorsDomination.html in Resources */,
 				DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */,
-				DE23239420551287004F1480 /* Novellist.json in Resources */,
 				DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */,
 				DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */,
-				DE23239720551287004F1480 /* Themes.json in Resources */,
 				DE23239820551287004F1480 /* Assets.xcassets in Resources */,
+				DEAD3423205826660064C46A /* Bindings in Resources */,
 				DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */,
+				DEAD341A2058263C0064C46A /* EmperorDominationChapter.html in Resources */,
+				DEAD34202058263C0064C46A /* Themes.json in Resources */,
+				DEAD34182058263C0064C46A /* Novellist.json in Resources */,
 				DE23239A20551287004F1480 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -657,17 +673,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DE4383A11F4AEADC003DF8A7 /* EmperorsDomination.html in Resources */,
 				DEC297A11F51E44B0088B77A /* FTFontPickerView.xib in Resources */,
-				DEA76531205140F20009F7F7 /* NRDataModel.json in Resources */,
-				DEC2979F1F51D02E0088B77A /* EmperorDominationChapter.html in Resources */,
+				DEAD341B2058263C0064C46A /* EmperorsDomination.html in Resources */,
 				DEA7E1501F496BAB0002C148 /* LaunchScreen.storyboard in Resources */,
-				DE4383A21F4AEADC003DF8A7 /* Novellist.json in Resources */,
 				DEA9EDBA1F4FEA7D00D54171 /* NRNovelTableViewCell.xib in Resources */,
 				DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */,
-				DE8D302B1F5704A20075FDE3 /* Themes.json in Resources */,
 				DEA7E14D1F496BAB0002C148 /* Assets.xcassets in Resources */,
+				DEAD3422205826660064C46A /* Bindings in Resources */,
 				DEA9EDBE1F4FED5500D54171 /* NRNovelDescriptionView.xib in Resources */,
+				DEAD34192058263C0064C46A /* EmperorDominationChapter.html in Resources */,
+				DEAD341F2058263C0064C46A /* Themes.json in Resources */,
+				DEAD34172058263C0064C46A /* Novellist.json in Resources */,
 				DEA7E14B1F496BAB0002C148 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

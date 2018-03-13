@@ -1,0 +1,19 @@
+{
+    "NovelBase": {
+        "timeout": "60"
+    },
+    "FetchList": {
+        "super": "NovelBase",
+        "type": "GET",
+        "path": "novel/updateList",
+        "requestQuery": {
+            "type": "type",
+            "category": "category",
+            "state": "state",
+            "page": "page"
+        },
+        "response": {
+            "arrayOf": "NRNovel"
+        }
+    }
+}

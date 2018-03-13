@@ -91,7 +91,7 @@ extension NRNovelCollectionViewController {
     
     func parseNovel() {
         NRServiceProvider.fetchRecentUpdateList({ (novelList) in
-            self.novel.novelList.append(contentsOf: novelList)
+//            self.novel.novelList.append(contentsOf: novelList)
             self.collectionView.reloadData()
         })
     }
