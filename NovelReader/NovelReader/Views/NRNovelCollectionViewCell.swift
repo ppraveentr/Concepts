@@ -70,7 +70,9 @@ class NRNovelCollectionViewCell: UICollectionViewCell {
     }
     
     func configureContent(novel: NRNovel) {
-        self.contentImageView?.downloadedFrom(link: novel.imageURL )
+        if let url = novel.imageURL {
+         self.contentImageView?.downloadedFrom(link: url)
+        }
         self.titleLabel?.text = novel.title
         self.chapterLabel?.text = novel.lastChapter
         self.lastUpdateLabel?.text = novel.lastUpdated

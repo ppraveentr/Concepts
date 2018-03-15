@@ -24,10 +24,10 @@ class NRAppDelegate: FTAppDelegate {
         FTMobileConfig.appBaseURL = "https://novelreader-online.herokuapp.com"
         
         //Model Binding Generator
-        if let resourcePath = Bundle.main.resourceURL {
-            FTModelCreator.configureSourcePath(path: resourcePath.appendingPathComponent("Bindings/ModelBindings").path);
-            FTModelCreator.generateOutput()
-        }
+//        if let resourcePath = Bundle.main.resourceURL {
+//            FTModelCreator.configureSourcePath(path: resourcePath.appendingPathComponent("Bindings/ModelBindings").path);
+//            FTModelCreator.generateOutput()
+//        }
         
         //Service Binding
         FTMobileConfig.serviceBindingPath = "Bindings/ServiceBindings"

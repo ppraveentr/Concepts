@@ -58,7 +58,7 @@ extension NRNovelChapterViewController {
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return novel?.chapterList.count ?? 0
+        return novel?.chapterList?.count ?? 0
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -71,7 +71,7 @@ extension NRNovelChapterViewController {
         
         if
             let cell = cell as? NRNovelTableViewCell,
-            let cur = novel?.chapterList[indexPath.section] {
+            let cur = novel?.chapterList?[indexPath.section] {
             cell.configureContent(novel: cur)
         }
         
@@ -83,7 +83,7 @@ extension NRNovelChapterViewController {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if let cur = novel?.chapterList[indexPath.section] {
+        if let cur = novel?.chapterList?[indexPath.section] {
             self.performSegue(withIdentifier: "kShowNovelReaderView", sender: cur)
         }
     }

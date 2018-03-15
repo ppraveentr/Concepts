@@ -24,14 +24,22 @@ class NRServiceProvider {
         
         FTServiceClient.make("FetchList") 
         
-//        let parse = { (html: Data) in
-//            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
-//            completionHandler(novelList)
-//        }
-//
-//        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
-//            parse(data)
-//        })
+        let parse = { (html: Data) in
+            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
+            do {
+                if let model = novelList.first!.jsonModelData() {
+                        print( model)
+                }
+                //novelList.jsonString()
+                print(novelList.first!.jsonString() ?? "")
+                //print(novelList.jsonModelData() ?? "sd")
+            }
+            completionHandler(novelList)
+        }
+
+        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
+            parse(data)
+        })
     }
     
     //Get list of all chapters from a single NRNovelObject
