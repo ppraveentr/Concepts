@@ -415,7 +415,8 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI11FTSearchBar")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI18FTSegmentedControl")
 @interface FTSegmentedControl : UISegmentedControl
-- (nonnull instancetype)initWithItems:(NSArray * _Nonnull)items completionHandler:(void (^ _Nonnull)(NSInteger))completionHandler SWIFT_DEPRECATED_OBJC("Swift initializer 'FTSegmentedControl.init(items:completionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+@property (nonatomic, copy) void (^ _Nullable handler)(NSInteger) SWIFT_DEPRECATED_OBJC("Swift property 'FTSegmentedControl.handler' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (nonnull instancetype)initWithItems:(NSArray * _Nonnull)items completionHandler:(void (^ _Nullable)(NSInteger))completionHandler SWIFT_DEPRECATED_OBJC("Swift initializer 'FTSegmentedControl.init(items:completionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithItems:(NSArray * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
