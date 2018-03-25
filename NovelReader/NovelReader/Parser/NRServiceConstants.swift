@@ -8,5 +8,6 @@
 
 import Foundation
 
-let NRService_recentUpdateList = "recentUpdateList"
-let NRService_fetchNovelList = "fetchNovelList"
+let kNRService_recentUpdateList = "recentUpdateList"
+typealias kfetchNovelList = NRService_fetchNovelList
+

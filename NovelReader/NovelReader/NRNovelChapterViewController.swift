@@ -92,7 +92,7 @@ extension NRNovelChapterViewController {
         
         if segue.identifier == "kShowNovelReaderView" {
             if let nextViewController = segue.destination as? NRReaderViewController{
-                nextViewController.novel = sender as? NovelChapter
+                nextViewController.novel = sender as? NRNovelChapter
             }
         }
     }

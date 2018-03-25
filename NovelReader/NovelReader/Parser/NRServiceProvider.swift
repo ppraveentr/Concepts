@@ -9,37 +9,53 @@
 import Foundation
 
 class NRServiceProvider {
-    
-//    static let fetchNovelList = "http://127.0.0.1:3000/users?jhj";
-    static let _recentUpdateList = {
-        return Bundle.main.path(forResource: "Novellist", ofType: "json")!
-    };
-    
+
+//    static let _recentUpdateList = {
+//        return Bundle.main.path(forResource: "Novellist", ofType: "json")!
+//    };
+
     static func nonvelChaptersList(novel: NRNovel) -> String {
         return Bundle.main.path(forResource: "Novellist", ofType: "json")!
     };
     
     //Get list of all Novels
-    class func fetchRecentUpdateList(_ completionHandler: @escaping (_ novelsList: [NRNovel]) -> Swift.Void) {
-        
-        FTServiceClient.make("FetchList") 
-        
-        let parse = { (html: Data) in
-            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
-            do {
-                if let model = novelList.first!.jsonModelData() {
-                        print( model)
-                }
-                //novelList.jsonString()
-                print(novelList.first!.jsonString() ?? "")
-                //print(novelList.jsonModelData() ?? "sd")
-            }
-            completionHandler(novelList)
-        }
+    class func fetchRecentUpdateList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
 
-        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
-            parse(data)
-        })
+        FTServiceClient.make(kfetchNovelList.self, modelStack: novel) { (status) in
+
+            switch (status) {
+            case .success(let res, _):
+                if let novelList = res as? NRNovels {
+
+                    var novel = novel
+                    if (novel != nil) {
+                        novel!.merge(data: novelList)
+                    }else{
+                        novel = novelList
+                    }
+
+                    completionHandler(novel!)
+                }
+                break
+            case .failed(let res, _):
+                completionHandler(res as? NRNovels)
+                break
+            }
+        }
+        
+//        let parse = { (html: Data) in
+//            let novelList: [NRNovel] = try! FTModelObject.createDataModel(ofType: [NRNovel].self, fromJSON: html)
+//          
+//                
+//                print(novelList.first!.jsonString() ?? "")
+//                //print(novelList.jsonModelData() ?? "sd")
+//        
+//            completionHandler(novelList)
+//        }
+//
+//        FTServiceClient.getContentFromURL(_recentUpdateList(), completionHandler: { (htmlString, data, httpURLResponse) in
+//            parse(data)
+//        })
     }
     
     //Get list of all chapters from a single NRNovelObject
@@ -67,7 +83,7 @@ class NRServiceProvider {
             novel.imageURL = value
         }
         
-        if let value = details["chapterList"] as? [NovelChapter] {
+        if let value = details["chapterList"] as? [NRNovelChapter] {
             novel.chapterList = value
         }
         

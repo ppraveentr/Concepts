@@ -10,7 +10,7 @@ import Foundation
 
 class NRReaderViewController: FTBaseViewController {
     
-    var novel: NovelChapter?
+    var novel: NRNovelChapter?
     
     @IBOutlet var fontPickerBarItem: UIBarButtonItem?
     @IBOutlet var chapterToolBarItem: UIToolbar?

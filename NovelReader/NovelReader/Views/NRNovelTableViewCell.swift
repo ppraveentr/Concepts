@@ -19,7 +19,7 @@ class NRNovelTableViewCell: UITableViewCell {
         self.addBorder()
     }
     
-    func configureContent(novel: NovelChapter) {
+    func configureContent(novel: NRNovelChapter) {
         
         self.titleLabel?.text = novel.shortTitle 
         self.chapterDate?.text = novel.releaseDate 

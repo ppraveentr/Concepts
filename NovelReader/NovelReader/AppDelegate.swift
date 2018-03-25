@@ -22,8 +22,10 @@ class NRAppDelegate: FTAppDelegate {
     func configBindings() {
         //App Config
         FTMobileConfig.appBaseURL = "https://novelreader-online.herokuapp.com"
-        
-        //Model Binding Generator
+        FTMobileConfig.mockURL = "http://127.0.0.1:3000/"
+        FTMobileConfig.isMockData = true
+
+//        //Model Binding Generator
 //        if let resourcePath = Bundle.main.resourceURL {
 //            FTModelCreator.configureSourcePath(path: resourcePath.appendingPathComponent("Bindings/ModelBindings").path);
 //            FTModelCreator.generateOutput()

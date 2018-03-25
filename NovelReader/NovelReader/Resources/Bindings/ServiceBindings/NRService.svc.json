@@ -2,7 +2,7 @@
     "NovelBase": {
         "timeout": "60"
     },
-    "FetchList": {
+    "fetchNovelList": {
         "super": "NovelBase",
         "type": "GET",
         "path": "novel/updateList",

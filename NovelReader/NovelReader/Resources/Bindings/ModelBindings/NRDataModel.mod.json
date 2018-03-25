@@ -1,4 +1,15 @@
 {
+    "NRNovels": {
+        "type": "type",
+        "category": "category",
+        "state": "state",
+        "page": "page",
+        "totalItems": "totalItems",
+        "novelList": {
+            "bindKey": "novelList",
+            "arrayOf": "NRNovel"
+        }
+    },
     "NRNovel": {
         "identifer": "id",
         "title": "name",
@@ -11,14 +22,14 @@
         "lastChapter": "lastchapter",
         "keyworkds": {
             "bindKey": "keyworkds",
-            "bindAs": "NovelChapter"
+            "arrayOf": "String"
         },
         "chapterList": {
             "bindKey": "chapterList",
-            "arrayOf": "NovelChapter"
+            "arrayOf": "NRNovelChapter"
         }
     },
-    "NovelChapter": {
+    "NRNovelChapter": {
         "url": "url",
         "title": "title",
         "shortTitle": "shortTitle",
