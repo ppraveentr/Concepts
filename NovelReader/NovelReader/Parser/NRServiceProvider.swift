@@ -21,11 +21,11 @@ class NRServiceProvider {
     //Get list of all Novels
     class func fetchRecentUpdateList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
 
-        FTServiceClient.make(kfetchNovelList.self, modelStack: novel) { (status) in
+        FTServiceClient.make(kfetchNovelList, modelStack: novel) { (status) in
 
             switch (status) {
-            case .success(let res, _):
-                if let novelList = res as? NRNovels {
+            case .success(let responseStack, _):
+                if let novelList = responseStack.responseStack as? NRNovels {
 
                     var novel = novel
                     if (novel != nil) {
@@ -38,7 +38,7 @@ class NRServiceProvider {
                 }
                 break
             case .failed(let res, _):
-                completionHandler(res as? NRNovels)
+                completionHandler(res?.responseStack as? NRNovels)
                 break
             }
         }

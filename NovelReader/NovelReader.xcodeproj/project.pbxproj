@@ -77,6 +77,12 @@
 		DEC297A11F51E44B0088B77A /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
 		DEC297A31F51E9160088B77A /* FTFontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A21F51E9160088B77A /* FTFontPickerView.swift */; };
 		DEC297A51F51EFDC0088B77A /* FTFontPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */; };
+		DEDC0A2F2068BCC80013D84F /* NovelServiceRules.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDC0A2E2068BCC80013D84F /* NovelServiceRules.plist */; };
+		DEDC0A302068BCC80013D84F /* NovelServiceRules.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEDC0A2E2068BCC80013D84F /* NovelServiceRules.plist */; };
+		DEDE27202069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */; };
+		DEDE27212069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */; };
+		DEDE27222069522300E4C992 /* NRRules_defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271C2069522300E4C992 /* NRRules_defaults.swift */; };
+		DEDE27232069522300E4C992 /* NRRules_defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271C2069522300E4C992 /* NRRules_defaults.swift */; };
 		DEF8D593206783B5001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
 		DEF8D594206783B6001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
 /* End PBXBuildFile section */
@@ -236,6 +242,9 @@
 		DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTFontPickerView.xib; sourceTree = "<group>"; };
 		DEC297A21F51E9160088B77A /* FTFontPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerView.swift; sourceTree = "<group>"; };
 		DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerViewController.swift; sourceTree = "<group>"; };
+		DEDC0A2E2068BCC80013D84F /* NovelServiceRules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NovelServiceRules.plist; sourceTree = "<group>"; };
+		DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_fetchNovelList.swift; sourceTree = "<group>"; };
+		DEDE271C2069522300E4C992 /* NRRules_defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_defaults.swift; sourceTree = "<group>"; };
 		DEF8D58E20678310001AFEC2 /* NRNovels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -415,6 +424,7 @@
 		DEA7E1AF1F4996910002C148 /* Parser */ = {
 			isa = PBXGroup;
 			children = (
+				DEDE271A2069522300E4C992 /* Rules */,
 				DE4EBE642067B6F5008AC70B /* ServiceModel */,
 				DE84280420558FE7006605C0 /* ModelObjects */,
 				DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */,
@@ -446,6 +456,7 @@
 				DEAD3421205826660064C46A /* Bindings */,
 				DEAD340D2058263C0064C46A /* MockData */,
 				DEAD34152058263C0064C46A /* Themes */,
+				DEDC0A2E2068BCC80013D84F /* NovelServiceRules.plist */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -466,6 +477,15 @@
 				DEAD34162058263C0064C46A /* Themes.json */,
 			);
 			path = Themes;
+			sourceTree = "<group>";
+		};
+		DEDE271A2069522300E4C992 /* Rules */ = {
+			isa = PBXGroup;
+			children = (
+				DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */,
+				DEDE271C2069522300E4C992 /* NRRules_defaults.swift */,
+			);
+			path = Rules;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -553,7 +573,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Praveen Prabhakar";
 				TargetAttributes = {
 					DE23237720551287004F1480 = {
@@ -673,6 +693,7 @@
 				DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */,
 				DE23239820551287004F1480 /* Assets.xcassets in Resources */,
 				DEAD3423205826660064C46A /* Bindings in Resources */,
+				DEDC0A302068BCC80013D84F /* NovelServiceRules.plist in Resources */,
 				DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */,
 				DEAD341A2058263C0064C46A /* EmperorDominationChapter.html in Resources */,
 				DEAD34202058263C0064C46A /* Themes.json in Resources */,
@@ -692,6 +713,7 @@
 				DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */,
 				DEA7E14D1F496BAB0002C148 /* Assets.xcassets in Resources */,
 				DEAD3422205826660064C46A /* Bindings in Resources */,
+				DEDC0A2F2068BCC80013D84F /* NovelServiceRules.plist in Resources */,
 				DEA9EDBE1F4FED5500D54171 /* NRNovelDescriptionView.xib in Resources */,
 				DEAD34192058263C0064C46A /* EmperorDominationChapter.html in Resources */,
 				DEAD341F2058263C0064C46A /* Themes.json in Resources */,
@@ -721,6 +743,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDE27212069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */,
 				DE23237920551287004F1480 /* NRServiceProvider.swift in Sources */,
 				DE23237B20551287004F1480 /* NRBaseTableViewController.swift in Sources */,
 				DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */,
@@ -741,6 +764,7 @@
 				DE84280D20558FE8006605C0 /* NovelChapter.swift in Sources */,
 				DE23238820551287004F1480 /* NRBaseView.swift in Sources */,
 				DE23238920551287004F1480 /* NRServiceConstants.swift in Sources */,
+				DEDE27232069522300E4C992 /* NRRules_defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -748,6 +772,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEDE27202069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */,
 				DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */,
 				DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */,
 				DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */,
@@ -768,6 +793,7 @@
 				DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */,
 				DEA7E1A61F497B6C0002C148 /* NRBaseView.swift in Sources */,
 				DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */,
+				DEDE27222069522300E4C992 /* NRRules_defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,6 +922,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -903,6 +930,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -955,6 +983,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -962,6 +991,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

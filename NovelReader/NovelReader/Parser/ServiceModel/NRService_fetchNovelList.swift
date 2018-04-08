@@ -1,5 +1,5 @@
 //
-//  NRServiceProvider.swift
+//  NRService_fetchNovelList.swift
 //  NovelReader
 //
 //  Created by Praveen Prabhakar on 20/08/17.
