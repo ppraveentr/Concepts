@@ -31,69 +31,70 @@ class NRNovelCollectionHeaderView: UICollectionReusableView {
         self.backgroundColor = "#df6e6e".hexColor()
         self.pin(view: segmentedControl!, withEdgeOffsets: FTEdgeOffsets(10))
     }
-
-    
 }
 
 class NRNovelCollectionViewController: NRBaseViewController {
 
     lazy var collectionView: UICollectionView = self.getCollectionView()
-    lazy var sampleCell: NRNovelCollectionViewCell = self.getSampleCell()
-
-//    lazy var novel: NRNovels = NRNovels(urlString: "https://novelonlinefree.info/novel_list")
-    var novel: NRNovels? = NRNovels()
+    //Dummycell for collectionView Height calculation
+    lazy var sampleCell: NRNovelCollectionViewCell = self.getDummyNovelCell()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.fetchNovelList()
     }
-    
-    func getflowLayout() -> UICollectionViewFlowLayout {
-        
-        let layout = UICollectionViewFlowLayout()
-        
-        layout.headerReferenceSize = CGSize(width:0, height:45)
-        layout.footerReferenceSize = .zero
-        
-        layout.sectionInset = UIEdgeInsets(top: 15, left: 20, bottom: 10, right: 20)
-        
-        layout.sectionHeadersPinToVisibleBounds = true
-        
-        return layout
+
+    //get-Novels from backend
+    var novel: NRNovels? = NRNovels()
+    func fetchNovelList() {
+        NRServiceProvider.fetchRecentUpdateList(novel: self.novel) { (novelList) in
+            self.configureColletionView()
+        }
     }
 }
 
 extension NRNovelCollectionViewController {
- 
+
+    func getDummyNovelCell() -> NRNovelCollectionViewCell {
+        return NRNovelCollectionViewCell.fromNib() as! NRNovelCollectionViewCell
+    }
+
     func getCollectionView() -> UICollectionView {
         let flow = self.getflowLayout()
-        
+        //
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: flow)
         collectionView.backgroundView?.backgroundColor = .clear
-        
         return collectionView
     }
-    
-    func fetchNovelList() {
-        NRServiceProvider.fetchRecentUpdateList(novel: self.novel) { (novelList) in
-            if(novelList != nil) {
-                self.novel = novelList
-            }
-            self.setUpColletionView()
-        }
+
+    func getflowLayout() -> UICollectionViewFlowLayout {
+        let layout = UICollectionViewFlowLayout()
+        layout.headerReferenceSize = CGSize(width:0, height:45)
+        layout.footerReferenceSize = .zero
+        layout.sectionInset = UIEdgeInsets(top: 15, left: 20, bottom: 10, right: 20)
+        layout.sectionHeadersPinToVisibleBounds = true
+        return layout
     }
 
-    func setUpColletionView() {
+    func configureColletionView() {
 
-        guard collectionView.superview == nil else { return }
+        //Only re-load collectionView if already present
+        guard collectionView.superview == nil else {
+            self.collectionView.reloadData()
+            return
+        }
 
+        //Setup collectionView if not added in view.
+
+        //Register Novel Cells
         collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
                                 forCellWithReuseIdentifier: "kNovelCellIdentifer")
-
+        //Collection Header: Segment Control
         collectionView.register(NRNovelCollectionHeaderView.self,
                                 forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
                                 withReuseIdentifier: "headerCell")
 
+        //CollectionView delegate
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.backgroundColor = .clear
@@ -147,10 +148,6 @@ extension NRNovelCollectionViewController: UICollectionViewDataSource, UICollect
 }
 
 extension NRNovelCollectionViewController {
-    
-    func getSampleCell() -> NRNovelCollectionViewCell {
-        return NRNovelCollectionViewCell.fromNib() as! NRNovelCollectionViewCell
-    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
        
@@ -164,26 +161,5 @@ extension NRNovelCollectionViewController {
                 nextViewController.novel = sender as? NRNovelChapter
             }
         }
-    }
-    
-    func setUpFloatingView() {
-        
-//        let floatingView = (UIApplication.shared.delegate as? NRAppDelegate)?.floatingButton
-        
-//        floatingView?.show()
-        
-//        var novels = NRNovelChapter(title: "title", url: (Bundle.main.path(forResource: "EmperorDominationChapter", ofType: "html")!))
-//        NRServiceProvider.parseNovelReader(&novels)
-//
-//        self.performSegue(withIdentifier: "kShowNovelReaderView", sender: novels)
-
-        
-//        NotificationCenter.default.addObserver(forName: .FTMobileCoreUI_ViewController_DidAppear, object: self, queue: nil) { (not) in
-//            
-//        }
-//        
-//        NotificationCenter.default.addObserver(forName: .FTMobileCoreUI_ViewController_WillDisappear, object: self, queue: nil) { (not) in
-//            
-//        }
     }
 }
