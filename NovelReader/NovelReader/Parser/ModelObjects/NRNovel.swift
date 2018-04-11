@@ -1,10 +1,10 @@
 final class NRNovel: FTModelData {
 
-    var identifer: String? = nil
+    var identifer: String? = "sadsa"
     var lastChapter: String? = nil
     var imageURL: String? = nil
-    var chapterList: [NRNovelChapter]? = nil
-    var contentDescription: String? = nil
+    var chapterList: [NRNovelChapter]? = [NRNovelChapter()]
+    var contentDescription: String? = "sadsa"
     var views: String? = nil
     var keyworkds: [String]? = nil
     var searchString: String? = nil

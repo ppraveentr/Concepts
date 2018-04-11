@@ -12,6 +12,6 @@ final class NRService_fetchNovelList: FTServiceStack {
     override func serviceName() -> String { return "fetchNovelList" }
 
     override func responseType() -> FTModelData.Type {
-        return NRNovels.self
+        return [NRNovel].self
     }
 }

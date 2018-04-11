@@ -1,6 +1,6 @@
 final class NRNovelChapter: FTModelData {
 
-    var shortTitle: String? = nil
+    var shortTitle: String? = "as"
     var title: String? = nil
     var url: String? = nil
     var releaseDate: String? = nil
