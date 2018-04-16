@@ -42,6 +42,8 @@
 		DE4EBE662067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */; };
 		DE4EBE672067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */; };
 		DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */; };
+		DE818246208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE818242208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift */; };
+		DE818247208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE818242208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift */; };
 		DE84280A20558FE8006605C0 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280520558FE7006605C0 /* NRNovel.swift */; };
 		DE84280B20558FE8006605C0 /* NRNovel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280520558FE7006605C0 /* NRNovel.swift */; };
 		DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE84280620558FE7006605C0 /* NovelChapter.swift */; };
@@ -83,6 +85,8 @@
 		DEDE27212069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */; };
 		DEDE27222069522300E4C992 /* NRRules_defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271C2069522300E4C992 /* NRRules_defaults.swift */; };
 		DEDE27232069522300E4C992 /* NRRules_defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271C2069522300E4C992 /* NRRules_defaults.swift */; };
+		DEF76490208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */; };
+		DEF76491208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */; };
 		DEF8D593206783B5001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
 		DEF8D594206783B6001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
 /* End PBXBuildFile section */
@@ -204,6 +208,7 @@
 		DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelCollectionViewCell.xib; sourceTree = "<group>"; };
 		DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchNovelList.swift; sourceTree = "<group>"; };
 		DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRServiceConstants.swift; sourceTree = "<group>"; };
+		DE818242208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchRecentUpdatesList.swift; sourceTree = "<group>"; };
 		DE84280520558FE7006605C0 /* NRNovel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovel.swift; sourceTree = "<group>"; };
 		DE84280620558FE7006605C0 /* NovelChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NovelChapter.swift; sourceTree = "<group>"; };
 		DEA45C94205513CF008FA401 /* FTCoreUtility.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = FTCoreUtility.xcodeproj; path = ../../../MobileCore/FTCoreUtility/FTCoreUtility.xcodeproj; sourceTree = "<group>"; };
@@ -245,6 +250,7 @@
 		DEDC0A2E2068BCC80013D84F /* NovelServiceRules.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NovelServiceRules.plist; sourceTree = "<group>"; };
 		DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_fetchNovelList.swift; sourceTree = "<group>"; };
 		DEDE271C2069522300E4C992 /* NRRules_defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_defaults.swift; sourceTree = "<group>"; };
+		DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchNovelChapters.swift; sourceTree = "<group>"; };
 		DEF8D58E20678310001AFEC2 /* NRNovels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -286,6 +292,8 @@
 		DE4EBE642067B6F5008AC70B /* ServiceModel */ = {
 			isa = PBXGroup;
 			children = (
+				DE818242208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift */,
+				DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */,
 				DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */,
 			);
 			path = ServiceModel;
@@ -749,6 +757,7 @@
 				DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */,
 				DE23237D20551287004F1480 /* NRTabBarController.swift in Sources */,
 				DE23237E20551287004F1480 /* AppDelegate.swift in Sources */,
+				DE818247208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,
 				DE23237F20551287004F1480 /* NRNovelTableViewCell.swift in Sources */,
 				DE23238020551287004F1480 /* NRNovelChapterViewController.swift in Sources */,
 				DE4EBE672067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */,
@@ -764,6 +773,7 @@
 				DE84280D20558FE8006605C0 /* NovelChapter.swift in Sources */,
 				DE23238820551287004F1480 /* NRBaseView.swift in Sources */,
 				DE23238920551287004F1480 /* NRServiceConstants.swift in Sources */,
+				DEF76491208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */,
 				DEDE27232069522300E4C992 /* NRRules_defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -778,6 +788,7 @@
 				DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */,
 				DEA7E1A41F497B5D0002C148 /* NRTabBarController.swift in Sources */,
 				DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */,
+				DE818246208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,
 				DEA7E1BA1F49E06A0002C148 /* NRNovelTableViewCell.swift in Sources */,
 				DEA7E1461F496BAB0002C148 /* NRNovelChapterViewController.swift in Sources */,
 				DE4EBE662067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */,
@@ -793,6 +804,7 @@
 				DE84280C20558FE8006605C0 /* NovelChapter.swift in Sources */,
 				DEA7E1A61F497B6C0002C148 /* NRBaseView.swift in Sources */,
 				DE5A775D204AB8D5008B19ED /* NRServiceConstants.swift in Sources */,
+				DEF76490208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */,
 				DEDE27222069522300E4C992 /* NRRules_defaults.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -952,8 +964,10 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
@@ -1007,8 +1021,10 @@
 				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/../Frameworks";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_SHADOW = YES;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;

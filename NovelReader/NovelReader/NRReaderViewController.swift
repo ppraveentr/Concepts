@@ -11,7 +11,8 @@ import Foundation
 class NRReaderViewController: FTBaseViewController {
     
     var novel: NRNovelChapter?
-    
+    static let backButton = #selector(NRReaderViewController.back)
+
     @IBOutlet var fontPickerBarItem: UIBarButtonItem?
     @IBOutlet var chapterToolBarItem: UIToolbar?
     var sortedToolBarItems: [UIBarButtonItem]? {
@@ -21,7 +22,6 @@ class NRReaderViewController: FTBaseViewController {
     }
 
     var textSize: Int = 140
-    
     let contentView = FTContentView()
     
     override func viewDidLoad() {
@@ -38,7 +38,7 @@ class NRReaderViewController: FTBaseViewController {
         
         self.title = novel?.shortTitle ?? novel?.title
         
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: #selector(back))
+        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: NRReaderViewController.backButton)
         
         self.navigationItem.rightBarButtonItem = fontPickerBarItem
 
@@ -59,14 +59,7 @@ class NRReaderViewController: FTBaseViewController {
 extension NRReaderViewController: FTFontPickerViewprotocol {
 
     func fontSize(_ size: FontSizePicker) {
-        
         textSize += (size == .increment) ? 10 : -10;
-//        if size == .increment {
-//            textSize += 10
-//        }else {
-//            textSize -= 10
-//        }
-    
         contentView.webView.setContentFontSize(textSize)
     }
     

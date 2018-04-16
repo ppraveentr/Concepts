@@ -9,34 +9,28 @@
 import UIKit
 
 class NRNovelChapterViewController: NRBaseTableViewController {
-    
+
     var novel: NRNovel?
     
     var novelDescView: NRNovelDescriptionView? = NRNovelDescriptionView.fromNib() as? NRNovelDescriptionView
     
     override func class_TableViewStyle() -> UITableViewStyle { return .grouped }
-    
     override func class_TableViewEdgeOffsets() -> FTEdgeOffsets { return FTEdgeOffsets(10, 0, 10, 0) }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.automaticallyAdjustsScrollViewInsets = true
-        
         setupToolBar()
-
         tableView.backgroundColor = .clear
         tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifer")
         
-        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (value: JSON) in
-            self.configureContent(value: value)
+        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (novel: NRNovel?) in
+            guard (novel != nil) else { return }
+            self.configureContent(novel: novel!)
         })
     }
     
-    func configureContent(value: JSON) {
-        
-        NRServiceProvider.getNovelChapters(&self.novel!, details: value)
-        
+    func configureContent(novel: NRNovel) {
+//        NRServiceProvider.getNovelChapters(&self.novel!, details: value)
         self.novelDescView?.configureContent(novel: self.novel!)
         self.tableView.setTableHeaderView(view: self.novelDescView)
         self.tableView.reloadData()

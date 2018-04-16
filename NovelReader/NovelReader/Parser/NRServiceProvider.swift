@@ -11,7 +11,21 @@ import Foundation
 class NRServiceProvider {
 
     //Get list of all Novels
-    class func fetchRecentUpdateList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
+    class func fetchRecentUpdateList(_ completionHandler: @escaping (_ novelsList: [NRNovel]?) -> Swift.Void) {
+
+        FTServiceClient.make(kfetchRecentUpdateList) { (status) in
+
+            switch (status) {
+            case .success(let res, _):
+                completionHandler(res.responseStack as? [NRNovel])
+            case .failed(let res, _):
+                completionHandler(res?.responseStack as? [NRNovel])
+            }
+        }
+    }
+
+    //Get list of all Novels
+    class func fetchNovelList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
 
         FTServiceClient.make(kfetchNovelList, modelStack: novel) { (status) in
 
@@ -38,16 +52,26 @@ class NRServiceProvider {
     
     //Get list of all chapters from a single NRNovelObject
     class func getNovelChapters(_ novel: NRNovel, getChapters: Bool = true,
-                                completionHandler: @escaping (_ novelsList: JSON) -> Swift.Void) {
+                                completionHandler: @escaping (_ novel: NRNovel?) -> Swift.Void) {
 
-//        let parse = { (html: String) in
-//            let valye: JSON = [:]
-//            completionHandler(valye)
-//        }
-//
-//        FTServiceClient.getContentFromURL(self.nonvelChaptersList(novel: novel), completionHandler: { (htmlString, data, httpURLResponse) in
-//            parse(htmlString)
-//        })
+        FTServiceClient.make(kfetchNovelChapters, modelStack: novel) { (status) in
+
+            switch (status) {
+            case .success(let res, _):
+                if let novelResponse = res.responseStack as? NRNovel {
+                    var novel = novel
+                    novel.merge(data: novelResponse)
+                    completionHandler(novel)
+                }
+                else {
+                    completionHandler(res.responseStack as? NRNovel)
+                }
+                break
+            case .failed(let res, _):
+                completionHandler(res?.responseStack as? NRNovel)
+                break
+            }
+        }
     }
     
     //Get list of all chapters from a single NRNovelObject

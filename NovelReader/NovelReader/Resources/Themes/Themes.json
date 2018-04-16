@@ -6,6 +6,7 @@
         "clear": "clear",
         "black": "#000000",
         "appRed": "#DD6060",
+        "navBarRed": "#DF6E6E",
         "appWhite": "#F7F3F0",
         "blue": "#1059ce",
         "green": "#10ce1a",
@@ -48,6 +49,11 @@
         "FTView": {
             "default": {
                 "backgroundColor": "appWhite"
+            }
+        },
+        "NRNovelCollectionHeaderView": {
+            "default": {
+                "backgroundColor": "navBarRed"
             }
         },
         "FTButton": {

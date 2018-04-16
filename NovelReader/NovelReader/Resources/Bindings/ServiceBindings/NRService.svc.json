@@ -2,6 +2,14 @@
     "NovelBase": {
         "timeout": "60"
     },
+    "fetchRecentUpdatesList": {
+        "super": "NovelBase",
+        "type": "GET",
+        "path": "novel/recentupdates",
+        "response": {
+            "arrayOf": "NRNovel"
+        }
+    },
     "fetchNovelList": {
         "super": "NovelBase",
         "type": "GET",
