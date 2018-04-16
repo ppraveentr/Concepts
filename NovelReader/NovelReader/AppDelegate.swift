@@ -24,20 +24,25 @@ class NRAppDelegate: FTAppDelegate {
         //Register self's type as BundleIdentifer for getting class name
         FTReflection.registerModuleIdentifier(NRAppDelegate.self)
 
+        //Service Binding
+        FTMobileConfig.serviceBindingPath = "Bindings/ServiceBindings"
+        FTMobileConfig.serviceBindingRulesName = "NovelServiceRules.plist"
+        
         //App Config
         FTMobileConfig.appBaseURL = "https://novelreader-online.herokuapp.com"
-        FTMobileConfig.mockURL = "http://127.0.0.1:3000/"
+
+#if DEBUG
+// Debug-only code
+        FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
+        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL() 
         FTMobileConfig.isMockData = true
+#endif
 
 //        //Model Binding Generator
 //        if let resourcePath = Bundle.main.resourceURL {
 //            FTModelCreator.configureSourcePath(path: resourcePath.appendingPathComponent("Bindings/ModelBindings").path);
 //            FTModelCreator.generateOutput()
 //        }
-        
-        //Service Binding
-        FTMobileConfig.serviceBindingPath = "Bindings/ServiceBindings"
-        FTMobileConfig.serviceBindingRulesName = "NovelServiceRules.plist"
     }
     
     func setAppTheme() {
