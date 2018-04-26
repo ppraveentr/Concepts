@@ -34,7 +34,7 @@ class NRAppDelegate: FTAppDelegate {
 #if DEBUG
 // Debug-only code
         FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
-        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL() 
+        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL()
         FTMobileConfig.isMockData = true
 #endif
 

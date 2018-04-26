@@ -326,8 +326,8 @@ SWIFT_CLASS("_TtC13FTCoreUtility8FTUIView")
 
 @interface UIView (SWIFT_EXTENSION(FTCoreUtility))
 - (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setUpAppearance(theme:inContainerClass:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setUpAppearance(theme:inContainerClass:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setBackgroundImage:(id _Nonnull)imageTheme SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setBackgroundImage(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
++ (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName;
++ (void)setBackgroundImage:(id _Nonnull)imageTheme;
 + (void)setBackgroundImageWithImageType:(NSString * _Nullable)imageType imageName:(id _Nonnull)imageName SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setBackgroundImage(imageType:imageName:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @end
 
