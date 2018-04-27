@@ -15,13 +15,18 @@
         "title": "name",
         "searchString": "nameunsigned",
         "author": "author",
+        "artist": "artist",
+        "status": "status",
+        "novelType": "type",
         "imageURL": "image",
+        "novelURL": "url",
+        "rating": "rating",
         "lastUpdated": "updatetime",
-        "views": "view",
-        "contentDescription": "description",
+        "views": "views",
+        "contentDescription": "summary",
         "lastChapter": "lastchapter",
         "keyworkds": {
-            "bindKey": "keyworkds",
+            "bindKey": "genres",
             "arrayOf": "String"
         },
         "chapterList": {
