@@ -10,10 +10,12 @@ import UIKit
 
 class NRRecentNovelCollectionViewCell: UICollectionViewCell, NRConfigureNovelCellProtocal {
     @IBOutlet weak var novelTitle: FTLabel?
+    @IBOutlet weak var lastUpdateTitleLabel: FTLabel?
     @IBOutlet weak var lastUpdateTimeLabel: FTLabel?
 
     func configureContent(novel: NRNovel) {
-        self.novelTitle?.text = novel.title
-        self.lastUpdateTimeLabel?.text = novel.lastUpdated
+        novelTitle?.text = novel.title
+        lastUpdateTitleLabel?.text = "Last Update:"
+        lastUpdateTimeLabel?.text = novel.lastUpdated
     }
 }

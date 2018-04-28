@@ -64,7 +64,7 @@
             },
             "button14R": {
                 "_super": "default",
-                "textcolor": "red"
+                "textcolor": "appRed"
             },
             "button14R:highlighted": {
                 "_super": "default",
@@ -85,7 +85,7 @@
             },
             "system14R": {
                 "_super": "default",
-                "textcolor": "red"
+                "textcolor": "appRed"
             },
             "system14B": {
                 "_super": "default",

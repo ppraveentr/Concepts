@@ -33,7 +33,6 @@
 		DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */; };
 		DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDB91F4FEA7D00D54171 /* NRNovelTableViewCell.xib */; };
 		DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
-		DE23239820551287004F1480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14C1F496BAB0002C148 /* Assets.xcassets */; };
 		DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */; };
 		DE23239A20551287004F1480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
 		DE28567120944A04003153C6 /* NRRecentNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */; };
@@ -60,7 +59,6 @@
 		DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1431F496BAB0002C148 /* AppDelegate.swift */; };
 		DEA7E1461F496BAB0002C148 /* NRNovelChapterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */; };
 		DEA7E14B1F496BAB0002C148 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
-		DEA7E14D1F496BAB0002C148 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14C1F496BAB0002C148 /* Assets.xcassets */; };
 		DEA7E1501F496BAB0002C148 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */; };
 		DEA7E15B1F496BAB0002C148 /* NovelReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E15A1F496BAB0002C148 /* NovelReaderTests.swift */; };
 		DEA7E1661F496BAB0002C148 /* NovelReaderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA7E1651F496BAB0002C148 /* NovelReaderUITests.swift */; };
@@ -236,7 +234,6 @@
 		DEA7E1431F496BAB0002C148 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRNovelChapterViewController.swift; sourceTree = "<group>"; };
 		DEA7E14A1F496BAB0002C148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		DEA7E14C1F496BAB0002C148 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DEA7E14F1F496BAB0002C148 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DEA7E1511F496BAB0002C148 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DEA7E1561F496BAB0002C148 /* NovelReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovelReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -406,7 +403,6 @@
 				DEA7E1451F496BAB0002C148 /* NRNovelChapterViewController.swift */,
 				DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */,
 				DEA7E1491F496BAB0002C148 /* Main.storyboard */,
-				DEA7E14C1F496BAB0002C148 /* Assets.xcassets */,
 				DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */,
 				DEA7E1511F496BAB0002C148 /* Info.plist */,
 				DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */,
@@ -750,7 +746,6 @@
 				DE23239320551287004F1480 /* LaunchScreen.storyboard in Resources */,
 				DE23239520551287004F1480 /* NRNovelTableViewCell.xib in Resources */,
 				DE23239620551287004F1480 /* NRNovelCollectionViewCell.xib in Resources */,
-				DE23239820551287004F1480 /* Assets.xcassets in Resources */,
 				DEAD3423205826660064C46A /* Bindings in Resources */,
 				DEDC0A302068BCC80013D84F /* NovelServiceRules.plist in Resources */,
 				DE28567820944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */,
@@ -779,7 +774,6 @@
 				DEA7E1501F496BAB0002C148 /* LaunchScreen.storyboard in Resources */,
 				DEA9EDBA1F4FEA7D00D54171 /* NRNovelTableViewCell.xib in Resources */,
 				DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */,
-				DEA7E14D1F496BAB0002C148 /* Assets.xcassets in Resources */,
 				DEAD3422205826660064C46A /* Bindings in Resources */,
 				DEDC0A2F2068BCC80013D84F /* NovelServiceRules.plist in Resources */,
 				DE28567720944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */,
