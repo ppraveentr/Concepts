@@ -56,7 +56,7 @@ class FTImageView: UIImageView {
     }
 }
 
-class NRNovelCollectionViewCell: UICollectionViewCell {
+class NRNovelCollectionViewCell: UICollectionViewCell, NRConfigureNovelCellProtocal {
 
     @IBOutlet var titleLabel: FTLabel?
     @IBOutlet var contentImageView: FTImageView?
@@ -91,21 +91,5 @@ class NRNovelCollectionViewCell: UICollectionViewCell {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 2.0
         self.layer.shadowOffset = CGSize(width: 3, height: 3)
-    }
-    
-    func getSize(baseView: UIView) -> CGSize {
-        
-        let compressedSize = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
-        
-        if (compressedSize.width*2 + 15*4) < baseView.frame.width {
-            return CGSize(width: compressedSize.width, height: compressedSize.height)
-        }
-        
-        let size = self.systemLayoutSizeFitting( CGSize(width: baseView.frame.width - 30, height: CGFloat.greatestFiniteMagnitude),
-                                                 withHorizontalFittingPriority: UILayoutPriority.fittingSizeLevel,
-                                                 verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
-        
-        return CGSize(width: baseView.frame.width - 30, height: size.height)
-        
     }
 }

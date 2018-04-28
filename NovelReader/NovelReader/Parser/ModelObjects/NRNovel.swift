@@ -25,7 +25,7 @@ final class NRNovel: FTModelData {
         case searchString = "nameunsigned"
         case rating
         case author
-        case lastUpdated = "updatetime"
+        case lastUpdated = "lastUpdate"
         case novelURL = "url"
         case imageURL = "image"
         case keyworkds = "genres"

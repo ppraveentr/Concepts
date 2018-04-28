@@ -36,6 +36,11 @@
 		DE23239820551287004F1480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E14C1F496BAB0002C148 /* Assets.xcassets */; };
 		DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */; };
 		DE23239A20551287004F1480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DEA7E1491F496BAB0002C148 /* Main.storyboard */; };
+		DE28567120944A04003153C6 /* NRRecentNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */; };
+		DE28567220944A04003153C6 /* NRRecentNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */; };
+		DE28567720944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE28567620944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib */; };
+		DE28567820944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE28567620944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib */; };
+		DE28567C20946CC2003153C6 /* fetchNovelList.json in Resources */ = {isa = PBXBuildFile; fileRef = DE28567B20946CC2003153C6 /* fetchNovelList.json */; };
 		DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */; };
 		DE4383B21F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */; };
 		DE4383B31F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */; };
@@ -208,6 +213,9 @@
 		DE0400192054608700A8B57A /* FTMobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCore.framework; sourceTree = "<group>"; };
 		DE2323A220551287004F1480 /* NovelReaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NovelReaderDemo-Info.plist"; path = "/Users/praveenprabhakar/Frameworks/xCodeProject/Concepts/NovelReader/NovelReader/NovelReaderDemo-Info.plist"; sourceTree = "<absolute>"; };
+		DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRRecentNovelCollectionViewCell.swift; sourceTree = "<group>"; };
+		DE28567620944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRRecentNovelCollectionViewCell.xib; sourceTree = "<group>"; };
+		DE28567B20946CC2003153C6 /* fetchNovelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchNovelList.json; sourceTree = "<group>"; };
 		DE4383AA1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NRNovelCollectionViewController.swift; path = BaseComponents/NRNovelCollectionViewController.swift; sourceTree = "<group>"; };
 		DE4383B01F4B3998003DF8A7 /* NRNovelCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovelCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE4383B11F4B3998003DF8A7 /* NRNovelCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -319,6 +327,7 @@
 				DE8182572085020A001316E5 /* EmperorDominationChapter.html */,
 				DE8182552085020A001316E5 /* EmperorsDomination.html */,
 				DE8182562085020A001316E5 /* fetchRecentUpdatesList.json */,
+				DE28567B20946CC2003153C6 /* fetchNovelList.json */,
 				DE81824E2084F8F6001316E5 /* Info.plist */,
 			);
 			path = FTNovelReaderMockBundle;
@@ -481,6 +490,8 @@
 				DEC297A21F51E9160088B77A /* FTFontPickerView.swift */,
 				DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */,
 				DEC297A41F51EFDC0088B77A /* FTFontPickerViewController.swift */,
+				DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */,
+				DE28567620944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -742,6 +753,7 @@
 				DE23239820551287004F1480 /* Assets.xcassets in Resources */,
 				DEAD3423205826660064C46A /* Bindings in Resources */,
 				DEDC0A302068BCC80013D84F /* NovelServiceRules.plist in Resources */,
+				DE28567820944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */,
 				DE23239920551287004F1480 /* NRNovelDescriptionView.xib in Resources */,
 				DEAD34202058263C0064C46A /* Themes.json in Resources */,
 				DE23239A20551287004F1480 /* Main.storyboard in Resources */,
@@ -753,6 +765,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE81825A2085020A001316E5 /* EmperorDominationChapter.html in Resources */,
+				DE28567C20946CC2003153C6 /* fetchNovelList.json in Resources */,
 				DE8182592085020A001316E5 /* fetchRecentUpdatesList.json in Resources */,
 				DE8182582085020A001316E5 /* EmperorsDomination.html in Resources */,
 			);
@@ -769,6 +782,7 @@
 				DEA7E14D1F496BAB0002C148 /* Assets.xcassets in Resources */,
 				DEAD3422205826660064C46A /* Bindings in Resources */,
 				DEDC0A2F2068BCC80013D84F /* NovelServiceRules.plist in Resources */,
+				DE28567720944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib in Resources */,
 				DEA9EDBE1F4FED5500D54171 /* NRNovelDescriptionView.xib in Resources */,
 				DEAD341F2058263C0064C46A /* Themes.json in Resources */,
 				DEA7E14B1F496BAB0002C148 /* Main.storyboard in Resources */,
@@ -805,6 +819,7 @@
 				DE818247208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,
 				DE23237F20551287004F1480 /* NRNovelTableViewCell.swift in Sources */,
 				DE23238020551287004F1480 /* NRNovelChapterViewController.swift in Sources */,
+				DE28567220944A04003153C6 /* NRRecentNovelCollectionViewCell.swift in Sources */,
 				DE4EBE672067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */,
 				DE23238120551287004F1480 /* NRNovelCollectionViewController.swift in Sources */,
 				DE23238220551287004F1480 /* NRBaseViewController.swift in Sources */,
@@ -843,6 +858,7 @@
 				DE818246208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,
 				DEA7E1BA1F49E06A0002C148 /* NRNovelTableViewCell.swift in Sources */,
 				DEA7E1461F496BAB0002C148 /* NRNovelChapterViewController.swift in Sources */,
+				DE28567120944A04003153C6 /* NRRecentNovelCollectionViewCell.swift in Sources */,
 				DE4EBE662067B6F5008AC70B /* NRService_fetchNovelList.swift in Sources */,
 				DE4383AB1F4B32B4003DF8A7 /* NRNovelCollectionViewController.swift in Sources */,
 				DEA7E1A31F497B5D0002C148 /* NRBaseViewController.swift in Sources */,
@@ -1162,7 +1178,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
@@ -1184,7 +1200,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
-				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 			};
 			name = Release;

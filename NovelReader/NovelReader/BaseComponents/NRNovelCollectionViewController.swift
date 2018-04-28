@@ -37,51 +37,94 @@ class NRNovelCollectionHeaderView: UICollectionReusableView {
 //MARK: NRNovelCollectionViewController
 class NRNovelCollectionViewController: NRBaseViewController {
 
-    lazy var collectionView: UICollectionView = self.getCollectionView()
-    //Dummycell for collectionView cell Height calculation
-    lazy var sampleCell: NRNovelCollectionViewCell = self.getDummyNovelCell()
-    var currentNovelList: [NRNovel]? = []
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.fetchRecentUpdateList()
+    enum NRNovelCollectionType: Int {
+        case recentNovel = 0
+        case topNovel
+
+        var cellIdentifer: String {
+            switch self {
+            case .recentNovel:
+                return "kRecentNovelCellIdentifer"
+            case .topNovel:
+                return "kNovelCellIdentifer"
+            }
+        }
+
+        func registerCell(_ collectionView: UICollectionView) {
+            switch self {
+            case .recentNovel:
+                collectionView.register(NRRecentNovelCollectionViewCell.getNIBFile(),
+                                        forCellWithReuseIdentifier: self.cellIdentifer)
+            case .topNovel:
+                collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
+                                        forCellWithReuseIdentifier: self.cellIdentifer)
+            }
+        }
+
+        func getNib() -> (UICollectionViewCell & NRConfigureNovelCellProtocal) {
+            switch self {
+            case .recentNovel:
+                return NRRecentNovelCollectionViewCell.fromNib() as! NRRecentNovelCollectionViewCell
+            case .topNovel:
+                return NRNovelCollectionViewCell.fromNib() as! NRNovelCollectionViewCell
+            }
+        }
     }
 
-    //get-Novels from backend
-    func updateListView(segmentControl: FTSegmentedControl) {
-        switch segmentControl.selectedSegmentIndex {
-        case 0:
-            self.fetchRecentUpdateList()
-        case 1:
-            fallthrough
-        default:
+    lazy var collectionView: UICollectionView = self.getCollectionView()
+    //Update collectionView when contentList changes
+    var currentNovelList: [NRNovel]? = [] {
+        didSet {
+            self.configureColletionView()
+        }
+    }
+
+    lazy var novel: NRNovels? = NRNovels()
+    //Collection Content Type
+    var novelCollectionType: NRNovelCollectionType = .recentNovel {
+        didSet {
             self.fetchNovelList()
         }
     }
 
-    //get-RecentUpdate from backend
-    func fetchRecentUpdateList() {
-        NRServiceProvider.fetchRecentUpdateList() { (novelList) in
-            self.currentNovelList = novelList
-            self.configureColletionView()
+    //Dummycell for collectionView cell Height calculation
+    lazy var sampleTopNovelCell = NRNovelCollectionType.topNovel.getNib()
+    lazy var sampleRecentNovelCell = NRNovelCollectionType.recentNovel.getNib()
+    var dummyNovelCell: NRConfigureNovelCellProtocal {
+        switch novelCollectionType {
+        case .recentNovel:
+            return self.sampleRecentNovelCell
+        case .topNovel:
+            return self.sampleTopNovelCell
         }
     }
 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.novelCollectionType = .recentNovel
+    }
+
+    //Updates novelCollectionType, which interns fetchNovelList from backend
+    func updateNovelSegment(segmentControl: FTSegmentedControl) {
+        novelCollectionType = NRNovelCollectionType(rawValue: segmentControl.selectedSegmentIndex)!
+    }
+
     //get-Novels from backend
-    var novel: NRNovels? = NRNovels()
     func fetchNovelList() {
-        NRServiceProvider.fetchNovelList(novel: self.novel) { (novelList) in
-            self.currentNovelList = self.novel?.novelList
-            self.configureColletionView()
+        switch novelCollectionType {
+        case .recentNovel:
+            NRServiceProvider.fetchRecentUpdateList() { (novelList) in
+                self.currentNovelList = novelList
+            }
+        case .topNovel:
+            NRServiceProvider.fetchNovelList(novel: self.novel) { (novelList) in
+                self.currentNovelList = self.novel?.novelList
+            }
         }
     }
 }
 
 extension NRNovelCollectionViewController {
-
-    func getDummyNovelCell() -> NRNovelCollectionViewCell {
-        return NRNovelCollectionViewCell.fromNib() as! NRNovelCollectionViewCell
-    }
 
     func getCollectionView() -> UICollectionView {
         let flow = self.getflowLayout()
@@ -103,7 +146,9 @@ extension NRNovelCollectionViewController {
 
         //Relaod collectionView on exit
         defer {
-            self.collectionView.reloadData()
+            DispatchQueue.main.async {
+                self.collectionView.reloadData()
+            }
         }
 
         //Only re-load collectionView if already present
@@ -111,11 +156,12 @@ extension NRNovelCollectionViewController {
             return
         }
 
-        //Setup collectionView if not added in view.
+        //Setup collectionView, if not added in view.
 
-        //Register Novel Cells
-        collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
-                                forCellWithReuseIdentifier: "kNovelCellIdentifer")
+        //Register Cell
+        NRNovelCollectionType.topNovel.registerCell(collectionView)
+        NRNovelCollectionType.recentNovel.registerCell(collectionView)
+
         //Collection Header: Segment Control
         collectionView.register(NRNovelCollectionHeaderView.self,
                                 forSupplementaryViewOfKind: UICollectionElementKindSectionHeader,
@@ -131,43 +177,51 @@ extension NRNovelCollectionViewController {
 }
 
 extension NRNovelCollectionViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
-    
+
+    //viewForSupplementaryElement
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
 
         let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "headerCell", for: indexPath) as! NRNovelCollectionHeaderView
 
         headerView.segmentedControl?.handler = { [unowned self] (sender) in
             if let segment = headerView.segmentedControl {
-                self.updateListView(segmentControl: segment)
+                self.updateNovelSegment(segmentControl: segment)
             }
         }
 
         return headerView
     }
-    
+
+    //numberOfItemsInSection
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return currentNovelList?.count ?? 0
     }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "kNovelCellIdentifer", for: indexPath)
 
-        if
-            let cur = currentNovelList?[indexPath.row],
-            let cell = cell as? NRNovelCollectionViewCell {
-           cell.configureContent(novel: cur)
+    //cellForItem
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
+        let cellIdentifier = novelCollectionType.cellIdentifer
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
+
+        if let cur = currentNovelList?[indexPath.row] {
+            if let cell = cell as? NRConfigureNovelCellProtocal {
+                cell.configureContent(novel: cur)
+            }
         }
         
         return cell
     }
-    
+
+    //Cell sizeForItem
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+        let cell = self.dummyNovelCell
         
         if let cur = currentNovelList?[indexPath.row] {
-            sampleCell.configureContent(novel: cur)
+            cell.configureContent(novel: cur)
         }
         
-        return sampleCell.getSize(baseView: collectionView)
+        return cell.getSize(baseView: collectionView)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

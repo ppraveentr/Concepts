@@ -31,12 +31,17 @@ class NRServiceProvider {
 
             switch (status) {
             case .success(let res, _):
+                //FIXIT: Has be done in FTServiceClient
                 if let novelResponse = res.responseStack as? NRNovels {
                     var novel = novel
                     novel!.merge(data: novelResponse)
                     completionHandler(novel)
                 }
+                //TODO: To be removed once Mock is done
                 else if let novelList = res.responseStack as? [NRNovel] {
+                    if(novel?.novelList == nil) {
+                        novel?.novelList = []
+                    }
                     novel?.novelList?.append(contentsOf: novelList)
                     completionHandler(novel)
                 }else {
