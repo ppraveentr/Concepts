@@ -11,7 +11,7 @@
         }
     },
     "NRNovel": {
-        "identifer": "id",
+        "identifier": "identifier",
         "title": "name",
         "searchString": "nameunsigned",
         "author": "author",
@@ -19,7 +19,6 @@
         "status": "status",
         "novelType": "type",
         "imageURL": "image",
-        "novelURL": "url",
         "rating": "rating",
         "lastUpdated": "updatetime",
         "views": "views",
@@ -37,7 +36,7 @@
     "NRNovelChapter": {
         "content": "content",
         "title": "name",
-        "url": "url",
+        "identifier": "identifier",
         "shortTitle": "shortTitle",
         "releaseDate": "releaseDate"
     }

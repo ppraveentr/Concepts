@@ -21,7 +21,7 @@ class NRNovelChapterViewController: NRBaseTableViewController {
         super.viewDidLoad()
         setupToolBar()
         tableView.backgroundColor = .clear
-        tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifer")
+        tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifier")
         
         NRServiceProvider.getNovelChapters(novel!, completionHandler: { (novelResponse: NRNovel?) in
             guard (novelResponse != nil) else { return }
@@ -61,7 +61,7 @@ extension NRNovelChapterViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "kNovelCellIdentifer", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "kNovelCellIdentifier", for: indexPath)
         
         if
             let cell = cell as? NRNovelTableViewCell,

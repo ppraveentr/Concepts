@@ -13,7 +13,7 @@
     "fetchNovelList": {
         "super": "NovelBase",
         "type": "GET",
-        "path": "novel/top-list",
+        "path": "novel/list",
         "requestQuery": {
             "type": "type",
             "category": "category",
@@ -29,7 +29,7 @@
         "type": "GET",
         "path": "novel/chapters-list",
         "requestQuery": {
-            "id": "identifer"
+            "id": "identifier"
         },
         "response": {
             "bindAs": "NRNovel"
@@ -40,7 +40,7 @@
         "type": "GET",
         "path": "novel/chapter",
         "requestQuery": {
-            "id": "identifer"
+            "id": "identifier"
         },
         "response": {
             "bindAs": "NRNovelChapter"

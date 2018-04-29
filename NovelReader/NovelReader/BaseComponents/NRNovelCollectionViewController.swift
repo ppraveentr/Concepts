@@ -41,12 +41,12 @@ class NRNovelCollectionViewController: NRBaseViewController {
         case recentNovel = 0
         case topNovel
 
-        var cellIdentifer: String {
+        var cellIdentifier: String {
             switch self {
             case .recentNovel:
-                return "kRecentNovelCellIdentifer"
+                return "kRecentNovelCellIdentifier"
             case .topNovel:
-                return "kNovelCellIdentifer"
+                return "kNovelCellIdentifier"
             }
         }
 
@@ -54,10 +54,10 @@ class NRNovelCollectionViewController: NRBaseViewController {
             switch self {
             case .recentNovel:
                 collectionView.register(NRRecentNovelCollectionViewCell.getNIBFile(),
-                                        forCellWithReuseIdentifier: self.cellIdentifer)
+                                        forCellWithReuseIdentifier: self.cellIdentifier)
             case .topNovel:
                 collectionView.register(NRNovelCollectionViewCell.getNIBFile(),
-                                        forCellWithReuseIdentifier: self.cellIdentifer)
+                                        forCellWithReuseIdentifier: self.cellIdentifier)
             }
         }
 
@@ -200,7 +200,7 @@ extension NRNovelCollectionViewController: UICollectionViewDataSource, UICollect
     //cellForItem
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-        let cellIdentifier = novelCollectionType.cellIdentifer
+        let cellIdentifier = novelCollectionType.cellIdentifier
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath)
 
         if let cur = currentNovelList?[indexPath.row] {

@@ -45,7 +45,7 @@ class NRReaderViewController: FTBaseViewController {
 
         self.mainView?.pin(view: contentView)
 
-        if let url = novelChapter?.title ?? novel?.novelURL {
+        if let url = novelChapter?.identifier ?? novel?.identifier {
             NRServiceProvider.getNovelChapter(url) { (chapter) in
 
                 if let content = chapter?.shortTitle {

@@ -59,7 +59,7 @@ class NRServiceProvider {
     class func getNovelChapters(_ novel: NRNovel, getChapters: Bool = true,
                                 completionHandler: @escaping (_ novel: NRNovel?) -> Swift.Void) {
 
-        let model: FTModelData = ["id": novel.identifer]
+        let model: FTModelData = ["id": novel.identifier]
 
         FTServiceClient.make(kfetchNovelChapters, modelStack: model) { (status) in
 
@@ -100,10 +100,10 @@ class NRServiceProvider {
     }
     
     //Get chapter content
-    class func getNovelChapter(_ identifer: String,
+    class func getNovelChapter(_ identifier: String,
                                 completionHandler: @escaping (_ chapterContent: NRNovelChapter?) -> Swift.Void) {
         
-        let model: FTModelData = ["id": identifer]
+        let model: FTModelData = ["id": identifier]
 
         FTServiceClient.make(kfetchChapter, modelStack: model) { (status) in
 

@@ -1,13 +1,12 @@
 final class NRNovel: FTModelData {
 
-    var identifer: String? = nil
+    var identifier: String? = nil
     var lastChapter: String? = nil
     var chapterList: [NRNovelChapter]? = nil
     var searchString: String? = nil
     var rating: String? = nil
     var author: String? = nil
     var lastUpdated: String? = nil
-    var novelURL: String? = nil
     var imageURL: String? = nil
     var genres: String? = nil
     var contentDescription: String? = nil
@@ -19,14 +18,13 @@ final class NRNovel: FTModelData {
 
     /* Coding Keys */
     enum CodingKeys: String, CodingKey  {
-        case identifer = "id"
+        case identifier
         case lastChapter = "lastchapter"
         case chapterList = "chapters"
         case searchString = "nameunsigned"
         case rating
         case author
         case lastUpdated = "lastUpdate"
-        case novelURL = "url"
         case imageURL = "image"
         case genres = "genres"
         case contentDescription = "summary"

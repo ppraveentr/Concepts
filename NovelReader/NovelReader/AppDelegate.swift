@@ -21,7 +21,7 @@ class NRAppDelegate: FTAppDelegate {
     
     func configBindings() {
 
-        //Register self's type as BundleIdentifer for getting class name
+        //Register self's type as Bundle-Identifier for getting class name
         FTReflection.registerModuleIdentifier(NRAppDelegate.self)
 
         //Service Binding
@@ -33,9 +33,9 @@ class NRAppDelegate: FTAppDelegate {
 
 #if DEBUG
 // Debug-only code
-        FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
-        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL()
-        FTMobileConfig.isMockData = true
+//        FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
+//        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL()
+//        FTMobileConfig.isMockData = true
 #endif
 
 //        //Model Binding Generator
