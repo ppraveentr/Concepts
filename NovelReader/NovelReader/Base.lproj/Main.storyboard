@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mSq-LN-j19">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mSq-LN-j19">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -81,7 +81,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RC7-Jv-W4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <barButtonItem systemItem="organize" id="bdI-Le-MFg">
+                <barButtonItem image="fontSize" width="45" style="plain" id="bdI-Le-MFg">
                     <connections>
                         <segue destination="afr-kd-Wru" kind="popoverPresentation" identifier="kShowFontPicker" popoverAnchorBarButtonItem="bdI-Le-MFg" id="iz1-PS-4L4">
                             <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -139,9 +139,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="fontSize" width="22" height="22"/>
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="N08-mK-hS3"/>
+        <segue reference="fSp-SM-qua"/>
     </inferredMetricsTieBreakers>
 </document>

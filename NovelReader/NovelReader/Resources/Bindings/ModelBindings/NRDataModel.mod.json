@@ -30,13 +30,14 @@
             "arrayOf": "String"
         },
         "chapterList": {
-            "bindKey": "chapterList",
+            "bindKey": "chapters",
             "arrayOf": "NRNovelChapter"
         }
     },
     "NRNovelChapter": {
+        "content": "content",
+        "title": "name",
         "url": "url",
-        "title": "title",
         "shortTitle": "shortTitle",
         "releaseDate": "releaseDate"
     }

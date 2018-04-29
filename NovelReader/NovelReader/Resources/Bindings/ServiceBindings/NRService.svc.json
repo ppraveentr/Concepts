@@ -23,5 +23,27 @@
         "response": {
             "arrayOf": "NRNovel"
         }
+    },
+    "fetchNovelChapters": {
+        "super": "NovelBase",
+        "type": "GET",
+        "path": "novel/chapters-list",
+        "requestQuery": {
+            "id": "identifer"
+        },
+        "response": {
+            "bindAs": "NRNovel"
+        }
+    },
+    "fetchChapter": {
+        "super": "NovelBase",
+        "type": "GET",
+        "path": "novel/chapter",
+        "requestQuery": {
+            "id": "identifer"
+        },
+        "response": {
+            "bindAs": "NRNovelChapter"
+        }
     }
 }

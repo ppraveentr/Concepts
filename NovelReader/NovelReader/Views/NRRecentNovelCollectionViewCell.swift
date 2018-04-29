@@ -12,7 +12,7 @@ class NRRecentNovelCollectionViewCell: UICollectionViewCell, NRConfigureNovelCel
     @IBOutlet weak var novelTitle: FTLabel?
     @IBOutlet weak var lastUpdateTitleLabel: FTLabel?
     @IBOutlet weak var lastUpdateTimeLabel: FTLabel?
-
+ 
     func configureContent(novel: NRNovel) {
         novelTitle?.text = novel.title
         lastUpdateTitleLabel?.text = "Last Update:"

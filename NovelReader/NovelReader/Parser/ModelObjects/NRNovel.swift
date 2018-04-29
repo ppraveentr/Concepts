@@ -9,7 +9,7 @@ final class NRNovel: FTModelData {
     var lastUpdated: String? = nil
     var novelURL: String? = nil
     var imageURL: String? = nil
-    var keyworkds: [String]? = nil
+    var genres: String? = nil
     var contentDescription: String? = nil
     var artist: String? = nil
     var status: String? = nil
@@ -21,14 +21,14 @@ final class NRNovel: FTModelData {
     enum CodingKeys: String, CodingKey  {
         case identifer = "id"
         case lastChapter = "lastchapter"
-        case chapterList
+        case chapterList = "chapters"
         case searchString = "nameunsigned"
         case rating
         case author
         case lastUpdated = "lastUpdate"
         case novelURL = "url"
         case imageURL = "image"
-        case keyworkds = "genres"
+        case genres = "genres"
         case contentDescription = "summary"
         case artist
         case status

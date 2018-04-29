@@ -88,6 +88,8 @@
 		DEDE27232069522300E4C992 /* NRRules_defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEDE271C2069522300E4C992 /* NRRules_defaults.swift */; };
 		DEE935132094CDA000B10398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE935122094CDA000B10398 /* Assets.xcassets */; };
 		DEE935142094CDA000B10398 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DEE935122094CDA000B10398 /* Assets.xcassets */; };
+		DEE9351620959E1D00B10398 /* NRService_fetchChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9351520959E1C00B10398 /* NRService_fetchChapter.swift */; };
+		DEE9351720959E1D00B10398 /* NRService_fetchChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEE9351520959E1C00B10398 /* NRService_fetchChapter.swift */; };
 		DEF76490208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */; };
 		DEF76491208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */; };
 		DEF8D593206783B5001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
@@ -265,6 +267,7 @@
 		DEDE271B2069522300E4C992 /* NRRules_fetchNovelList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_fetchNovelList.swift; sourceTree = "<group>"; };
 		DEDE271C2069522300E4C992 /* NRRules_defaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRRules_defaults.swift; sourceTree = "<group>"; };
 		DEE935122094CDA000B10398 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DEE9351520959E1C00B10398 /* NRService_fetchChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchChapter.swift; sourceTree = "<group>"; };
 		DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchNovelChapters.swift; sourceTree = "<group>"; };
 		DEF8D58E20678310001AFEC2 /* NRNovels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -314,6 +317,7 @@
 		DE4EBE642067B6F5008AC70B /* ServiceModel */ = {
 			isa = PBXGroup;
 			children = (
+				DEE9351520959E1C00B10398 /* NRService_fetchChapter.swift */,
 				DE818242208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift */,
 				DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */,
 				DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */,
@@ -814,6 +818,7 @@
 				DE23237920551287004F1480 /* NRServiceProvider.swift in Sources */,
 				DE23237B20551287004F1480 /* NRBaseTableViewController.swift in Sources */,
 				DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */,
+				DEE9351720959E1D00B10398 /* NRService_fetchChapter.swift in Sources */,
 				DE23237D20551287004F1480 /* NRTabBarController.swift in Sources */,
 				DE23237E20551287004F1480 /* AppDelegate.swift in Sources */,
 				DE818247208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,
@@ -853,6 +858,7 @@
 				DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */,
 				DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */,
 				DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */,
+				DEE9351620959E1D00B10398 /* NRService_fetchChapter.swift in Sources */,
 				DEA7E1A41F497B5D0002C148 /* NRTabBarController.swift in Sources */,
 				DEA7E1441F496BAB0002C148 /* AppDelegate.swift in Sources */,
 				DE818246208356BA001316E5 /* NRService_fetchRecentUpdatesList.swift in Sources */,

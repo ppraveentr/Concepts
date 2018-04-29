@@ -23,14 +23,14 @@ class NRNovelChapterViewController: NRBaseTableViewController {
         tableView.backgroundColor = .clear
         tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifer")
         
-        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (novel: NRNovel?) in
-            guard (novel != nil) else { return }
-            self.configureContent(novel: novel!)
+        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (novelResponse: NRNovel?) in
+            guard (novelResponse != nil) else { return }
+            self.novel?.merge(data: novelResponse!)
+            self.configureContent(novel: self.novel!)
         })
     }
     
     func configureContent(novel: NRNovel) {
-//        NRServiceProvider.getNovelChapters(&self.novel!, details: value)
         self.novelDescView?.configureContent(novel: self.novel!)
         self.tableView.setTableHeaderView(view: self.novelDescView)
         self.tableView.reloadData()
@@ -86,7 +86,7 @@ extension NRNovelChapterViewController {
         
         if segue.identifier == "kShowNovelReaderView" {
             if let nextViewController = segue.destination as? NRReaderViewController{
-                nextViewController.novel = sender as? NRNovelChapter
+                nextViewController.novelChapter = sender as? NRNovelChapter
             }
         }
     }

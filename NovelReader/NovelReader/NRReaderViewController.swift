@@ -10,16 +10,17 @@ import Foundation
 
 class NRReaderViewController: FTBaseViewController {
     
-    var novel: NRNovelChapter?
+    var novelChapter: NRNovelChapter?
+    var novel: NRNovel?
     static let backButton = #selector(NRReaderViewController.back)
 
     @IBOutlet var fontPickerBarItem: UIBarButtonItem?
-    @IBOutlet var chapterToolBarItem: UIToolbar?
-    var sortedToolBarItems: [UIBarButtonItem]? {
-        get{
-            return self.chapterToolBarItem?.items?.sorted(by: { $0.tag > $1.tag })
-        }
-    }
+//    @IBOutlet var chapterToolBarItem: UIToolbar?
+//    var sortedToolBarItems: [UIBarButtonItem]? {
+//        get{
+//            return self.chapterToolBarItem?.items?.sorted(by: { $0.tag > $1.tag })
+//        }
+//    }
 
     var textSize: Int = 140
     let contentView = FTContentView()
@@ -36,7 +37,7 @@ class NRReaderViewController: FTBaseViewController {
     
     func setupViewContent() {
         
-        self.title = novel?.shortTitle ?? novel?.title
+        self.title = novelChapter?.shortTitle ?? novelChapter?.title
         
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .stop, target: self, action: NRReaderViewController.backButton)
         
@@ -44,10 +45,16 @@ class NRReaderViewController: FTBaseViewController {
 
         self.mainView?.pin(view: contentView)
 
-        if let url = novel?.url {
-            NRServiceProvider.parseNovelReader(url, completionHandler: { (html) in
-                self.loadWebContent(contnet: html)
-            })
+        if let url = novelChapter?.title ?? novel?.novelURL {
+            NRServiceProvider.getNovelChapter(url) { (chapter) in
+
+                if let content = chapter?.shortTitle {
+                    self.title = content
+                }
+                if let content = chapter?.content {
+                    self.loadWebContent(contnet: content)
+                }
+            }
         }
     }
     

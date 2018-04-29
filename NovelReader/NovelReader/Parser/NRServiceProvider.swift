@@ -59,14 +59,14 @@ class NRServiceProvider {
     class func getNovelChapters(_ novel: NRNovel, getChapters: Bool = true,
                                 completionHandler: @escaping (_ novel: NRNovel?) -> Swift.Void) {
 
-        FTServiceClient.make(kfetchNovelChapters, modelStack: novel) { (status) in
+        let model: FTModelData = ["id": novel.identifer]
+
+        FTServiceClient.make(kfetchNovelChapters, modelStack: model) { (status) in
 
             switch (status) {
             case .success(let res, _):
                 if let novelResponse = res.responseStack as? NRNovel {
-                    var novel = novel
-                    novel.merge(data: novelResponse)
-                    completionHandler(novel)
+                    completionHandler(novelResponse)
                 }
                 else {
                     completionHandler(res.responseStack as? NRNovel)
@@ -100,15 +100,21 @@ class NRServiceProvider {
     }
     
     //Get chapter content
-    class func parseNovelReader(_ url: String,
-                                completionHandler: @escaping (_ chapterContent: String) -> Swift.Void) {
+    class func getNovelChapter(_ identifer: String,
+                                completionHandler: @escaping (_ chapterContent: NRNovelChapter?) -> Swift.Void) {
         
-//        let parse = { (html: String) in
-//            completionHandler("")
-//        }
-//        
-//        FTServiceClient.getContentFromURL(url) { (htmlString, data, httpURLResponse) in
-//            parse(htmlString)
-//        }
+        let model: FTModelData = ["id": identifer]
+
+        FTServiceClient.make(kfetchChapter, modelStack: model) { (status) in
+
+            switch (status) {
+            case .success(let res, _):
+                completionHandler(res.responseStack as? NRNovelChapter)
+                break
+            case .failed(let res, _):
+                completionHandler(res?.responseStack as? NRNovelChapter)
+                break
+            }
+        }
     }
 }

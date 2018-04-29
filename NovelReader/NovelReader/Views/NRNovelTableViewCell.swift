@@ -21,7 +21,7 @@ class NRNovelTableViewCell: UITableViewCell {
     
     func configureContent(novel: NRNovelChapter) {
         
-        self.titleLabel?.text = novel.shortTitle 
+        self.titleLabel?.text = novel.shortTitle ?? novel.title
         self.chapterDate?.text = novel.releaseDate 
     }
     

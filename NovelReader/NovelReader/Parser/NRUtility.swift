@@ -19,12 +19,12 @@ extension NRConfigureNovelCellProtocal where Self: UIView {
 
         let compressedSize = self.systemLayoutSizeFitting(UILayoutFittingCompressedSize)
 
-        if (compressedSize.width*2 + 15*4) < baseView.frame.width {
+        if (compressedSize.width*2 + 15*3) < baseView.frame.width/2 {
             return CGSize(width: compressedSize.width, height: compressedSize.height)
         }
 
         let size = self.systemLayoutSizeFitting( CGSize(width: baseView.frame.width - 30, height: CGFloat.greatestFiniteMagnitude),
-                                                 withHorizontalFittingPriority: UILayoutPriority.fittingSizeLevel,
+                                                 withHorizontalFittingPriority: UILayoutPriority.required,
                                                  verticalFittingPriority: UILayoutPriority.fittingSizeLevel)
 
         return CGSize(width: baseView.frame.width - 30, height: size.height)

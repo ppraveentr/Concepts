@@ -12,4 +12,5 @@ let kfetchRecentUpdateList = "NRService_fetchRecentUpdatesList"
 //typealias kfetchNovelList = NRService_fetchNovelList
 let kfetchNovelList = "NRService_fetchNovelList"
 let kfetchNovelChapters = "NRService_fetchNovelChapters"
+let kfetchChapter = "NRService_fetchChapter"
 

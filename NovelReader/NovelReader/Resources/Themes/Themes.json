@@ -11,7 +11,8 @@
         "blue": "#1059ce",
         "green": "#10ce1a",
         "yellow": "#cecb10",
-        "white": "#FFFFFF"
+        "white": "#FFFFFF",
+        "gray": "#A9A9A9"
     },
     "font": {
         "default": {
@@ -21,6 +22,10 @@
         "system14": {
             "_super": "default",
             "size": "14.0"
+        },
+        "system17": {
+            "_super": "default",
+            "size": "17.0"
         }
     },
     "appearance": {
@@ -83,8 +88,17 @@
                 "isLinkUnderlineEnabled": true,
                 "isLinkDetectionEnabled": true
             },
+            "system13Gray": {
+                "_super": "default",
+                "textcolor": "gray"
+            },
             "system14R": {
                 "_super": "default",
+                "textcolor": "appRed"
+            },
+            "system17R": {
+                "_super": "default",
+                "textfont": "system17",
                 "textcolor": "appRed"
             },
             "system14B": {

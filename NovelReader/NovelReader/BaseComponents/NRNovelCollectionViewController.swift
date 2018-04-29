@@ -226,7 +226,12 @@ extension NRNovelCollectionViewController: UICollectionViewDataSource, UICollect
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cur = currentNovelList?[indexPath.row]
-        self.performSegue(withIdentifier: "kShowNovelChapterList", sender: cur)
+
+        if novelCollectionType == .recentNovel {
+            self.performSegue(withIdentifier: "kShowNovelReaderView", sender: cur)
+        }else{
+            self.performSegue(withIdentifier: "kShowNovelChapterList", sender: cur)
+        }
     }
 }
 
@@ -241,7 +246,7 @@ extension NRNovelCollectionViewController {
         }
         else if segue.identifier == "kShowNovelReaderView" {
             if let nextViewController = segue.destination as? NRReaderViewController {
-                nextViewController.novel = sender as? NRNovelChapter
+                nextViewController.novel = sender as? NRNovel
             }
         }
     }
