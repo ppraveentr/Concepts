@@ -485,6 +485,7 @@
 		DEA7E19F1F497B5D0002C148 /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DEA7E1B61F49A67F0002C148 /* NRUtility.swift */,
 				DEBC650D20970E1E0057F649 /* NRGoogleAuth.swift */,
 				DEBC650520970CB50057F649 /* NRProtocalUtility.swift */,
 				DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */,
@@ -510,7 +511,6 @@
 				DE4EBE642067B6F5008AC70B /* ServiceModel */,
 				DE84280420558FE7006605C0 /* ModelObjects */,
 				DEA7E1B01F4996A90002C148 /* NRServiceProvider.swift */,
-				DEA7E1B61F49A67F0002C148 /* NRUtility.swift */,
 				DE5A775C204AB8D5008B19ED /* NRServiceConstants.swift */,
 			);
 			path = Parser;
