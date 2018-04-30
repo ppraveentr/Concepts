@@ -9,7 +9,18 @@
 import Foundation
 
 public class NRBaseViewController: FTBaseViewController {
-    
-//    @IBOutlet var sbaseView: NRBaseView?
-    
+
+    override public func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "kShowNovelChapterList" {
+            if let nextViewController = segue.destination as? NRNovelChapterViewController {
+                nextViewController.novel = sender as? NRNovel
+            }
+        }
+        else if segue.identifier == "kShowNovelReaderView" {
+            if let nextViewController = segue.destination as? NRReaderViewController {
+                nextViewController.novel = sender as? NRNovel
+            }
+        }
+    }
 }

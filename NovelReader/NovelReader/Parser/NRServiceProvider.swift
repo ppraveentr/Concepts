@@ -39,10 +39,11 @@ class NRServiceProvider {
                 }
                 //TODO: To be removed once Mock is done
                 else if let novelList = res.responseStack as? [NRNovel] {
-                    if(novel?.novelList == nil) {
-                        novel?.novelList = []
+                    let novel = novel ?? NRNovels()
+                    if(novel.novelList == nil) {
+                        novel.novelList = []
                     }
-                    novel?.novelList?.append(contentsOf: novelList)
+                    novel.novelList?.append(contentsOf: novelList)
                     completionHandler(novel)
                 }else {
                     completionHandler(res.responseStack as? NRNovels)
