@@ -24,7 +24,7 @@
         "views": "views",
         "contentDescription": "summary",
         "lastChapter": "lastchapter",
-        "keyworkds": {
+        "genres": {
             "bindKey": "genres",
             "arrayOf": "String"
         },

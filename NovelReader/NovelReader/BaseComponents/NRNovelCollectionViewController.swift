@@ -102,6 +102,9 @@ class NRNovelCollectionViewController: NRBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.novelCollectionType = .recentNovel
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: NRGoogleAuth.signInButton())
+
     }
 
     //Updates novelCollectionType, which interns fetchNovelList from backend

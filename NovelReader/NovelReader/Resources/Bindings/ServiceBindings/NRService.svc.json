@@ -13,7 +13,7 @@
     "fetchNovelList": {
         "super": "NovelBase",
         "type": "GET",
-        "path": "novel/list",
+        "path": "novel/top-list",
         "requestQuery": {
             "type": "type",
             "category": "category",

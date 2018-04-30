@@ -8,7 +8,7 @@ final class NRNovel: FTModelData {
     var author: String? = nil
     var lastUpdated: String? = nil
     var imageURL: String? = nil
-    var genres: String? = nil
+    var genres: [String]? = nil
     var contentDescription: String? = nil
     var artist: String? = nil
     var status: String? = nil
@@ -26,7 +26,7 @@ final class NRNovel: FTModelData {
         case author
         case lastUpdated = "lastUpdate"
         case imageURL = "image"
-        case genres = "genres"
+        case genres
         case contentDescription = "summary"
         case artist
         case status

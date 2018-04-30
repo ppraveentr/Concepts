@@ -122,7 +122,6 @@
         <scene sceneID="J2u-Xw-ceI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mSq-LN-j19" userLabel="FTBaseNavigationController" customClass="FTBaseNavigationController" customModule="FTMobileCoreUI" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Bds-yi-zwV">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
@@ -140,7 +139,6 @@
     </scenes>
     <resources>
         <image name="fontSize" width="22" height="22"/>
-        <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="fSp-SM-qua"/>

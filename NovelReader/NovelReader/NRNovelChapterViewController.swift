@@ -23,7 +23,7 @@ class NRNovelChapterViewController: NRBaseTableViewController {
         tableView.backgroundColor = .clear
         tableView.register(NRNovelTableViewCell.getNIBFile(), forCellReuseIdentifier: "kNovelCellIdentifier")
         
-        NRServiceProvider.getNovelChapters(novel!, completionHandler: { (novelResponse: NRNovel?) in
+        NRServiceProvider.getNovelChaptersList(novel!, completionHandler: { (novelResponse: NRNovel?) in
             guard (novelResponse != nil) else { return }
             self.novel?.merge(data: novelResponse!)
             self.configureContent(novel: self.novel!)

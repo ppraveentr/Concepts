@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4DF54C61831F19E908183153 /* Pods_NovelReaderDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89900C8A827DDB8F2CA3DAC4 /* Pods_NovelReaderDemo.framework */; };
 		DE04001A2054608700A8B57A /* FTMobileCoreUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400172054608600A8B57A /* FTMobileCoreUI.framework */; };
 		DE04001B2054608700A8B57A /* FTCoreUtility.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400182054608700A8B57A /* FTCoreUtility.framework */; };
 		DE04001C2054608700A8B57A /* FTMobileCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE0400192054608700A8B57A /* FTMobileCore.framework */; };
@@ -76,6 +77,10 @@
 		DEAD34202058263C0064C46A /* Themes.json in Resources */ = {isa = PBXBuildFile; fileRef = DEAD34162058263C0064C46A /* Themes.json */; };
 		DEAD3422205826660064C46A /* Bindings in Resources */ = {isa = PBXBuildFile; fileRef = DEAD3421205826660064C46A /* Bindings */; };
 		DEAD3423205826660064C46A /* Bindings in Resources */ = {isa = PBXBuildFile; fileRef = DEAD3421205826660064C46A /* Bindings */; };
+		DEBC650620970CB50057F649 /* NRProtocalUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC650520970CB50057F649 /* NRProtocalUtility.swift */; };
+		DEBC650720970CB50057F649 /* NRProtocalUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC650520970CB50057F649 /* NRProtocalUtility.swift */; };
+		DEBC650E20970E1E0057F649 /* NRGoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC650D20970E1E0057F649 /* NRGoogleAuth.swift */; };
+		DEBC650F20970E1E0057F649 /* NRGoogleAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEBC650D20970E1E0057F649 /* NRGoogleAuth.swift */; };
 		DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */; };
 		DEC297A11F51E44B0088B77A /* FTFontPickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */; };
 		DEC297A31F51E9160088B77A /* FTFontPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC297A21F51E9160088B77A /* FTFontPickerView.swift */; };
@@ -94,6 +99,7 @@
 		DEF76491208341DD00E6F614 /* NRService_fetchNovelChapters.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */; };
 		DEF8D593206783B5001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
 		DEF8D594206783B6001AFEC2 /* NRNovels.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF8D58E20678310001AFEC2 /* NRNovels.swift */; };
+		F8D94274DD536B93166A55D1 /* Pods_NovelReader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A680179A183DD1D3D78732CB /* Pods_NovelReader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -210,11 +216,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		097F0E9BB63395D857FC2973 /* Pods-NovelReaderDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovelReaderDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		0C1CF0563A222DF277798964 /* Pods-NovelReader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovelReader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader.debug.xcconfig"; sourceTree = "<group>"; };
+		89900C8A827DDB8F2CA3DAC4 /* Pods_NovelReaderDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovelReaderDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A38A0428150D994F048C60EF /* Pods-NovelReaderDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovelReaderDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A680179A183DD1D3D78732CB /* Pods_NovelReader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NovelReader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE0400172054608600A8B57A /* FTMobileCoreUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCoreUI.framework; sourceTree = "<group>"; };
 		DE0400182054608700A8B57A /* FTCoreUtility.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTCoreUtility.framework; sourceTree = "<group>"; };
 		DE0400192054608700A8B57A /* FTMobileCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FTMobileCore.framework; sourceTree = "<group>"; };
 		DE2323A220551287004F1480 /* NovelReaderDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovelReaderDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "NovelReaderDemo-Info.plist"; path = "/Users/praveenprabhakar/Frameworks/xCodeProject/Concepts/NovelReader/NovelReader/NovelReaderDemo-Info.plist"; sourceTree = "<absolute>"; };
 		DE28567020944A04003153C6 /* NRRecentNovelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRRecentNovelCollectionViewCell.swift; sourceTree = "<group>"; };
 		DE28567620944A1A003153C6 /* NRRecentNovelCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NRRecentNovelCollectionViewCell.xib; sourceTree = "<group>"; };
 		DE28567B20946CC2003153C6 /* fetchNovelList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fetchNovelList.json; sourceTree = "<group>"; };
@@ -259,6 +269,8 @@
 		DEA9EDBD1F4FED5500D54171 /* NRNovelDescriptionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NRNovelDescriptionView.xib; sourceTree = "<group>"; };
 		DEAD34162058263C0064C46A /* Themes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Themes.json; sourceTree = "<group>"; };
 		DEAD3421205826660064C46A /* Bindings */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Bindings; sourceTree = "<group>"; };
+		DEBC650520970CB50057F649 /* NRProtocalUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRProtocalUtility.swift; sourceTree = "<group>"; };
+		DEBC650D20970E1E0057F649 /* NRGoogleAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NRGoogleAuth.swift; sourceTree = "<group>"; };
 		DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRReaderViewController.swift; sourceTree = "<group>"; };
 		DEC297A01F51E44B0088B77A /* FTFontPickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FTFontPickerView.xib; sourceTree = "<group>"; };
 		DEC297A21F51E9160088B77A /* FTFontPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTFontPickerView.swift; sourceTree = "<group>"; };
@@ -270,6 +282,7 @@
 		DEE9351520959E1C00B10398 /* NRService_fetchChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchChapter.swift; sourceTree = "<group>"; };
 		DEF7648C208341DD00E6F614 /* NRService_fetchNovelChapters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRService_fetchNovelChapters.swift; sourceTree = "<group>"; };
 		DEF8D58E20678310001AFEC2 /* NRNovels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NRNovels.swift; sourceTree = "<group>"; };
+		E79CFA97A43C0FF6EC2DF089 /* Pods-NovelReader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NovelReader.release.xcconfig"; path = "Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -277,6 +290,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DF54C61831F19E908183153 /* Pods_NovelReaderDemo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,6 +308,7 @@
 				DE04001C2054608700A8B57A /* FTMobileCore.framework in Frameworks */,
 				DE04001B2054608700A8B57A /* FTCoreUtility.framework in Frameworks */,
 				DE04001A2054608700A8B57A /* FTMobileCoreUI.framework in Frameworks */,
+				F8D94274DD536B93166A55D1 /* Pods_NovelReader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +329,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7D38BD8F927372A6ED7EE86C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C1CF0563A222DF277798964 /* Pods-NovelReader.debug.xcconfig */,
+				E79CFA97A43C0FF6EC2DF089 /* Pods-NovelReader.release.xcconfig */,
+				097F0E9BB63395D857FC2973 /* Pods-NovelReaderDemo.debug.xcconfig */,
+				A38A0428150D994F048C60EF /* Pods-NovelReaderDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		DE4EBE642067B6F5008AC70B /* ServiceModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +349,14 @@
 				DE4EBE652067B6F5008AC70B /* NRService_fetchNovelList.swift */,
 			);
 			path = ServiceModel;
+			sourceTree = "<group>";
+		};
+		DE80F5832096F0D000AD8C9A /* plist */ = {
+			isa = PBXGroup;
+			children = (
+				DEA7E1511F496BAB0002C148 /* Info.plist */,
+			);
+			path = plist;
 			sourceTree = "<group>";
 		};
 		DE81824D2084F8F6001316E5 /* FTNovelReaderMockBundle */ = {
@@ -383,6 +417,7 @@
 				DEA7E1591F496BAB0002C148 /* NovelReaderTests */,
 				DEA7E1641F496BAB0002C148 /* NovelReaderUITests */,
 				DEA7E1411F496BAB0002C148 /* Products */,
+				7D38BD8F927372A6ED7EE86C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -401,6 +436,7 @@
 		DEA7E1421F496BAB0002C148 /* NovelReader */ = {
 			isa = PBXGroup;
 			children = (
+				DE80F5832096F0D000AD8C9A /* plist */,
 				DEAD340C2058263C0064C46A /* Resources */,
 				DEA7E1B81F49E04B0002C148 /* Views */,
 				DEA7E1AF1F4996910002C148 /* Parser */,
@@ -411,8 +447,6 @@
 				DEC2979C1F51CD910088B77A /* NRReaderViewController.swift */,
 				DEA7E1491F496BAB0002C148 /* Main.storyboard */,
 				DEA7E14E1F496BAB0002C148 /* LaunchScreen.storyboard */,
-				DEA7E1511F496BAB0002C148 /* Info.plist */,
-				DE2323A320551288004F1480 /* NovelReaderDemo-Info.plist */,
 				DEA7E1801F496C1C0002C148 /* NovelReader-Bridging-Header.h */,
 			);
 			path = NovelReader;
@@ -445,6 +479,8 @@
 				DE0400182054608700A8B57A /* FTCoreUtility.framework */,
 				DE0400192054608700A8B57A /* FTMobileCore.framework */,
 				DE0400172054608600A8B57A /* FTMobileCoreUI.framework */,
+				A680179A183DD1D3D78732CB /* Pods_NovelReader.framework */,
+				89900C8A827DDB8F2CA3DAC4 /* Pods_NovelReaderDemo.framework */,
 			);
 			path = Frameworks;
 			sourceTree = "<group>";
@@ -452,6 +488,8 @@
 		DEA7E19F1F497B5D0002C148 /* BaseComponents */ = {
 			isa = PBXGroup;
 			children = (
+				DEBC650D20970E1E0057F649 /* NRGoogleAuth.swift */,
+				DEBC650520970CB50057F649 /* NRProtocalUtility.swift */,
 				DEA7E1AD1F4992030002C148 /* NRBaseTableViewController.swift */,
 				DEA7E1A01F497B5D0002C148 /* NRBaseViewController.swift */,
 				DEA7E1A11F497B5D0002C148 /* NRTabBarController.swift */,
@@ -534,10 +572,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DE23239F20551287004F1480 /* Build configuration list for PBXNativeTarget "NovelReaderDemo" */;
 			buildPhases = (
+				810E16F089087BE60285965A /* [CP] Check Pods Manifest.lock */,
 				DE23237820551287004F1480 /* Sources */,
 				DE23238A20551287004F1480 /* Frameworks */,
 				DE23238E20551287004F1480 /* Resources */,
 				DE23239B20551287004F1480 /* Embed Frameworks */,
+				E83B24A414A425C09676EC88 /* [CP] Embed Pods Frameworks */,
+				1E0241702F80F4887ED17F93 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -573,10 +614,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DEA7E16A1F496BAB0002C148 /* Build configuration list for PBXNativeTarget "NovelReader" */;
 			buildPhases = (
+				0A101EE8EA3C68CDD6F39DB8 /* [CP] Check Pods Manifest.lock */,
 				DEA7E13C1F496BAB0002C148 /* Sources */,
 				DEA7E13D1F496BAB0002C148 /* Frameworks */,
 				DEA7E13E1F496BAB0002C148 /* Resources */,
 				DEA7E19B1F4970400002C148 /* Embed Frameworks */,
+				5226665313E4689E4DAE9BC8 /* [CP] Embed Pods Frameworks */,
+				3B40B5E9049E6B5CB415DFEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -809,13 +853,134 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0A101EE8EA3C68CDD6F39DB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NovelReader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E0241702F80F4887ED17F93 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3B40B5E9049E6B5CB415DFEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader-resources.sh",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5226665313E4689E4DAE9BC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovelReader/Pods-NovelReader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		810E16F089087BE60285965A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NovelReaderDemo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E83B24A414A425C09676EC88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NovelReaderDemo/Pods-NovelReaderDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		DE23237820551287004F1480 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBC650F20970E1E0057F649 /* NRGoogleAuth.swift in Sources */,
 				DEDE27212069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */,
 				DE23237920551287004F1480 /* NRServiceProvider.swift in Sources */,
+				DEBC650720970CB50057F649 /* NRProtocalUtility.swift in Sources */,
 				DE23237B20551287004F1480 /* NRBaseTableViewController.swift in Sources */,
 				DE23237C20551287004F1480 /* NRReaderViewController.swift in Sources */,
 				DEE9351720959E1D00B10398 /* NRService_fetchChapter.swift in Sources */,
@@ -854,8 +1019,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEBC650E20970E1E0057F649 /* NRGoogleAuth.swift in Sources */,
 				DEDE27202069522300E4C992 /* NRRules_fetchNovelList.swift in Sources */,
 				DEA7E1B11F4996A90002C148 /* NRServiceProvider.swift in Sources */,
+				DEBC650620970CB50057F649 /* NRProtocalUtility.swift in Sources */,
 				DEA7E1AE1F4992030002C148 /* NRBaseTableViewController.swift in Sources */,
 				DEC2979D1F51CD910088B77A /* NRReaderViewController.swift in Sources */,
 				DEE9351620959E1D00B10398 /* NRService_fetchChapter.swift in Sources */,
@@ -956,18 +1123,16 @@
 /* Begin XCBuildConfiguration section */
 		DE2323A020551287004F1480 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 097F0E9BB63395D857FC2973 /* Pods-NovelReaderDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W6W48SVQX7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NovelReader/Frameworks",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "NovelReader/NovelReaderDemo-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NovelReader/plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
@@ -979,18 +1144,16 @@
 		};
 		DE2323A120551287004F1480 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A38A0428150D994F048C60EF /* Pods-NovelReaderDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W6W48SVQX7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NovelReader/Frameworks",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = "NovelReader/NovelReaderDemo-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/NovelReader/plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
@@ -1082,7 +1245,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/../Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1102,6 +1265,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1145,7 +1309,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				FRAMEWORK_SEARCH_PATHS = "${SRCROOT}/../Frameworks";
+				FRAMEWORK_SEARCH_PATHS = "";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -1158,6 +1322,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
@@ -1168,46 +1333,44 @@
 		};
 		DEA7E16B1F496BAB0002C148 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C1CF0563A222DF277798964 /* Pods-NovelReader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W6W48SVQX7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NovelReader/Frameworks",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = NovelReader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NovelReader/plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
 		DEA7E16C1F496BAB0002C148 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E79CFA97A43C0FF6EC2DF089 /* Pods-NovelReader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = W6W48SVQX7;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NovelReader/Frameworks",
-					"$(PROJECT_DIR)/Frameworks",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
-				INFOPLIST_FILE = NovelReader/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/NovelReader/plist/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ft.NovelReader;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "NovelReader/NovelReader-Bridging-Header.h";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};

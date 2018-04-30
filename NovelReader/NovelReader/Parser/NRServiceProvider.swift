@@ -27,7 +27,7 @@ class NRServiceProvider {
     //Get list of all Novels
     class func fetchNovelList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
 
-        FTServiceClient.make(kfetchNovelList, modelStack: novel) { (status) in
+        FTServiceClient.make(kfetchNovelList, modelStack: nil) { (status) in
 
             switch (status) {
             case .success(let res, _):
@@ -56,7 +56,7 @@ class NRServiceProvider {
     }
     
     //Get list of all chapters from a single NRNovelObject
-    class func getNovelChapters(_ novel: NRNovel, getChapters: Bool = true,
+    class func getNovelChaptersList(_ novel: NRNovel, getChapters: Bool = true,
                                 completionHandler: @escaping (_ novel: NRNovel?) -> Swift.Void) {
 
         let model: FTModelData = ["id": novel.identifier]
@@ -76,26 +76,6 @@ class NRServiceProvider {
                 completionHandler(res?.responseStack as? NRNovel)
                 break
             }
-        }
-    }
-    
-    //Get list of all chapters from a single NRNovelObject
-    class func getNovelChapters(_ novel: inout NRNovel, details: JSON) {
-        
-        if let value = details["title"] as? String {
-            novel.title = value
-        }
-        
-        if let value = details["imageURL"] as? String {
-            novel.imageURL = value
-        }
-        
-        if let value = details["chapterList"] as? [NRNovelChapter] {
-            novel.chapterList = value
-        }
-        
-        if let value = details["contentDescription"] as? String {
-            novel.contentDescription = value
         }
     }
     
