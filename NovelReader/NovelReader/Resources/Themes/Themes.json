@@ -78,6 +78,14 @@
             "button14R:disabled": {
                 "_super": "default",
                 "textcolor": "yellow"
+            },
+            "googleButton": {
+                "_super": "default",
+                "image": "@google",
+                "backgroundColor": "white",
+                "layer": {
+                    "cornerRadius" : 22
+                }
             }
         },
         "FTLabel": {

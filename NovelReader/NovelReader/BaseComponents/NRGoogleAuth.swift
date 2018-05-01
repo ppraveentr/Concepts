@@ -9,53 +9,89 @@
 import Foundation
 import GoogleSignIn
 
-//extension NRAppDelegate {
-//    func setupGoogleAuth() { }
-//}
+//Notification constans name
+public extension Notification.Name {
+    //FTAuthentication - Google
+    public static let FTAuthentication_GoogleSignIn_SignedIn = Notification.Name("FTAuthentication_GoogleSignIn_SignedIn")
+    public static let FTAuthentication_GoogleSignIn_SignedOut = Notification.Name("FTAuthentication_GoogleSignIn_SignedOut")
+
+}
 
 class NRGoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
 
     static let sharedInstance = NRGoogleAuth()
 
     class func setupGoogleAuth() {
+
+        FTThemesManager.addImageSourceBundle(imageSource: "GoogleSignIn".bundle())
+
         // Initialize sign-in
-//        GIDSignIn.sharedInstance().clientID = "769359482558-l9uifqdbpq49n1pjqk6vvb2qtekm0ktl.apps.googleusercontent.com"
-//        GIDSignIn.sharedInstance().delegate = NRGoogleAuth.sharedInstance
-//        GIDSignIn.sharedInstance().uiDelegate = NRGoogleAuth.sharedInstance
+        GIDSignIn.sharedInstance().clientID = "769359482558-l9uifqdbpq49n1pjqk6vvb2qtekm0ktl.apps.googleusercontent.com"
+        GIDSignIn.sharedInstance().delegate = NRGoogleAuth.sharedInstance
+        GIDSignIn.sharedInstance().uiDelegate = NRGoogleAuth.sharedInstance
 
         // Uncomment to automatically sign in the user.
-        //GIDSignIn.sharedInstance().signInSilently()
+        GIDSignIn.sharedInstance().signInSilently()
     }
 
-    class func signInButton() -> GIDSignInButton {
-        let signButtton = GIDSignInButton()
-        signButtton.style = .iconOnly
-        signButtton.colorScheme = .dark
+    class func signInButton() -> FTButton {
+
+        let signButtton = FTButton(type: .custom)
+        signButtton.theme = "googleButton"
+        signButtton.addSizeConstraint(44, 44)
+
+        //Update with User Profile
+        if let profile = GIDSignIn.sharedInstance().currentUser?.profile {
+            profile.imageURL(withDimension: 44).downloadedImage { (image) in
+                signButtton.setImage(image, for: .normal)
+            }
+        }
+
+        //Update with User Profile after SignIn
+        NotificationCenter.default.addObserver(forName: .FTAuthentication_GoogleSignIn_SignedIn, object: nil, queue: nil) { (notificationn) in
+
+            if let userObject = notificationn.object as? GIDGoogleUser {
+                userObject.profile.imageURL(withDimension: 44).downloadedImage { (image) in
+                    signButtton.setImage(image, for: .normal)
+                }
+            }
+        }
+
+        //Remove User Profile
+        NotificationCenter.default.addObserver(forName: .FTAuthentication_GoogleSignIn_SignedOut, object: nil, queue: nil) { (nnnot) in
+            signButtton.theme = "googleButton"
+        }
+
+        //SignIn Button Tap Action
+        signButtton.addTapActionBlock {
+            if ((GIDSignIn.sharedInstance().uiDelegate != nil) || (GIDSignIn.sharedInstance().delegate != nil)) {
+                GIDSignIn.sharedInstance().signIn()
+            }
+        }
 
         return signButtton
     }
 
+    //GIDSignInDelegate
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
 
         if let error = error {
             print("\(error.localizedDescription)")
         } else {
-            // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
-            // ...
+            NotificationCenter.default.post(name: .FTAuthentication_GoogleSignIn_SignedIn, object: user)
         }
     }
 
-    // Stop the UIActivityIndicatorView animation that was started when the user
-    // pressed the Sign In button
-    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) {
-//        myActivityIndicator.stopAnimating()
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            NotificationCenter.default.post(name: .FTAuthentication_GoogleSignIn_SignedOut, object: user)
+        }
     }
+
+    //GIDSignInUIDelegate
+    func sign(inWillDispatch signIn: GIDSignIn!, error: Error!) { }
 
     // Present a view that prompts the user to sign in with Google
     func sign(_ signIn: GIDSignIn!,

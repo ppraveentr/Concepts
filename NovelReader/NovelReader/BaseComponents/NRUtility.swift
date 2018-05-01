@@ -53,7 +53,7 @@ class NRUtility {
             let theme = Bundle.main.path(forResource: "Themes", ofType: "json"),
             let themeContent: FTThemeDic = try! theme.jsonContentAtPath() {
 
-            FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: [NRAppDelegate.self])
+            FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: [Bundle(for: NRAppDelegate.self)])
         }
 
         let navigationBarAppearance = UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
