@@ -23,8 +23,7 @@ class NRSearchCollectionViewController: NRBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: NRGoogleAuth.signInButton())
-
+        setupToolBar()
         self.searchNovelList()
     }
 
@@ -33,6 +32,19 @@ class NRSearchCollectionViewController: NRBaseViewController {
         NRServiceProvider.fetchNovelList(novel: nil) { (novelList) in
             self.currentNovelList = novelList?.novelList
         }
+    }
+
+    func setupToolBar() {
+
+        let searchBar = FTSearchBar(frame: CGRect(origin: .zero, size: CGSize(width: 200, height: 44)), textColor: .white)
+        searchBar.configure(barTintColor: "#de6161".hexColor()!, tintColor: .white)
+        searchBar.placeholder = "Search"
+        searchBar.autoresizingMask = [.flexibleRightMargin, .flexibleHeight]
+
+        self.navigationItem.titleView = searchBar
+
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: NRGoogleAuth.signInButton())
+
     }
 }
 

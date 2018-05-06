@@ -26,12 +26,12 @@ class NRGoogleAuth: NSObject, GIDSignInDelegate, GIDSignInUIDelegate {
         FTThemesManager.addImageSourceBundle(imageSource: "GoogleSignIn".bundle())
 
         // Initialize sign-in
-        GIDSignIn.sharedInstance().clientID = "769359482558-l9uifqdbpq49n1pjqk6vvb2qtekm0ktl.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = NRGoogleAuth.sharedInstance
-        GIDSignIn.sharedInstance().uiDelegate = NRGoogleAuth.sharedInstance
-
-        // Uncomment to automatically sign in the user.
-        GIDSignIn.sharedInstance().signInSilently()
+//        GIDSignIn.sharedInstance().clientID = "769359482558-l9uifqdbpq49n1pjqk6vvb2qtekm0ktl.apps.googleusercontent.com"
+//        GIDSignIn.sharedInstance().delegate = NRGoogleAuth.sharedInstance
+//        GIDSignIn.sharedInstance().uiDelegate = NRGoogleAuth.sharedInstance
+//
+//        // Uncomment to automatically sign in the user.
+//        GIDSignIn.sharedInstance().signInSilently()
     }
 
     class func signInButton() -> FTButton {

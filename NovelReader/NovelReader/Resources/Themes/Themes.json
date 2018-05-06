@@ -32,12 +32,15 @@
         "UINavigationBar:UINavigationController": {
             "barTintColor": "white",
             "tintColor": "white",
-            "isTranslucent": false,
+            "isTranslucent": true,
             "backgroundImage": {
                 "default": "@Pixel",
                 "landScape": "@Pixel"
             },
-            "shadowImage": "@empty"
+            "shadowImage": "@empty",
+            "titleText": {
+                "foregroundColor": "white"
+            }
         },
         "UIToolbar:UINavigationController": {
             "barTintColor": "white",

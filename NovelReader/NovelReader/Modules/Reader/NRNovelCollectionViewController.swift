@@ -101,6 +101,7 @@ class NRNovelCollectionViewController: NRBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Novel Reader"
         self.novelCollectionType = .recentNovel
 
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(customView: NRGoogleAuth.signInButton())

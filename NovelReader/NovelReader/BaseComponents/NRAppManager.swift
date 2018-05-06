@@ -1,5 +1,5 @@
 //
-//  NRUtility.swift
+//  NRAppManager.swift
 //  NovelReader
 //
 //  Created by Praveen Prabhakar on 20/08/17.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NRUtility {
+class NRAppManager {
 
     class func configureAppBase() {
 
@@ -20,7 +20,7 @@ class NRUtility {
         FTMobileConfig.serviceBindingRulesName = "NovelServiceRules.plist"
 
         //App Config
-        FTMobileConfig.appBaseURL = NRUtility.endpointURL()
+        FTMobileConfig.appBaseURL = NRAppManager.endpointURL()
 
         //Debug-only code
         self.configDebug()
@@ -33,9 +33,9 @@ class NRUtility {
     class func configDebug() {
         #if DEBUG
         // Debug-only code
-//        FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
-//        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL()
-//        FTMobileConfig.isMockData = true
+        FTMobileConfig.appBaseURL = "http://127.0.0.1:3000"
+        FTMobileConfig.mockBundleResource = "FTNovelReaderMockBundle.bundle".bundleURL()
+        FTMobileConfig.isMockData = true
         #endif
     }
 
@@ -56,25 +56,9 @@ class NRUtility {
             FTThemesManager.setupThemes(themes: themeContent, imageSourceBundle: [Bundle(for: NRAppDelegate.self)])
         }
 
-        let navigationBarAppearance = UINavigationBar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
-        //        navigationBarAppearance.barTintColor = .white
-        //        navigationBarAppearance.tintColor = .white
-        //        navigationBarAppearance.isTranslucent = false
-
-        UINavigationBar.applyBackgroundImage(navigationBar: navigationBarAppearance, defaultImage: #imageLiteral(resourceName: "Pixel"))
-        //        //Remove Bottom 1px image
-        navigationBarAppearance.shadowImage = UIImage()
-        navigationBarAppearance.titleTextAttributes = [.foregroundColor : UIColor.white]
-
-        let toolBarAppearance = UIToolbar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
-        toolBarAppearance.barTintColor = .white
-        toolBarAppearance.isTranslucent = true
-
-        //        let segmentedControlAppearance = UISegmentedControl.appearance()
-        //        segmentedControlAppearance.tintColor = #imageLiteral(resourceName: "Pixel").getColor()
-
-        let extoolBarAppearance = UISegmentedControl.appearance(whenContainedInInstancesOf: [UICollectionReusableView.self])
-        extoolBarAppearance.tintColor = .white
+//        let toolBarAppearance = UIToolbar.appearance(whenContainedInInstancesOf: [UINavigationController.self])
+//        toolBarAppearance.barTintColor = .white
+//        toolBarAppearance.isTranslucent = true
 
         //        let textBarAppearance = UILabel.appearance(whenContainedInInstancesOf: [FTSearchBar.self])
         //        textBarAppearance.tintColor = .blue

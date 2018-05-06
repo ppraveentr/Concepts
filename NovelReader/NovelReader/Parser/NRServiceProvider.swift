@@ -13,8 +13,7 @@ class NRServiceProvider {
     //Get list of all Novels
     class func fetchRecentUpdateList(_ completionHandler: @escaping (_ novelsList: [NRNovel]?) -> Swift.Void) {
 
-        FTServiceClient.make(kfetchRecentUpdateList) { (status) in
-
+        FTServiceClient.make(FTServicefetchRecentUpdatesList.self) { (status) in
             switch (status) {
             case .success(let res, _):
                 completionHandler(res.responseStack as? [NRNovel])
@@ -27,8 +26,7 @@ class NRServiceProvider {
     //Get list of all Novels
     class func fetchNovelList(novel: NRNovels?, _ completionHandler: @escaping (_ novelsList: NRNovels?) -> Swift.Void) {
 
-        FTServiceClient.make(kfetchNovelList, modelStack: nil) { (status) in
-
+        FTServiceClient.make(FTServicefetchNovelList.self, modelStack: nil) { (status) in
             switch (status) {
             case .success(let res, _):
                 //FIXIT: Has be done in FTServiceClient
@@ -63,7 +61,6 @@ class NRServiceProvider {
         let model: FTModelData = ["id": novel.identifier]
 
         FTServiceClient.make(kfetchNovelChapters, modelStack: model) { (status) in
-
             switch (status) {
             case .success(let res, _):
                 if let novelResponse = res.responseStack as? NRNovel {
@@ -87,7 +84,6 @@ class NRServiceProvider {
         let model: FTModelData = ["id": identifier]
 
         FTServiceClient.make(kfetchChapter, modelStack: model) { (status) in
-
             switch (status) {
             case .success(let res, _):
                 completionHandler(res.responseStack as? NRNovelChapter)

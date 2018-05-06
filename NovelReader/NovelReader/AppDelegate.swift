@@ -13,8 +13,8 @@ class NRAppDelegate: FTAppDelegate {
 
     open override func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]?) -> Bool {
         
-        NRUtility.configureAppBase()
-        NRUtility.configureAppTheme()
+        NRAppManager.configureAppBase()
+        NRAppManager.configureAppTheme()
         NRGoogleAuth.setupGoogleAuth()
         
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
