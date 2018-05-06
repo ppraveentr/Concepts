@@ -198,23 +198,18 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI26FTBaseNavigationController")
 @end
 
 @class FTBaseView;
-@class FTView;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI20FTBaseViewController")
 @interface FTBaseViewController : UIViewController
 @property (nonatomic, strong) IBOutlet FTBaseView * _Nullable baseView;
 - (void)loadView;
-- (BOOL)shouldSetTopLayoutGuide SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTBaseViewController.shouldSetTopLayoutGuide()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, readonly, strong) FTView * _Nullable mainView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseViewController.mainView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FTScrollView;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI26FTBaseScrollViewController")
 @interface FTBaseScrollViewController : FTBaseViewController
-@property (nonatomic, strong) FTScrollView * _Nonnull scrollView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseScrollViewController.scrollView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (void)loadView;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -229,15 +224,9 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI22FTBaseTabBarController")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FTCoreTableViewController;
-@class FTTableView;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI25FTBaseTableViewController")
 @interface FTBaseTableViewController : FTBaseViewController
-@property (nonatomic, strong) FTCoreTableViewController * _Nonnull tableViewController SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseTableViewController.tableViewController' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, readonly, strong) FTTableView * _Nonnull tableView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseTableViewController.tableView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (FTCoreTableViewController * _Nonnull)class_TableViewController SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTBaseTableViewController.class_TableViewController()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (UITableViewStyle)class_TableViewStyle SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTBaseTableViewController.class_TableViewStyle()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (void)loadView;
 - (void)viewDidLayoutSubviews;
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
@@ -272,10 +261,6 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI6FTView")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI10FTBaseView")
 @interface FTBaseView : FTView
-@property (nonatomic, strong) FTView * _Nonnull rootView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseView.rootView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, strong) FTView * _Nullable topPinnedView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseView.topPinnedView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, strong) FTView * _Nonnull mainPinnedView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseView.mainPinnedView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, strong) FTView * _Nullable bottomPinnedView SWIFT_DEPRECATED_OBJC("Swift property 'FTBaseView.bottomPinnedView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -308,16 +293,13 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI8FTButton")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI12FTScrollView")
 @interface FTScrollView : UIScrollView
-@property (nonatomic, strong) FTView * _Nonnull contentView SWIFT_DEPRECATED_OBJC("Swift property 'FTScrollView.contentView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class FTWebView;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI13FTContentView")
 @interface FTContentView : FTScrollView
-@property (nonatomic, strong) FTWebView * _Nonnull webView SWIFT_DEPRECATED_OBJC("Swift property 'FTContentView.webView' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (void)observeValueForKeyPath:(NSString * _Nullable)keyPath ofObject:(id _Nullable)object change:(NSDictionary<NSKeyValueChangeKey, id> * _Nullable)change context:(void * _Nullable)context;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -329,8 +311,6 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI25FTCoreTableViewController")
 - (nonnull instancetype)initWithStyle:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)loadView;
-- (void)setupCustomeTableView SWIFT_DEPRECATED_OBJC("Swift method 'FTCoreTableViewController.setupCustomeTableView()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (FTTableView * _Nonnull)getFTTableView SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTCoreTableViewController.getFTTableView()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithNibName:(NSString * _Nullable)nibNameOrNil bundle:(NSBundle * _Nullable)nibBundleOrNil SWIFT_UNAVAILABLE;
 @end
 
@@ -344,35 +324,14 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI27FTExtendedNavigationBarView")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI14FTFloatingView")
 @interface FTFloatingView : FTView
-+ (FTFloatingView * _Nonnull)configFloatingViewWithView:(UIView * _Nonnull)view SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTFloatingView.configFloatingView(view:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// is floating view showing
-@property (nonatomic) BOOL isShowing SWIFT_DEPRECATED_OBJC("Swift property 'FTFloatingView.isShowing' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Initilization of FTFloatingView
-/// \param view A normal view that turns to floating view.
-///
-/// \param layer The layer of Z that the View will be presented, by default it is 1. in case of have more windows change it.
-///
-- (nonnull instancetype)initWith:(UIView * _Nonnull)view layer:(CGFloat)layer OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'FTFloatingView.init(with:layer:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
-/// Showing floating view
-- (void)show SWIFT_DEPRECATED_OBJC("Swift method 'FTFloatingView.show()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Hidding floating view
-- (void)hide SWIFT_DEPRECATED_OBJC("Swift method 'FTFloatingView.hide()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
-@class NSTextStorage;
-@class NSTextContainer;
-@class NSLayoutManager;
 @class NSAttributedString;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI7FTLabel")
 @interface FTLabel : UILabel <NSLayoutManagerDelegate>
-@property (nonatomic, strong) NSTextStorage * _Nonnull textStorage SWIFT_DEPRECATED_OBJC("Swift property 'FTLabel.textStorage' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, strong) NSTextContainer * _Nonnull textContainer SWIFT_DEPRECATED_OBJC("Swift property 'FTLabel.textContainer' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic, strong) NSLayoutManager * _Nonnull layoutManager SWIFT_DEPRECATED_OBJC("Swift property 'FTLabel.layoutManager' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL islinkDetectionEnabled SWIFT_DEPRECATED_OBJC("Swift property 'FTLabel.islinkDetectionEnabled' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@property (nonatomic) BOOL isLinkUnderLineEnabled SWIFT_DEPRECATED_OBJC("Swift property 'FTLabel.isLinkUnderLineEnabled' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @property (nonatomic, copy) NSString * _Nullable text;
 @property (nonatomic, strong) NSAttributedString * _Nullable attributedText;
 @property (nonatomic) CGRect frame;
@@ -397,23 +356,17 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI7FTLabel")
 
 
 
-@class UIFont;
-@class UIColor;
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI11FTSearchBar")
 @interface FTSearchBar : UISearchBar
-- (nonnull instancetype)initWithFrame:(CGRect)frame font:(UIFont * _Nullable)font textColor:(UIColor * _Nullable)textColor OBJC_DESIGNATED_INITIALIZER SWIFT_DEPRECATED_OBJC("Swift initializer 'FTSearchBar.init(frame:font:textColor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 - (void)drawRect:(CGRect)rect;
-- (void)configureWithBarTintColor:(UIColor * _Nullable)barTintColor tintColor:(UIColor * _Nullable)tintColor textColor:(UIColor * _Nullable)textColor SWIFT_DEPRECATED_OBJC("Swift method 'FTSearchBar.configure(barTintColor:tintColor:textColor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
 @end
 
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI18FTSegmentedControl")
 @interface FTSegmentedControl : UISegmentedControl
-@property (nonatomic, copy) void (^ _Nullable handler)(NSInteger) SWIFT_DEPRECATED_OBJC("Swift property 'FTSegmentedControl.handler' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithItems:(NSArray * _Nonnull)items completionHandler:(void (^ _Nullable)(NSInteger))completionHandler SWIFT_DEPRECATED_OBJC("Swift initializer 'FTSegmentedControl.init(items:completionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithItems:(NSArray * _Nullable)items OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
@@ -422,8 +375,6 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI18FTSegmentedControl")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI11FTTableView")
 @interface FTTableView : UITableView
-- (void)setTableHeaderViewWithView:(UIView * _Nullable)view SWIFT_DEPRECATED_OBJC("Swift method 'FTTableView.setTableHeaderView(view:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setTableFooterViewWithView:(UIView * _Nullable)view SWIFT_DEPRECATED_OBJC("Swift method 'FTTableView.setTableFooterView(view:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame style:(UITableViewStyle)style OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -440,19 +391,11 @@ SWIFT_CLASS("_TtC14FTMobileCoreUI27FTTableViewHeaderFooterView")
 
 SWIFT_CLASS("_TtC14FTMobileCoreUI9FTWebView")
 @interface FTWebView : WKWebView
-- (void)setScrollEnabledWithEnabled:(BOOL)enabled SWIFT_DEPRECATED_OBJC("Swift method 'FTWebView.setScrollEnabled(enabled:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame configuration:(WKWebViewConfiguration * _Nonnull)configuration OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class WKNavigation;
 
-@interface FTWebView (SWIFT_EXTENSION(FTMobileCoreUI))
-- (WKNavigation * _Nullable)loadHTMLBody:(NSString * _Nonnull)string baseURL:(NSURL * _Nullable)baseURL SWIFT_DEPRECATED_OBJC("Swift method 'FTWebView.loadHTMLBody(_:baseURL:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setContentFontSize:(NSInteger)size SWIFT_DEPRECATED_OBJC("Swift method 'FTWebView.setContentFontSize(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setContentColorWithTextColor:(UIColor * _Nullable)textColor backgroundColor:(UIColor * _Nullable)backgroundColor SWIFT_DEPRECATED_OBJC("Swift method 'FTWebView.setContentColor(textColor:backgroundColor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setContentFontFamily:(NSString * _Nullable)fontName SWIFT_DEPRECATED_OBJC("Swift method 'FTWebView.setContentFontFamily(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop

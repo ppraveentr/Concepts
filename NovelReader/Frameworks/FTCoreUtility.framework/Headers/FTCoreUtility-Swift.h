@@ -165,7 +165,6 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #if __has_feature(modules)
 @import UIKit;
 @import CoreGraphics;
-@import Foundation;
 #endif
 
 #pragma clang diagnostic ignored "-Wproperty-attribute-mismatch"
@@ -202,9 +201,6 @@ SWIFT_CLASS("_TtC13FTCoreUtility13FTAppDelegate")
 
 SWIFT_CLASS("_TtC13FTCoreUtility10FTUIButton")
 @interface FTUIButton : UIButton
-- (NSString * _Nullable)get_ThemeSubType SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'FTUIButton.get_ThemeSubType()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)updateTheme:(NSDictionary<NSString *, id> * _Nonnull)theme SWIFT_DEPRECATED_OBJC("Swift method 'FTUIButton.updateTheme(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)updateWithThemeDic:(NSDictionary<NSString *, id> * _Nonnull)themeDic state:(UIControlState)state SWIFT_DEPRECATED_OBJC("Swift method 'FTUIButton.update(themeDic:state:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (nonnull instancetype)initWithFrame:(CGRect)frame OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -223,85 +219,36 @@ SWIFT_CLASS("_TtC13FTCoreUtility8FTUIView")
 - (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
 
-@class UIImage;
 
-@interface UIColor (SWIFT_EXTENSION(FTCoreUtility))
-- (nonnull instancetype)initWithRgb:(uint32_t)rgb a:(CGFloat)a SWIFT_DEPRECATED_OBJC("Swift initializer 'UIColor.init(rgb:a:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (nonnull instancetype)initWithRgba:(uint32_t)rgba SWIFT_DEPRECATED_OBJC("Swift initializer 'UIColor.init(rgba:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (NSString * _Nonnull)hexString SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.hexString()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIColor * _Nullable)hexColor:(NSString * _Nonnull)hex SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.hexColor(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (UIImage * _Nonnull)generateImageWithOpacity:(CGFloat)opacity contextSize:(CGSize)contextSize contentsScale:(CGFloat)contentsScale SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.generateImage(opacity:contextSize:contentsScale:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (UIColor * _Nonnull)lighterColor:(CGFloat)amount SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.lighterColor(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (UIColor * _Nonnull)darkerColor:(CGFloat)amount SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.darkerColor(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIColor * _Nonnull)blendColorsWithColor:(UIColor * _Nonnull)color destinationColor:(UIColor * _Nonnull)destinationColor amount:(CGFloat)amount SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIColor.blendColors(color:destinationColor:amount:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
+
+
 
 
 @interface UIControl (SWIFT_EXTENSION(FTCoreUtility))
-- (BOOL)get_AllThemeSubType SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIControl.get_AllThemeSubType()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setThemes:(NSDictionary<NSString *, id> * _Nonnull)themes SWIFT_DEPRECATED_OBJC("Swift method 'UIControl.setThemes(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
+- (void)actionBlockTapped:(UIControl * _Nonnull)sender;
 @end
 
 
-@interface UIImage (SWIFT_EXTENSION(FTCoreUtility))
-+ (UIImage * _Nullable)named:(NSString * _Nonnull)named SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIImage.named(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 
-@interface UIImage (SWIFT_EXTENSION(FTCoreUtility))
-- (UIColor * _Nullable)getColorAtPoint:(CGPoint)atPoint a:(CGFloat)a SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIImage.getColor(atPoint:a:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 
-@interface UIImageView (SWIFT_EXTENSION(FTCoreUtility))
-/// Download Image from async in background
-/// \param url Image’s url from which need to download
-///
-/// \param contentMode ImageView’s content mode, defalut to ‘scaleAspectFit’
-///
-- (void)downloadedFromUrl:(NSURL * _Nonnull)url contentMode:(UIViewContentMode)mode comletionHandler:(void (^ _Nullable)(void))comletionHandler SWIFT_DEPRECATED_OBJC("Swift method 'UIImageView.downloadedFrom(url:contentMode:comletionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Download Image from async in background
-/// \param link Image’s urlString from which need to download
-///
-/// \param contentMode ImageView’s content mode, defalut to ‘scaleAspectFit’
-///
-- (void)downloadedFromLink:(NSString * _Nonnull)link contentMode:(UIViewContentMode)mode comletionHandler:(void (^ _Nullable)(void))comletionHandler SWIFT_DEPRECATED_OBJC("Swift method 'UIImageView.downloadedFrom(link:contentMode:comletionHandler:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
-@class UIFont;
 
-@interface UILabel (SWIFT_EXTENSION(FTCoreUtility))
-- (void)theme_isLinkUnderlineEnabled:(BOOL)bool_ SWIFT_DEPRECATED_OBJC("Swift method 'UILabel.theme_isLinkUnderlineEnabled(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)theme_isLinkDetectionEnabled:(BOOL)bool_ SWIFT_DEPRECATED_OBJC("Swift method 'UILabel.theme_isLinkDetectionEnabled(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)theme_textfont:(UIFont * _Nonnull)font SWIFT_DEPRECATED_OBJC("Swift method 'UILabel.theme_textfont(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)theme_textcolor:(UIColor * _Nonnull)color SWIFT_DEPRECATED_OBJC("Swift method 'UILabel.theme_textcolor(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)updateVisualThemes SWIFT_DEPRECATED_OBJC("Swift method 'UILabel.updateVisualThemes()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
+@protocol UIAppearanceContainer;
+@protocol UIAppearance;
 
 @interface UINavigationBar (SWIFT_EXTENSION(FTCoreUtility))
-+ (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName;
++ (id <UIAppearance> _Nonnull)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme containerClass:(NSArray<Class <UIAppearanceContainer>> * _Nullable)containerClass SWIFT_WARN_UNUSED_RESULT;
 + (void)setBackgroundImage:(id _Nonnull)image;
 @end
 
 
-@interface UINavigationBar (SWIFT_EXTENSION(FTCoreUtility))
-/// Configures the navigation bar to use an image as its background.
-+ (void)applyBackgroundImageWithNavigationBar:(UINavigationBar * _Nullable)navigationBar defaultColor:(UIColor * _Nonnull)defaultColor landScapeColor:(UIColor * _Nullable)landScape SWIFT_DEPRECATED_OBJC("Swift method 'UINavigationBar.applyBackgroundImage(navigationBar:defaultColor:landScapeColor:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Configures the navigation bar to use an image as its background.
-+ (void)applyBackgroundImageWithNavigationBar:(UINavigationBar * _Nullable)navigationBar defaultImage:(UIImage * _Nonnull)defaultImage landScapeImage:(UIImage * _Nullable)landScape SWIFT_DEPRECATED_OBJC("Swift method 'UINavigationBar.applyBackgroundImage(navigationBar:defaultImage:landScapeImage:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Configures the navigation bar to use a transparent background (see-through
-/// but without any blur).
-+ (void)applyTransparentBackgroundWithNavigationBar:(UINavigationBar * _Nullable)navigationBar :(CGFloat)opacity SWIFT_DEPRECATED_OBJC("Swift method 'UINavigationBar.applyTransparentBackground(navigationBar:_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-/// Configures the navigation bar to use a custom color as its background.
-/// The navigation bar remains translucent.
-+ (void)applyTintColorWithNavigationBar:(UINavigationBar * _Nullable)navigationBar :(UIColor * _Nonnull)color SWIFT_DEPRECATED_OBJC("Swift method 'UINavigationBar.applyTintColor(navigationBar:_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 
 @interface UISegmentedControl (SWIFT_EXTENSION(FTCoreUtility))
-+ (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName;
-+ (void)setBackgroundImageWithImageType:(NSString * _Nonnull)imageType image:(UIImage * _Nonnull)image SWIFT_DEPRECATED_OBJC("Swift method 'UISegmentedControl.setBackgroundImage(imageType:image:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
++ (id <UIAppearance> _Nonnull)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme containerClass:(NSArray<Class <UIAppearanceContainer>> * _Nullable)containerClass SWIFT_WARN_UNUSED_RESULT;
 @end
 
 
@@ -314,59 +261,31 @@ SWIFT_CLASS("_TtC13FTCoreUtility8FTUIView")
 
 @interface UIView (SWIFT_EXTENSION(FTCoreUtility))
 - (void)swizzled_updateTheme:(NSDictionary<NSString *, id> * _Nonnull)theme;
-- (void)theme_backgroundColor:(UIColor * _Nonnull)color SWIFT_DEPRECATED_OBJC("Swift method 'UIView.theme_backgroundColor(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @end
 
 
-@interface UIView (SWIFT_EXTENSION(FTCoreUtility))
-- (NSArray<UIImageView *> * _Nullable)findShadowImage SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIView.findShadowImage()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)hideShadowImage SWIFT_DEPRECATED_OBJC("Swift method 'UIView.hideShadowImage()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 
 @interface UIView (SWIFT_EXTENSION(FTCoreUtility))
-- (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setUpAppearance(theme:inContainerClass:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (void)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme inContainerClass:(NSString * _Nullable)cclassName;
++ (id <UIAppearance> _Nonnull)setUpAppearanceWithTheme:(NSDictionary<NSString *, id> * _Nonnull)theme containerClass:(NSArray<Class <UIAppearanceContainer>> * _Nullable)containerClass;
 + (void)setBackgroundImage:(id _Nonnull)imageTheme;
-+ (void)setBackgroundImageWithImageType:(NSString * _Nullable)imageType imageName:(id _Nonnull)imageName SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setBackgroundImage(imageType:imageName:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
-
-@class UINib;
-
-@interface UIView (SWIFT_EXTENSION(FTCoreUtility))
-+ (UIView * _Nonnull)embedViewWithContentView:(UIView * _Nonnull)contentView SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIView.embedView(contentView:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)removeSubviews SWIFT_DEPRECATED_OBJC("Swift method 'UIView.removeSubviews()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)removeAllConstraints SWIFT_DEPRECATED_OBJC("Swift method 'UIView.removeAllConstraints()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UINib * _Nullable)getNIBFile SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIView.getNIBFile()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIView * _Nullable)fromNib:(id _Nullable)owner SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIView.fromNib(_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-+ (UIView * _Nullable)fromNibWithNamed:(NSString * _Nonnull)name owner:(id _Nullable)owner SWIFT_WARN_UNUSED_RESULT SWIFT_DEPRECATED_OBJC("Swift method 'UIView.fromNib(named:owner:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)xibSetupWithClassName:(SWIFT_METATYPE(UIView) _Nonnull)className SWIFT_DEPRECATED_OBJC("Swift method 'UIView.xibSetup(className:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 @end
 
 
 
 
-@interface UIView (SWIFT_EXTENSION(FTCoreUtility))
-- (void)addSizeConstraint:(CGFloat)width :(CGFloat)height SWIFT_DEPRECATED_OBJC("Swift method 'UIView.addSizeConstraint(_:_:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)addSelfSizing SWIFT_DEPRECATED_OBJC("Swift method 'UIView.addSelfSizing()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)resizeToFitSubviewsInScreen SWIFT_DEPRECATED_OBJC("Swift method 'UIView.resizeToFitSubviewsInScreen()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)resizeToFitSubviews SWIFT_DEPRECATED_OBJC("Swift method 'UIView.resizeToFitSubviews()' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setViewSize:(CGSize)size createConstraint:(BOOL)createConstraint relation:(NSLayoutRelation)relation SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setViewSize(_:createConstraint:relation:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setViewHeight:(CGFloat)height createConstraint:(BOOL)createConstraint relation:(NSLayoutRelation)relation SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setViewHeight(_:createConstraint:relation:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-- (void)setViewWidth:(CGFloat)width createConstraint:(BOOL)createConstraint relation:(NSLayoutRelation)relation SWIFT_DEPRECATED_OBJC("Swift method 'UIView.setViewWidth(_:createConstraint:relation:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
 
 
 @interface UIView (SWIFT_EXTENSION(FTCoreUtility))
 @property (nonatomic, copy) NSString * _Nullable theme;
-@property (nonatomic) BOOL needsThemesUpdate SWIFT_DEPRECATED_OBJC("Swift property 'UIView.needsThemesUpdate' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
 - (void)prepareForInterfaceBuilder;
 @end
 
 
-@interface UIViewController (SWIFT_EXTENSION(FTCoreUtility))
-- (void)postNotificationWithName:(NSNotificationName _Nonnull)name object:(id _Nullable)object SWIFT_DEPRECATED_OBJC("Swift method 'UIViewController.postNotification(name:object:)' uses '@objc' inference deprecated in Swift 4; add '@objc' to provide an Objective-C entrypoint");
-@end
+
+
+
+
 
 #if __has_attribute(external_source_symbol)
 # pragma clang attribute pop
